@@ -594,7 +594,7 @@
 }
 
 .slider.slider-primary.noUi-target {
-  background-color: rgba(55, 140, 63, 0.4);
+  background-color: rgba(68, 186, 243, 0.4);
 }
 
 .slider.slider-primary .noUi-handle {
@@ -1486,6 +1486,7 @@ fieldset[disabled]
   height: 3.6rem;
   min-width: 3.6rem;
   width: 3.6rem;
+  background-color: #a3bfde;
 }
 
 .btn.btn-icon.btn-lg i.now-ui-icons,
@@ -2598,7 +2599,7 @@ textarea.form-control:focus, textarea.form-control:active {
 }
 
 .progress-container.progress-primary .progress {
-  background: rgba(55, 140, 63, 0.4);
+  background: rgba(68, 186, 243, 0.4);
 }
 
 .progress-container.progress-primary .progress-bar {
@@ -4729,6 +4730,7 @@ Created using IcoMoon - icomoon.io
 
 .footer {
   padding: 24px 0;
+  background-color: #cee5ff;
 }
 
 .footer.footer-default {
@@ -7231,6 +7233,7 @@ Created using IcoMoon - icomoon.io
   width: 100%;
   position: relative;
   overflow: hidden;
+  background-color: #007bff;
 }
 
 .cc-contact-information .cc-contact {
