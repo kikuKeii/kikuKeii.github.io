@@ -2,185 +2,568 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="refresh" content="5;url=https://kikukeii.github.io/blogs">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <Style>
+    <title>kikukeii.github.io | Page Tree</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background: #2e3032;
+            height: 100vh;
+            width: 100vw;
+            background-color: #f1fbfa;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        judul {
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 25vmin;
+            line-height: 20vmin;
+        }
+
+        .gradient-text {
+            color: transparent;
+            background: conic-gradient(#D9D7F1 12%,
+                    #BAABDA 12%, #BAABDA 33%,
+                    #E7FBBE 33%, #E7FBBE 55%,
+                    #FFCBCB 55%, #FFCBCB 70%,
+                    #B5DEFF 70%, #B5DEFF 87%,
+                    #F7D1BA 87%);
+            background-size: 50%;
+            background-clip: text;
+            -webkit-background-clip: text;
+
+            animation: expand-rev 0.5s ease forwards;
+
+            cursor: pointer;
+        }
+
+        .gradient-text:hover {
+            animation: expand 0.5s ease forwards;
+        }
+
+        @keyframes expand {
+            0% {
+                background-size: 50%;
+                background-position: 0 0;
+            }
+
+            20% {
+                background-size: 55%;
+                background-position: 0 1em;
+            }
+
+            100% {
+                background-size: 325%;
+                background-position: -10em -4em;
+            }
+        }
+
+        @keyframes expand-rev {
+            0% {
+                background-size: 325%;
+                background-position: -10em -4em;
+            }
+
+            20% {
+                background-size: 55%;
+                background-position: 0 1em;
+            }
+
+            100% {
+                background-size: 50%;
+                background-position: 0 0;
+            }
+        }
+
+        /* jam */
+
+        /* Base Styles
+----------------------------------- */
+        jam {
+            height: 100%;
+        }
+
+        jam {
+            margin: 0;
+            padding: 0;
+            background: #f1fbfa;
+            font-family: Arial;
+            font-size: 11px;
+        }
+
+        @media (max-width: 800px),
+        (max-height: 350px) {
+            jam {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 600px),
+        (max-height: 250px) {
+            jam {
+                font-size: 8px;
+            }
+        }
+
+        UL {
+            padding: 0;
+            margin: 0;
+        }
+
+        LI {
+            list-style: none;
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 500px;
             text-align: center;
-            font-family: Verdana, Geneva, sans-serif;
-            font-size: 30px;
-            letter-spacing: 0.8px;
-            word-spacing: -5px;
-            color: #FFFFFF;
-            font-weight: 700;
-            text-decoration: none solid rgb(68, 68, 68);
-            font-style: italic;
-            font-variant: small-caps;
-            text-transform: uppercase;
         }
 
-        canvas {
-            display: block;
-            margin: 20px auto;
+        .wrapper:before {
+            content: "";
+            display: inline-block;
+            height: 12em;
+            width: 20px;
+            vertical-align: middle;
         }
-    </Style>
+
+        /* Dottes
+----------------------------------- */
+        .dottes {
+            display: inline-block;
+            width: 1em;
+            margin: 0 1em;
+            background: transparent !important;
+            vertical-align: middle;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .dottes:before,
+        .dottes:after {
+            content: "";
+            display: block;
+            width: 1em;
+            height: 0;
+            border-bottom: 1em solid #f1fbfa;
+            -webkit-transition: border-color 0.5s;
+            transition: border-color 0.5s;
+        }
+
+        .dottes:before {
+            margin-bottom: 2em;
+        }
+
+        /* Digit
+----------------------------------- */
+        .digit {
+            display: inline-block;
+            width: 6em;
+            margin: 0 1em;
+            vertical-align: middle;
+        }
+
+        .digit__item {
+            position: relative;
+            -webkit-transition: background 0.5s;
+            transition: background 0.5s;
+        }
+
+        .digit__item:before,
+        .digit__item:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 0.5em solid transparent;
+            -webkit-transition: border-color 0.5s;
+            transition: border-color 0.5s;
+        }
+
+        .item--h {
+            clear: both;
+            width: 3.4em;
+            height: 1em;
+            margin: 0 auto;
+        }
+
+        .item--1:before,
+        .item--1:after {
+            border-bottom-color: transparent !important;
+        }
+
+        .item--1:before {
+            left: -1em;
+            border-left-color: transparent !important;
+        }
+
+        .item--1:after {
+            right: -1em;
+            border-right-color: transparent !important;
+        }
+
+        .item--4 {
+            width: 3.4em;
+            margin: 4em auto 0;
+        }
+
+        .item--4:before {
+            left: -0.5em;
+            border-left: 0;
+            border-top-color: transparent !important;
+            border-bottom-color: transparent !important;
+        }
+
+        .item--4:after {
+            right: -0.5em;
+            border-right: 0;
+            border-top-color: transparent !important;
+            border-bottom-color: transparent !important;
+        }
+
+        .item--7:before,
+        .item--7:after {
+            border-top-color: transparent !important;
+        }
+
+        .item--7:before {
+            left: -1em;
+            border-left-color: transparent !important;
+        }
+
+        .item--7:after {
+            right: -1em;
+            border-right-color: transparent !important;
+        }
+
+        .item--v {
+            float: left;
+            width: 1em;
+            height: 3.4em;
+            margin: 0.3em 0;
+        }
+
+        .item--v:before {
+            top: -1em;
+        }
+
+        .item--v:after {
+            bottom: -1em;
+        }
+
+        .item--3,
+        .item--6 {
+            float: right;
+        }
+
+        .item--2:before,
+        .item--5:before {
+            border-top-color: transparent !important;
+            border-right-color: transparent !important;
+        }
+
+        .item--2:after,
+        .item--5:after {
+            border-bottom-color: transparent !important;
+            border-right-color: transparent !important;
+        }
+
+        .item--3:before,
+        .item--6:before {
+            border-top-color: transparent !important;
+            border-left-color: transparent !important;
+        }
+
+        .item--3:after,
+        .item--6:after {
+            border-bottom-color: transparent !important;
+            border-left-color: transparent !important;
+        }
+
+        .item--2:after,
+        .item--5:before {
+            border-left-color: transparent !important;
+        }
+
+        .item--3:after,
+        .item--6:before {
+            border-right-color: transparent !important;
+        }
+
+        .item {
+            background: #f1fbfa;
+        }
+
+        .item:before,
+        .item:after {
+            border-color: #f1fbfa;
+        }
+
+        .digit--sec {
+            vertical-align: text-bottom;
+            font-size: .5em;
+        }
+
+        @media (max-width: 600px) {
+            .digit--sec {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <judul>
-        <p>Membuka Blog dalam</p>
-    </judul>
-    <canvas id="mycanvas" width="250" height="250"></canvas>
+    <div class="container" style="padding-top: 15%; width: 1200px;">
+        <div class="row">
+            <div class="col-6">
+                <h1 class="gradient-text">hello world!<h1>
+            </div>
+            <div class="col-6">
+
+                <jam>
+                    <div class="wrapper">
+                        <ul class="digit hours--1">
+                            <li class="item digit__item item--h item--1"></li>
+                            <li class="item digit__item item--v item--2"></li>
+                            <li class="item digit__item item--v item--3"></li>
+                            <li class="item digit__item item--h item--4"></li>
+                            <li class="item digit__item item--v item--5"></li>
+                            <li class="item digit__item item--v item--6"></li>
+                            <li class="item digit__item item--h item--7"></li>
+                        </ul>
+
+                        <ul class="digit hours--2">
+                            <li class="item digit__item item--h item--1"></li>
+                            <li class="item digit__item item--v item--2"></li>
+                            <li class="item digit__item item--v item--3"></li>
+                            <li class="item digit__item item--h item--4"></li>
+                            <li class="item digit__item item--v item--5"></li>
+                            <li class="item digit__item item--v item--6"></li>
+                            <li class="item digit__item item--h item--7"></li>
+                        </ul>
+
+                        <span class="dottes"></span>
+
+                        <ul class="digit min--0">
+                            <li class="item digit__item item--h item--1"></li>
+                            <li class="item digit__item item--v item--2"></li>
+                            <li class="item digit__item item--v item--3"></li>
+                            <li class="item digit__item item--h item--4"></li>
+                            <li class="item digit__item item--v item--5"></li>
+                            <li class="item digit__item item--v item--6"></li>
+                            <li class="item digit__item item--h item--7"></li>
+                        </ul>
+
+                        <ul class="digit min--1">
+                            <li class="item digit__item item--h item--1"></li>
+                            <li class="item digit__item item--v item--2"></li>
+                            <li class="item digit__item item--v item--3"></li>
+                            <li class="item digit__item item--h item--4"></li>
+                            <li class="item digit__item item--v item--5"></li>
+                            <li class="item digit__item item--v item--6"></li>
+                            <li class="item digit__item item--h item--7"></li>
+                        </ul>
+
+                        <ul class="digit digit--sec">
+                            <li class="item digit__item item--h item--1"></li>
+                            <li class="item digit__item item--v item--2"></li>
+                            <li class="item digit__item item--v item--3"></li>
+                            <li class="item digit__item item--h item--4"></li>
+                            <li class="item digit__item item--v item--5"></li>
+                            <li class="item digit__item item--v item--6"></li>
+                            <li class="item digit__item item--h item--7"></li>
+                        </ul>
+
+                        <ul class="digit digit--sec">
+                            <li class="item digit__item item--h item--1"></li>
+                            <li class="item digit__item item--v item--2"></li>
+                            <li class="item digit__item item--v item--3"></li>
+                            <li class="item digit__item item--h item--4"></li>
+                            <li class="item digit__item item--v item--5"></li>
+                            <li class="item digit__item item--v item--6"></li>
+                            <li class="item digit__item item--h item--7"></li>
+                        </ul>
+                    </div>
+                </jam>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card" style="width: 100%; text-align: center;">
+                    <div class="card-body bg-primary">
+                        <h5 class="card-title" style="color: #fff;">Page Tree</h5>
+                        <!-- <p class="card-text">Berikut .</p> -->
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item "><a href="https://kikukeii.github.io/profile/index.html">CV</a></li>
+                        <li class="list-group-item"><a href="https://kikukeii.github.io/mnfi">Blog - MnFi</a></li>
+                        <li class="list-group-item"><a href="https://bookcase.my.id">Blog - Bookcase.my.id</a></li>
+                        <li class="list-group-item"><a href="https://keiikomik.vercel.app">Blog - KeiKomik [OFF]</a>
+                        </li>
+                        <li class="list-group-item"><a href="https://kikukeii.github.io/niji">Sticker WhatsApp Nijisanji
+                                [ON Develop]</a></li>
+                        <li class="list-group-item"><a href="#">Bot Discord - [ON Develop]</a></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="https://github.com/kikukeii" class="card-link btn btn-secondary">Github</a>
+                        <a href="https://web.facebook.com/kikukeii" class="card-link btn btn-secondary">Facebook</a>
+                        <a href="https://instagram.com/kikukeii" class="card-link btn btn-secondary">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script>
+        var digits_map = [[".item--1", ".item--2", ".item--3", ".item--5", ".item--6", ".item--7"],
+        [".item--3", ".item--6"],
+        [".item--1", ".item--3", ".item--4", ".item--5", ".item--7"],
+        [".item--1", ".item--3", ".item--4", ".item--6", ".item--7"],
+        [".item--2", ".item--3", ".item--4", ".item--6"],
+        [".item--1", ".item--2", ".item--4", ".item--6", ".item--7"],
+        [".item--1", ".item--2", ".item--4", ".item--5", ".item--6", ".item--7"],
+        [".item--1", ".item--3", ".item--6"],
+        [".item--1", ".item--2", ".item--3", ".item--4", ".item--5", ".item--6", ".item--7"],
+        [".item--1", ".item--2", ".item--3", ".item--4", ".item--6", ".item--7"]
+        ];
+
+        var head = document.querySelector('head');
+        head.insertAdjacentHTML('beforeend', '<style id="coloring"></style>');
+        var style_container = document.getElementById("coloring");
+
+        var color_step = 0;
+        var color_steps_max = 12;
+        var color_period = 1; // time out before changing color
+        var color_time_counter = 0;
+        var color_class = "js-color--active";
+
+        var digits = document.querySelectorAll('.digit');
+        var digit_item_class = ".digit__item";
+        var digits_items = document.querySelectorAll(".digit__item");
+        var dottes = document.querySelector(".dottes");
+        var dottes_items = document.querySelectorAll(".dottes__item");
+
+        setTime();
+        var interval = setInterval(setTime, 1000);
+
+        function setTime() {
+
+            // Get Date 
+            var now = new Date();
+            var hour = now.getHours() >= 10 ? now.getHours() : "0" + now.getHours();
+            var min = now.getMinutes() >= 10 ? now.getMinutes() : "0" + now.getMinutes();
+            var sec = now.getSeconds() >= 10 ? now.getSeconds() : "0" + now.getSeconds();
+            var date_string = hour + "" + min + "" + sec;
+
+            // Change Time
+            for (var i = 0; i < digits.length; i++) {
+
+                var digit = digits[i];
+                var digit_value = +date_string.charAt(i);
+
+                remove_class_from_items(digit, color_class);
+                remove_class_from_elem(dottes, color_class);
+
+                var digit_elems_classes = digits_map[digit_value];
+
+                if (digit_elems_classes.length > 0) {
+                    for (var l = 0; l < digit_elems_classes.length; l++) {
+                        var item = digit.querySelector(digit_elems_classes[l]);
+                        item.classList.add(color_class);
+                    }
+                }
+
+            }
+
+            dottes.classList.add(color_class);
+
+            // Change colors
+            if (color_time_counter == color_period) {
+                color_time_counter = 0;
+                change_color_by_style();
+            }
+            else {
+                color_time_counter++;
+            }
+
+        }
+
+        function add_class_to_items(elem) {
+            var items = elem.querySelectorAll(".item");
+
+            for (var i = 0; i < items.length; i++) {
+                items[i].classList.add(class_color);
+            }
+        }
+
+        function remove_class_from_items(elem, class_prefix) {
+            var items = elem.querySelectorAll(".item");
+
+            for (var i = 0; i < items.length; i++) {
+                remove_class_from_elem(items[i], class_prefix);
+            }
+        }
+
+        function remove_class_from_elem(elem, class_prefix) {
+            var classes = elem.classList;
+
+            for (var k = 0; k < classes.length; k++) {
+                if (classes[k].indexOf(class_prefix) >= 0) {
+                    elem.classList.remove(classes[k]);
+                }
+            }
+        }
+
+        function change_color_by_style() {
+
+            var hue_value = 360 / color_steps_max * color_step;
+            var bright_value = 50;
+
+            var current_color = "hsl(" + hue_value + ", 70%, " + bright_value + "%)";
+            var color_class_local = "." + color_class;
+
+            var styles = color_class_local + " { background: " + current_color + "; }";
+            styles += color_class_local + ":before, " + color_class_local + ":after { border-color: " + current_color + "; }";
+
+            style_container.innerHTML = styles;
+
+            if (color_step < color_steps_max) {
+                color_step++;
+            }
+            else {
+                color_step = 0;
+            }
+        }
+    </script>
 </body>
 
 </html>
-
-
-
-<script>
-    (function drawCanvas() {
-        var canvas = document.getElementById('mycanvas');
-        var ctx = canvas.getContext('2d');
-        var cWidth = canvas.width;
-        var cHeight = canvas.height;
-
-        var countTo = 4;
-
-        var min = Math.floor(countTo / 60);
-        var sec = countTo - (min * 60);
-        var counter = 0;
-        var angle = 270;
-        var inc = 360 / countTo;
-
-
-        function drawScreen() {
-
-
-
-            //======= reset canvas
-
-            ctx.fillStyle = "#2e3032";
-            ctx.fillRect(0, 0, cWidth, cHeight);
-
-            //========== base arc
-
-            ctx.beginPath();
-            ctx.strokeStyle = "#252424";
-            ctx.lineWidth = 14;
-            ctx.arc(cWidth / 2, cHeight / 2, 100, (Math.PI / 180) * 0, (Math.PI / 180) * 360, false);
-            ctx.stroke();
-            ctx.closePath();
-
-            //========== dynamic arc
-
-            ctx.beginPath();
-            ctx.strokeStyle = "#df8209";
-            ctx.lineWidth = 14;
-            ctx.arc(cWidth / 2, cHeight / 2, 100, (Math.PI / 180) * 270, (Math.PI / 180) * angle, false);
-            ctx.stroke();
-            ctx.closePath();
-
-            //======== inner shadow arc
-
-            grad = ctx.createRadialGradient(cWidth / 2, cHeight / 2, 80, cWidth / 2, cHeight / 2, 115);
-            grad.addColorStop(0.0, 'rgba(0,0,0,.4)');
-            grad.addColorStop(0.5, 'rgba(0,0,0,0)');
-            grad.addColorStop(1.0, 'rgba(0,0,0,0.4)');
-
-            ctx.beginPath();
-            ctx.strokeStyle = grad;
-            ctx.lineWidth = 14;
-            ctx.arc(cWidth / 2, cHeight / 2, 100, (Math.PI / 180) * 0, (Math.PI / 180) * 360, false);
-            ctx.stroke();
-            ctx.closePath();
-
-            //======== bevel arc
-
-            grad = ctx.createLinearGradient(cWidth / 2, 0, cWidth / 2, cHeight);
-            grad.addColorStop(0.0, '#6c6f72');
-            grad.addColorStop(0.5, '#252424');
-
-            ctx.beginPath();
-            ctx.strokeStyle = grad;
-            ctx.lineWidth = 1;
-            ctx.arc(cWidth / 2, cHeight / 2, 93, (Math.PI / 180) * 0, (Math.PI / 180) * 360, true);
-            ctx.stroke();
-            ctx.closePath();
-
-            //====== emboss arc
-
-            grad = ctx.createLinearGradient(cWidth / 2, 0, cWidth / 2, cHeight);
-            grad.addColorStop(0.0, 'transparent');
-            grad.addColorStop(0.98, '#6c6f72');
-
-            ctx.beginPath();
-            ctx.strokeStyle = grad;
-            ctx.lineWidth = 1;
-            ctx.arc(cWidth / 2, cHeight / 2, 107, (Math.PI / 180) * 0, (Math.PI / 180) * 360, true);
-            ctx.stroke();
-            ctx.closePath();
-
-            //====== Labels
-
-            var textColor = '#646464';
-            var textSize = "12";
-            var fontFace = "helvetica, arial, sans-serif";
-
-            ctx.fillStyle = textColor;
-            ctx.font = textSize + "px " + fontFace;
-            ctx.fillText('MIN', cWidth / 2 - 46, cHeight / 2 - 40);
-            ctx.fillText('SEC', cWidth / 2 + 25, cHeight / 2 - 15);
-
-            //====== Values
-
-
-
-            ctx.fillStyle = '#6292ae';
-
-            if (min > 9) {
-                ctx.font = '84px ' + fontFace;
-                ctx.fillText('9', cWidth / 2 - 55, cHeight / 2 + 35);
-
-                ctx.font = '24px ' + fontFace;
-                ctx.fillText('+', cWidth / 2 - 72, cHeight / 2 - 5);
-            }
-            else {
-                ctx.font = '84px ' + fontFace;
-                ctx.fillText(min, cWidth / 2 - 60, cHeight / 2 + 35);
-            }
-
-            ctx.font = '50px ' + fontFace;
-            if (sec < 10) {
-                ctx.fillText('0' + sec, cWidth / 2 + 10, cHeight / 2 + 35);
-            }
-            else {
-                ctx.fillText(sec, cWidth / 2 + 10, cHeight / 2 + 35);
-            }
-
-
-            if (sec <= 0 && counter < countTo) {
-                angle += inc;
-                counter++;
-                min--;
-                sec = 59;
-            } else
-                if (counter >= countTo) {
-                    sec = 0;
-                    min = 0;
-                } else {
-                    angle += inc;
-                    counter++;
-                    sec--;
-                }
-        }
-
-        setInterval(drawScreen, 1000);
-
-    })()
-</script>
