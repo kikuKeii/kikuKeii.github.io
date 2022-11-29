@@ -1,587 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kikuKeii.github.io | Pages Tree</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kikukeii.github.io | Page Tree</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            height: 100vh;
-            width: 100vw;
-            background-color: #f1fbfa;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 25vmin;
-            line-height: 20vmin;
-        }
-
-        .gradient-text {
-            color: transparent;
-            background: conic-gradient(#D9D7F1 12%,
-                    #BAABDA 12%, #BAABDA 33%,
-                    #E7FBBE 33%, #E7FBBE 55%,
-                    #FFCBCB 55%, #FFCBCB 70%,
-                    #B5DEFF 70%, #B5DEFF 87%,
-                    #F7D1BA 87%);
-            background-size: 50%;
-            background-clip: text;
-            -webkit-background-clip: text;
-
-            animation: expand-rev 0.5s ease forwards;
-
-            cursor: pointer;
-        }
-
-        .gradient-text:hover {
-            animation: expand 0.5s ease forwards;
-        }
-
-        @keyframes expand {
-            0% {
-                background-size: 50%;
-                background-position: 0 0;
-            }
-
-            20% {
-                background-size: 55%;
-                background-position: 0 1em;
-            }
-
-            100% {
-                background-size: 325%;
-                background-position: -10em -4em;
-            }
-        }
-
-        @keyframes expand-rev {
-            0% {
-                background-size: 325%;
-                background-position: -10em -4em;
-            }
-
-            20% {
-                background-size: 55%;
-                background-position: 0 1em;
-            }
-
-            100% {
-                background-size: 50%;
-                background-position: 0 0;
-            }
-        }
-
-        /* jam */
-
-        /* Base Styles
------------------------------------ */
-        jam {
-            height: 100%;
-        }
-
-        jam {
-            margin: 0;
-            padding: 0;
-            background: #f1fbfa;
-            font-family: Arial;
-            font-size: 11px;
-        }
-
-        @media (max-width: 800px),
-        (max-height: 350px) {
-            jam {
-                font-size: 12px;
-            }
-        }
-
-        @media (max-width: 600px),
-        (max-height: 250px) {
-            jam {
-                font-size: 8px;
-            }
-        }
-
-        UL {
-            padding: 0;
-            margin: 0;
-        }
-
-        LI {
-            list-style: none;
-        }
-
-        .wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            height: 500px;
-            text-align: center;
-        }
-
-        .wrapper:before {
-            content: "";
-            display: inline-block;
-            height: 12em;
-            width: 20px;
-            vertical-align: middle;
-        }
-
-        /* Dottes
------------------------------------ */
-        .dottes {
-            display: inline-block;
-            width: 1em;
-            margin: 0 1em;
-            background: transparent !important;
-            vertical-align: middle;
-            -webkit-transition: 0.5s;
-            transition: 0.5s;
-        }
-
-        .dottes:before,
-        .dottes:after {
-            content: "";
-            display: block;
-            width: 1em;
-            height: 0;
-            border-bottom: 1em solid #f1fbfa;
-            -webkit-transition: border-color 0.5s;
-            transition: border-color 0.5s;
-        }
-
-        .dottes:before {
-            margin-bottom: 2em;
-        }
-
-        /* Digit
------------------------------------ */
-        .digit {
-            display: inline-block;
-            width: 6em;
-            margin: 0 1em;
-            vertical-align: middle;
-        }
-
-        .digit__item {
-            position: relative;
-            -webkit-transition: background 0.5s;
-            transition: background 0.5s;
-        }
-
-        .digit__item:before,
-        .digit__item:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 0;
-            height: 0;
-            border: 0.5em solid transparent;
-            -webkit-transition: border-color 0.5s;
-            transition: border-color 0.5s;
-        }
-
-        .item--h {
-            clear: both;
-            width: 3.4em;
-            height: 1em;
-            margin: 0 auto;
-        }
-
-        .item--1:before,
-        .item--1:after {
-            border-bottom-color: transparent !important;
-        }
-
-        .item--1:before {
-            left: -1em;
-            border-left-color: transparent !important;
-        }
-
-        .item--1:after {
-            right: -1em;
-            border-right-color: transparent !important;
-        }
-
-        .item--4 {
-            width: 3.4em;
-            margin: 4em auto 0;
-        }
-
-        .item--4:before {
-            left: -0.5em;
-            border-left: 0;
-            border-top-color: transparent !important;
-            border-bottom-color: transparent !important;
-        }
-
-        .item--4:after {
-            right: -0.5em;
-            border-right: 0;
-            border-top-color: transparent !important;
-            border-bottom-color: transparent !important;
-        }
-
-        .item--7:before,
-        .item--7:after {
-            border-top-color: transparent !important;
-        }
-
-        .item--7:before {
-            left: -1em;
-            border-left-color: transparent !important;
-        }
-
-        .item--7:after {
-            right: -1em;
-            border-right-color: transparent !important;
-        }
-
-        .item--v {
-            float: left;
-            width: 1em;
-            height: 3.4em;
-            margin: 0.3em 0;
-        }
-
-        .item--v:before {
-            top: -1em;
-        }
-
-        .item--v:after {
-            bottom: -1em;
-        }
-
-        .item--3,
-        .item--6 {
-            float: right;
-        }
-
-        .item--2:before,
-        .item--5:before {
-            border-top-color: transparent !important;
-            border-right-color: transparent !important;
-        }
-
-        .item--2:after,
-        .item--5:after {
-            border-bottom-color: transparent !important;
-            border-right-color: transparent !important;
-        }
-
-        .item--3:before,
-        .item--6:before {
-            border-top-color: transparent !important;
-            border-left-color: transparent !important;
-        }
-
-        .item--3:after,
-        .item--6:after {
-            border-bottom-color: transparent !important;
-            border-left-color: transparent !important;
-        }
-
-        .item--2:after,
-        .item--5:before {
-            border-left-color: transparent !important;
-        }
-
-        .item--3:after,
-        .item--6:before {
-            border-right-color: transparent !important;
-        }
-
-        .item {
-            background: #f1fbfa;
-        }
-
-        .item:before,
-        .item:after {
-            border-color: #f1fbfa;
-        }
-
-        .digit--sec {
-            vertical-align: text-bottom;
-            font-size: .5em;
-        }
-
-        @media (max-width: 600px) {
-            .digit--sec {
-                display: none;
-            }
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/style.css">
 </head>
 
 <body>
-    <div class="container" style="padding-top: 15%; width: 1200px;">
-        <div class="row">
-            <div class="col-6">
-                <h1 class="gradient-text">hello world!<h1>
-            </div>
-            <div class="col-6">
+    <div class="container">
+        <header data-aos="fade-down">
+            <div class="collapse" id="navbarHeader" style="">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4>About</h4>
+                            <p class="text-muted">Ini adalah page index dari kikukeii.github.io.</p>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4>Contact</h4>
+                            <ul class="list-unstyled">
 
-                <jam>
-                    <div class="wrapper">
-                        <ul class="digit hours--1">
-                            <li class="item digit__item item--h item--1"></li>
-                            <li class="item digit__item item--v item--2"></li>
-                            <li class="item digit__item item--v item--3"></li>
-                            <li class="item digit__item item--h item--4"></li>
-                            <li class="item digit__item item--v item--5"></li>
-                            <li class="item digit__item item--v item--6"></li>
-                            <li class="item digit__item item--h item--7"></li>
-                        </ul>
-
-                        <ul class="digit hours--2">
-                            <li class="item digit__item item--h item--1"></li>
-                            <li class="item digit__item item--v item--2"></li>
-                            <li class="item digit__item item--v item--3"></li>
-                            <li class="item digit__item item--h item--4"></li>
-                            <li class="item digit__item item--v item--5"></li>
-                            <li class="item digit__item item--v item--6"></li>
-                            <li class="item digit__item item--h item--7"></li>
-                        </ul>
-
-                        <span class="dottes"></span>
-
-                        <ul class="digit min--0">
-                            <li class="item digit__item item--h item--1"></li>
-                            <li class="item digit__item item--v item--2"></li>
-                            <li class="item digit__item item--v item--3"></li>
-                            <li class="item digit__item item--h item--4"></li>
-                            <li class="item digit__item item--v item--5"></li>
-                            <li class="item digit__item item--v item--6"></li>
-                            <li class="item digit__item item--h item--7"></li>
-                        </ul>
-
-                        <ul class="digit min--1">
-                            <li class="item digit__item item--h item--1"></li>
-                            <li class="item digit__item item--v item--2"></li>
-                            <li class="item digit__item item--v item--3"></li>
-                            <li class="item digit__item item--h item--4"></li>
-                            <li class="item digit__item item--v item--5"></li>
-                            <li class="item digit__item item--v item--6"></li>
-                            <li class="item digit__item item--h item--7"></li>
-                        </ul>
-
-                        <ul class="digit digit--sec">
-                            <li class="item digit__item item--h item--1"></li>
-                            <li class="item digit__item item--v item--2"></li>
-                            <li class="item digit__item item--v item--3"></li>
-                            <li class="item digit__item item--h item--4"></li>
-                            <li class="item digit__item item--v item--5"></li>
-                            <li class="item digit__item item--v item--6"></li>
-                            <li class="item digit__item item--h item--7"></li>
-                        </ul>
-
-                        <ul class="digit digit--sec">
-                            <li class="item digit__item item--h item--1"></li>
-                            <li class="item digit__item item--v item--2"></li>
-                            <li class="item digit__item item--v item--3"></li>
-                            <li class="item digit__item item--h item--4"></li>
-                            <li class="item digit__item item--v item--5"></li>
-                            <li class="item digit__item item--v item--6"></li>
-                            <li class="item digit__item item--h item--7"></li>
-                        </ul>
+                                <li class="pb-2"><a href="https://twitter.com/kikukeii_" class="btn btn-outline-info"><i
+                                            class="bi bi-twitter pe-4"></i>Follow me on
+                                        Twitter</a></li>
+                                <li class="pb-2"><a href="https://facebook.com/kikukeii" class="btn btn-outline-info"><i
+                                            class="bi bi-facebook pe-4"></i>Add me on
+                                        Facebook</a></li>
+                                <li><a href="mailto:miftakhuddinfalaki@gmail.com" class="btn btn-outline-info"><i
+                                            class="bi bi-envelope-at pe-4"></i> Email
+                                        me</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </jam>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="card" style="width: 100%; text-align: center;">
-                    <div class="card-body bg-primary">
-                        <h5 class="card-title" style="color: #fff;">Page Tree</h5>
-                        <!-- <p class="card-text">Berikut .</p> -->
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item "><a href="https://kikukeii.github.io/profile/index.html">CV</a></li>
-                        <li class="list-group-item"><a href="https://kikukeii.github.io/mnfi">Blog - MnFi</a></li>
-                        <li class="list-group-item"><a href="https://bookcase.my.id">Blog - Bookcase.my.id</a></li>
-                        <li class="list-group-item"><a href="https://keiikomik.vercel.app">Blog - KeiKomik [OFF]</a>
-                        </li>
-                        <li class="list-group-item"><a href="https://kikukeii.github.io/niji">Sticker WhatsApp Nijisanji
-                                [ON Develop]</a></li>
-                        <li class="list-group-item"><a href="#">Bot Discord - [ON Develop]</a></li>
-                    </ul>
+            <div class="navbar shadow-sm">
+                <div class="container">
+                    <a href="./" class="navbar-brand d-flex align-items-center">
+                        <i class="bi bi-house-door pe-4" style="width: 20px; "></i>
+                        <strong> Home</strong>
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
 
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6" data-aos="fade-left">
+                <img src="./img/heros-img.png" class="d-block mx-lg-auto img-fluid" alt="..." loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 lh-1 mb-3 typing1-name">MIFTAKHUDDIN FALAKI</h1>
+                <div class="tulis" data-aos="zoom-in">
+                    <p class="lead">Saya adalah <b class="fw-bold"><span class="typed-text">seorang yang dapat
+                                bek</span><span class="cursor typing2">&nbsp;</span></b></p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="./profile/#about" class="btn btn-primary btn-lg px-4 me-md-2">About</a>
+                        <a href="./profile/#contact" class="btn btn-outline-secondary btn-lg px-4">Hire</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container" data-aos="fade-up">
+        <main>
+
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-bold">All Project</h1>
+                        <p class="lead text-muted">Projeck yang tidak ada dan ada di portofolio.</p>
+                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                            <input id="cari" type="search" class="form-control" placeholder="Cari..."
+                                aria-label="Search">
+                        </form>
+                        <p>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-primary filter-button active"
+                                data-filter="all"><i class="bi bi-bookmark"></i>All</button>
+                            <button type="button" class="btn btn-outline-primary filter-button" data-filter="web"><i
+                                    class="bi bi-android2"></i> Android</button>
+                            <button type="button" class="btn btn-outline-primary filter-button" data-filter="web"><i
+                                    class="bi bi-browser-edge"></i> Web</button>
+                            <button type="button" class="btn btn-outline-primary filter-button" data-filter="bot"><i
+                                    class="bi bi-robot"></i> Bot</button>
+                            <button type="button" class="btn btn-outline-primary filter-button" data-filter="service"><i
+                                    class="bi bi-fire"></i> Service</button>
+                            <button type="button" class="btn btn-outline-primary filter-button" data-filter="desktop"><i
+                                    class="bi bi-cpu"></i> Desktop</button>
+                            <button type="button" class="btn btn-outline-primary filter-button" data-filter="blog"><i
+                                    class="bi bi-journal-richtext"></i> Blog</button>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="album py-5 ">
+                <div class="container">
+
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="galery-list">
+
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-muted">© 2022 kikukeii.github.io</p>
-
-            <a href="/"
-                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                <svg class="bi me-2" width="40" height="32">
-                    <use xlink:href="#bootstrap"></use>
-                </svg>
-            </a>
-
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="https://github.com/kikukeii" class="nav-link px-2 text-muted">Github</a>
-                </li>
-                <li class="nav-item"><a href="https://web.facebook.com/kikukeii"
-                        class="nav-link px-2 text-muted">Facebook</a></li>
-                <li class="nav-item"><a href="https://instagram.com/kikukeii"
-                        class="nav-link px-2 text-muted">Instagram</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <i class="bi bi-github"></i>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">© 2022 - <i id="years"></i> kikuKeii.github.io. All
+                    rights reserved.</span>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-twitter"></i></a></li>
+                <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-facebook"></i></a></li>
             </ul>
         </footer>
     </div>
 
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
-    <script>
-        var digits_map = [[".item--1", ".item--2", ".item--3", ".item--5", ".item--6", ".item--7"],
-        [".item--3", ".item--6"],
-        [".item--1", ".item--3", ".item--4", ".item--5", ".item--7"],
-        [".item--1", ".item--3", ".item--4", ".item--6", ".item--7"],
-        [".item--2", ".item--3", ".item--4", ".item--6"],
-        [".item--1", ".item--2", ".item--4", ".item--6", ".item--7"],
-        [".item--1", ".item--2", ".item--4", ".item--5", ".item--6", ".item--7"],
-        [".item--1", ".item--3", ".item--6"],
-        [".item--1", ".item--2", ".item--3", ".item--4", ".item--5", ".item--6", ".item--7"],
-        [".item--1", ".item--2", ".item--3", ".item--4", ".item--6", ".item--7"]
-        ];
-
-        var head = document.querySelector('head');
-        head.insertAdjacentHTML('beforeend', '<style id="coloring"></style>');
-        var style_container = document.getElementById("coloring");
-
-        var color_step = 0;
-        var color_steps_max = 12;
-        var color_period = 1; // time out before changing color
-        var color_time_counter = 0;
-        var color_class = "js-color--active";
-
-        var digits = document.querySelectorAll('.digit');
-        var digit_item_class = ".digit__item";
-        var digits_items = document.querySelectorAll(".digit__item");
-        var dottes = document.querySelector(".dottes");
-        var dottes_items = document.querySelectorAll(".dottes__item");
-
-        setTime();
-        var interval = setInterval(setTime, 1000);
-
-        function setTime() {
-
-            // Get Date 
-            var now = new Date();
-            var hour = now.getHours() >= 10 ? now.getHours() : "0" + now.getHours();
-            var min = now.getMinutes() >= 10 ? now.getMinutes() : "0" + now.getMinutes();
-            var sec = now.getSeconds() >= 10 ? now.getSeconds() : "0" + now.getSeconds();
-            var date_string = hour + "" + min + "" + sec;
-
-            // Change Time
-            for (var i = 0; i < digits.length; i++) {
-
-                var digit = digits[i];
-                var digit_value = +date_string.charAt(i);
-
-                remove_class_from_items(digit, color_class);
-                remove_class_from_elem(dottes, color_class);
-
-                var digit_elems_classes = digits_map[digit_value];
-
-                if (digit_elems_classes.length > 0) {
-                    for (var l = 0; l < digit_elems_classes.length; l++) {
-                        var item = digit.querySelector(digit_elems_classes[l]);
-                        item.classList.add(color_class);
-                    }
-                }
-
-            }
-
-            dottes.classList.add(color_class);
-
-            // Change colors
-            if (color_time_counter == color_period) {
-                color_time_counter = 0;
-                change_color_by_style();
-            }
-            else {
-                color_time_counter++;
-            }
-
-        }
-
-        function add_class_to_items(elem) {
-            var items = elem.querySelectorAll(".item");
-
-            for (var i = 0; i < items.length; i++) {
-                items[i].classList.add(class_color);
-            }
-        }
-
-        function remove_class_from_items(elem, class_prefix) {
-            var items = elem.querySelectorAll(".item");
-
-            for (var i = 0; i < items.length; i++) {
-                remove_class_from_elem(items[i], class_prefix);
-            }
-        }
-
-        function remove_class_from_elem(elem, class_prefix) {
-            var classes = elem.classList;
-
-            for (var k = 0; k < classes.length; k++) {
-                if (classes[k].indexOf(class_prefix) >= 0) {
-                    elem.classList.remove(classes[k]);
-                }
-            }
-        }
-
-        function change_color_by_style() {
-
-            var hue_value = 360 / color_steps_max * color_step;
-            var bright_value = 50;
-
-            var current_color = "hsl(" + hue_value + ", 70%, " + bright_value + "%)";
-            var color_class_local = "." + color_class;
-
-            var styles = color_class_local + " { background: " + current_color + "; }";
-            styles += color_class_local + ":before, " + color_class_local + ":after { border-color: " + current_color + "; }";
-
-            style_container.innerHTML = styles;
-
-            if (color_step < color_steps_max) {
-                color_step++;
-            }
-            else {
-                color_step = 0;
-            }
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="./dist/script.js"></script>
 </body>
 
 </html>
