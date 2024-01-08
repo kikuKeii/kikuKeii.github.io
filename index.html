@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>kikuKeii.github.io | Pages Tree</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="./dist/style.css" />
 </head>
@@ -82,6 +83,14 @@
             <b class="fw-bold"><span class="typed-text">seorang yang dapat bek</span><span
                 class="cursor typing2">&nbsp;</span></b>
           </p>
+          <div id="alert-init" class="alert alert-info position-relative" role="alert">
+            <i onclick="closeAlert()" class="bi bi-x-circle fs-3 position-absolute top-0 end-0 me-1"></i>
+            <h4 class="alert-heading">Welcome to my Link list!</h4>
+            <p>This page is created using static web.</p>
+            <hr>
+            <p class="mb-0">Open new versi of this page <a href="http://kiki.my.id" class="text-decoration-none fw-bold"
+                target="_blank" rel="noopener noreferrer">Here</a>.</p>
+          </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
             <a href="https://kikukeii.github.io/profile/#about" class="btn btn-primary btn-lg px-4 me-md-2">About</a>
             <a href="https://kikukeii.github.io/profile/#contact" class="btn btn-outline-secondary btn-lg px-4">Hire</a>
@@ -126,38 +135,41 @@
           </p>
         </div>
 
-      <div class="album py-5">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="galery-list"></div>
+        <div class="album py-5">
+          <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="galery-list"></div>
+          </div>
         </div>
-      </div>
     </main>
   </div>
 
   <div class="container" data-aos="fade-up" id="#link-list">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col" align="center">
-          <h1 class="fw-bold">Link List</h1>
-          <div class="card text-center mb-3">
-            <div class="card-body">
-              <img src="./img/profile-img4.png" class="card-img-top rounded-circle" style="width: 140px;" alt="...">
-              <h5 class="card-title">Miftakhuddin Falaki</h5>
-              <p class="card-text">Connect with me.</p><a href="/profile/#contact" class="btn btn-primary">
-                Message <span class="badge text-bg-danger">3</span>
-              </a>
-              <hr>
-                <a href="https://www.linkedin.com/in/miftakhuddin-falaki/" class="link-primary" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-linkedin fs-3"></i> </a><br><hr>
-                <a href="http://github.com/kikukeii" class="" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-github fs-3"></i></a><br><hr>
-                <a href="http://web.facebook.com/kikukeii0" class="" target="_blank" rel="noopener noreferrer">
-                <i class="bi bi-facebook fs-3"></i></a>
-            </div>
+    <div class="row">
+      <div class="col-mb-3"></div>
+      <div class="col-mb-6">
+        <h1 class="fw-bold">Link List</h1>
+        <div class="card text-center mb-3">
+          <div class="card-body">
+            <img src="./img/profile-img4.png" class="card-img-top rounded-circle" style="width: 140px;" alt="...">
+            <h5 class="card-title">Miftakhuddin Falaki</h5>
+            <p class="card-text">Connect with me.</p><a href="/profile/#contact" class="btn btn-primary">
+              Message <span class="badge text-bg-danger">3</span>
+            </a>
+            <hr>
+            <a href="https://www.linkedin.com/in/miftakhuddin-falaki/" class="link-primary" target="_blank"
+              rel="noopener noreferrer">
+              <i class="bi bi-linkedin fs-3"></i> </a><br>
+            <hr>
+            <a href="http://github.com/kikukeii" class="" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-github fs-3"></i></a><br>
+            <hr>
+            <a href="http://web.facebook.com/kikukeii0" class="" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-facebook fs-3"></i></a>
           </div>
         </div>
-        <div class="col"></div>
-      </div
+      </div>
+      <div class="col-mb-3"></div>
+    </div>
   </div>
 
   <div class="container">
@@ -177,16 +189,21 @@
     </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
     crossorigin="anonymous"></script>
   <script src="./dist/script.js"></script>
+  <script>
+    function closeAlert() {
+      $('#alert-init').hide(1000)
+    }
+  </script>
 </body>
 
 </html>
