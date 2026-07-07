@@ -44,8 +44,10 @@
             }
         },
         "website": [
-            "https://kiki.my.id",
-            "https://devkikinian.click"
+            "kiki.my.id",
+            "devkikinian.click",
+            "kronjo.com",
+            "native.biz.id"
         ],
         "summary": {
             "v1_deprecated": "Experienced in developing applications using PHP, JavaScript, RESTful API, and databases such as MySQL, PostgreSQL, and MS SQL Server. Proficient in frameworks like Laravel, CodeIgniter 4, and ExpressJS. Also experienced in providing technical support for user issues and handling application deployment.",

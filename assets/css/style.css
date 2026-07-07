@@ -26,11 +26,20 @@
 }
 
 body {
-  font-family: "Cause", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Cause",
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  background: radial-gradient(circle at 50% 0%, var(--bg-dark-1) 0%, var(--bg-dark-2) 100%);
+  background: radial-gradient(
+    circle at 50% 0%,
+    var(--bg-dark-1) 0%,
+    var(--bg-dark-2) 100%
+  );
   background-color: var(--bg-dark-2);
   background-attachment: fixed;
   color: var(--text-light);
@@ -59,7 +68,12 @@ body {
 }
 
 /* Typography Enhancements (Bootstrap 5 supportive) */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Plus Jakarta Sans", "Cause", sans-serif;
   font-weight: 700;
   color: var(--text-light);
@@ -92,7 +106,12 @@ h2:hover::after {
 
 /* Specific elements like name and summary styling */
 #my-name {
-  background: linear-gradient(135deg, var(--text-light) 30%, var(--accent-cyan) 70%, var(--accent-purple) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--text-light) 30%,
+    var(--accent-cyan) 70%,
+    var(--accent-purple) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
@@ -218,14 +237,16 @@ a:hover {
 }
 
 /* Forms and Floating Labels */
-.form-control, .form-floating textarea {
+.form-control,
+.form-floating textarea {
   background-color: rgba(255, 255, 255, 0.02) !important;
   border: 1px solid var(--glass-border) !important;
   color: var(--text-light) !important;
   border-radius: 8px !important;
   transition: var(--transition) !important;
 }
-.form-control:focus, .form-floating textarea:focus {
+.form-control:focus,
+.form-floating textarea:focus {
   background-color: rgba(255, 255, 255, 0.05) !important;
   border-color: var(--accent-cyan) !important;
   box-shadow: 0 0 12px rgba(0, 242, 254, 0.15) !important;
@@ -236,7 +257,11 @@ a:hover {
 
 /* Buttons style overrides */
 .btn-danger {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)) !important;
+  background: linear-gradient(
+    135deg,
+    var(--accent-cyan),
+    var(--accent-blue)
+  ) !important;
   border: none !important;
   color: #05060f !important;
   font-weight: 700 !important;

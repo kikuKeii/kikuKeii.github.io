@@ -51,7 +51,6 @@ $(document).keydown(function (e) {
     e.preventDefault();
 
     const route = "./assets/pdf/Miftakhuddin Falaki - IT Programmer.pdf";
-    console.log(route);
 
     window.open(
       route,

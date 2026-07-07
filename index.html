@@ -57,6 +57,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"
         integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.js.iife.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.css" />
+    <link rel="stylesheet" href="./assets/lib/css/driver.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -92,36 +95,33 @@
                             </li>
                             <li><a class="dropdown-item" href="#contact">Contact</a></li>
                             <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li class="d-block d-md-none">
-                                <a class="dropdown-item download-cv" href="#">Download PDF</a>
+                                <hr class="dropdown-divider d-none" />
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-light" role="button">Start Tour</a>
-                    </li>
                 </ul>
             </div>
-            <a href="./assets/pdf/Miftakhuddin Falaki - IT Programmer.pdf"
-                class="d-none d-md-block btn btn-danger download-cv"
-                download="Miftakhuddin Falaki - IT Programmer.pdf">Download here</a>
         </div>
     </nav>
 
     <div class="container" id="about">
         <div class="row flex-lg-row-reverse align-items-center justify-content-center py-5">
-            <div class="col-10 col-sm-8 col-lg-6 position-relative">
+            <div class="col-10 col-sm-8 col-lg-6 ">
                 <img id="avatar" src="#" class="d-block mx-lg-auto img-fluid rounded-circle shadow"
                     alt="Miftakhuddin Falaki - IT Programmer & Full Stack Developer" width="400" height="400"
                     loading="lazy" />
             </div>
-            <div class="col-lg-6 d-grid gap-2">
+            <div class="col-lg-6 d-grid gap-2" id="about-me">
                 <h1 class="display-5 fw-bold lh-1 mb-3" id="my-name">
                     Miftakhuddin Falaki
                 </h1>
                 <p id="summary"></p>
+            </div>
+            <div class="d-grid d-md-flex gap-2">
+                <button class="btn btn-danger btn-sm" id="start-tour">Start Tour</button>
+                <a href="./assets/pdf/Miftakhuddin Falaki - IT Programmer.pdf"
+                    class="btn btn-warning download-cv btn-sm" download="Miftakhuddin Falaki - IT Programmer.pdf"
+                    id="download-cv-btn-1">Download resume</a>
             </div>
         </div>
     </div>
@@ -283,7 +283,7 @@
                 </div>
                 <div class="col-12">
                     <div class="row flex-lg-row-reverse">
-                        <div class="col-md-6">
+                        <div class="col-md-6" id="list-contact">
                             <div class="d-grid gap-2">
                                 <div class="fw-bold">Email</div>
                                 <div class="d-flex gap-2">
@@ -301,7 +301,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6" id="form-input-contact-me">
                             <div class="row mt-md-0 mt-4">
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
@@ -400,7 +400,7 @@
                                 Ujungnya malah dibalikin ke yang simple dan clean.</span>
                             <br />(*/ω＼*). </small><br />
                         <small>Sekarang hanya menggunakan git action untuk build dan free host
-                            dari vercel.com</small>
+                            dari Cloudflare</small>
                     </div>
                 </div>
                 <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
@@ -418,7 +418,7 @@
                         <div class="d-grid">
                             <div class="d-frid d-md-flex gap-2">
                                 <p class="text-center fw-bold">Powered by:</p>
-                                <ul class="nav justify-content-center pb-3 mb-3 fw-bold">
+                                <ul class="nav justify-content-center pb-3 mb-3 fw-bold" id="powerby">
                                     <li class="nav-item">
                                         <a href="https://github.com/kikukeii"
                                             class="text-secondary text-decoration-none px-2" target="_blank">Github</a>
@@ -432,6 +432,11 @@
                                             target="_blank">Vercel</a>
                                     </li>
                                     <li class="nav-item">
+                                        <a href="https://cloudflare.com"
+                                            class="text-secondary text-decoration-none px-2"
+                                            target="_blank">Cloudflare</a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a href="https://getbootstrap.com"
                                             class="text-secondary text-decoration-none px-2"
                                             target="_blank">Bootstrap</a>
@@ -439,6 +444,10 @@
                                     <li class="nav-item">
                                         <a href="https://leafletjs.com" class="text-secondary text-decoration-none px-2"
                                             target="_blank">Leaflet</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://driverjs.com" class="text-secondary text-decoration-none px-2"
+                                            target="_blank">Driver js</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="https://www.freepik.com"
@@ -454,7 +463,7 @@
                             </marquee>
                         </div>
                     </div>
-                    <div class="col-md-4 d-md-flex d-grid gap-2">
+                    <div class="col-md-4 d-md-flex d-grid gap-2" id="visit-count-section">
                         <div class="d-md-flex fw-bold">Visit Count</div>
                         <div class="d-grid gap-2">
                             <div class="d-flex gap-1">
@@ -566,6 +575,7 @@
     <script src="./assets/js/obfuscate/app.js"></script>
     <script src="./assets/js/app.js"></script>
     <script src="./assets/lib/js/leaflet.js"></script>
+    <script src="./assets/lib/js/driver.js"></script>
 </body>
 
 </html>
