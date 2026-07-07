@@ -36,27 +36,6 @@ Baru saja *${name}* mencoba mengirim pesan melalui WhatsApp.\n
 }
 
 $(document).ready(function () {
-  let dev = true;
-  $.ajax({
-    url: "https://service.kiki.my.id/api/visit-count",
-    method: "GET",
-    data: {
-      code: "kikimyid",
-      dev: dev ? 1 : 0,
-    },
-    success: function (data) {
-      $(".vcount-today").text(data.today ?? 0);
-      $(".vcount-this-week").text(data.this_week ?? 0);
-      $(".vcount-this-month").text(data.this_month ?? 0);
-      $(".vcount-this-year").text(data.this_year ?? 0);
-    },
-    error: function (xhr, status, error) {
-      console.log(error);
-    },
-  });
-});
-
-$(document).ready(function () {
   $(".download-cv").on("click", function () {
     alertShow("Info", "You Are download PDF", "info", "Okay");
   });
