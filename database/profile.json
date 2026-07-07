@@ -1,0 +1,191 @@
+{
+    "data": {
+        "username": "kikukeii",
+        "name": "Miftakhuddin Falaki",
+        "avatar": "./assets/images/hero2.jpg",
+        "contact": {
+            "email": [
+                "miftakhuddinfalaki@gmail.com",
+                "kiki@devkikinian.click",
+                "me@kiki.my.id"
+            ],
+            "phone": [
+                "628386000048",
+                "6283807303926"
+            ]
+        },
+        "location": {
+            "country": "Indonesia",
+            "city": "Kab. Tangerang",
+            "province": "Banten"
+        },
+        "job_title": [
+            "Software Engineer",
+            "Programmer",
+            "Backend Developer",
+            "Web Developer",
+            "Fullstack Developer"
+        ],
+        "social_media": {
+            "github": {
+                "title": "Github",
+                "link": "https://github.com/kikukeii",
+                "icon": "bi bi-github"
+            },
+            "linkedin": {
+                "title": "Linkedin",
+                "link": "https://linkedin.com/miftakhuddin-falaki",
+                "icon": "bi bi-linkedin"
+            },
+            "whatsapp": {
+                "title": "Whatsapp",
+                "link": "https://wa.me/628386000048",
+                "icon": "bi bi-whatsapp"
+            }
+        },
+        "website": [
+            "https://kiki.my.id",
+            "https://devkikinian.click"
+        ],
+        "summary": {
+            "v1_deprecated": "Experienced in developing applications using PHP, JavaScript, RESTful API, and databases such as MySQL, PostgreSQL, and MS SQL Server. Proficient in frameworks like Laravel, CodeIgniter 4, and ExpressJS. Also experienced in providing technical support for user issues and handling application deployment.",
+            "v2_deprecated": "I have over 2 years of experience in application development using technologies such as PHP, JavaScript, and RESTful APIs, as well as databases like MySQL, PostgreSQL, and MS SQL Server. I am also proficient in frameworks such as Laravel, CodeIgniter 4, and Express.js. Additionally, I have experience in providing technical support for user issues and handling application deployment.",
+            "v3_deprecated": "Full Stack Developer & HIS Specialist with 3+ years of experience in PHP, JavaScript (Laravel, Express.js), and database management (MySQL, PostgreSQL, MS SQL Server). Skilled in data warehouse design, API development, CI/CD implementation, and system integration (HIS, payment gateways). Adept at creating dashboards for data-driven insights and optimizing system performance through cross-functional collaboration.",
+            "v4": "Full stack developer with experience in building and maintaining enterprise applications using Laravel, PHP, Node.js, and JavaScript. Skilled in developing reporting systems, analytics Dashboards, dynamic data management, RESTful API integrations, and WhatsApp gateway Solutions using Express.js and baileys. Proficient in database design, complex SQL queries, SQL Server integration, and application performance optimization. Experienced in end-to-end software Development, including backend and frontend implementation, system maintenance, Troubleshooting, and Laravel framework upgrades. Strong problem-solving abilities with a focus on Delivering scalable, reliable, and efficient business solutions."
+        },
+        "education": [
+            {
+                "img": null,
+                "institution": "Indraprasta PGRI University",
+                "city": "Jakarta Selatan",
+                "degree": "Bachelor of Computer Science",
+                "major": "Information Technology",
+                "start": "2018",
+                "end": "2022",
+                "gpa": "3.55",
+                "description": null,
+                "link": "https://unindra.ac.id"
+            },
+            {
+                "img": null,
+                "institution": "SMK Mandiri 02 Balaraja",
+                "city": "Kab. Tangerang",
+                "degree": "Vocational High School",
+                "major": "Multimedia",
+                "start": "2015",
+                "end": "2018",
+                "gpa": null,
+                "description": null,
+                "link": "https://www.smkmandiri2balaraja.sch.id"
+            }
+        ],
+        "language": [
+            "Bahasa Indonesia : Fluent",
+            "English : Basic reading and writing skills"
+        ],
+        "hobby": [
+            "Reading",
+            "Watching Movies",
+            "Playing Games"
+        ],
+        "skills": [
+            {
+                "name": "HTML",
+                "level": "Advance",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
+            },
+            {
+                "name": "CSS",
+                "level": "Advance",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
+            },
+            {
+                "name": "JavaScript",
+                "level": "Advance",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
+            },
+            {
+                "name": "PHP",
+                "level": "Advance",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png"
+            },
+            {
+                "name": "Kotlin",
+                "level": "Basic",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/4479d2a2c854198cb00160f8593519c14dc3b905/topics/kotlin/kotlin.png"
+            },
+            {
+                "name": "Bootstrap",
+                "level": "Advance",
+                "description": null,
+                "img": "https://avatars.githubusercontent.com/u/2918581"
+            },
+            {
+                "name": "Laravel",
+                "level": "Advance",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/56a826d05cf762b2b50ecbe7d492a839b04f3fbf/topics/laravel/laravel.png"
+            },
+            {
+                "name": "CodeIgniter 4",
+                "level": "Advance",
+                "description": null,
+                "img": "https://avatars.githubusercontent.com/u/44521256"
+            },
+            {
+                "name": "ExpressJS",
+                "level": "Advance",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png"
+            },
+            {
+                "name": "MySQL",
+                "level": "Advance",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
+            },
+            {
+                "name": "PostgreSQL",
+                "level": "Advance",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png"
+            },
+            {
+                "name": "MS SQL Server",
+                "level": "Advance",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png"
+            },
+            {
+                "name": "Git",
+                "description": null,
+                "img": "https://raw.githubusercontent.com/github/explore/9d47da057258d668c7dba9e9bb9cfcd45e2226e9/topics/git/git.png"
+            },
+            {
+                "name": "GitHub",
+                "img": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
+            },
+            {
+                "name": "GitLab",
+                "img": "https://images.ctfassets.net/xz1dnu24egyd/3FbNmZRES38q2Sk2EcoT7a/a290dc207a67cf779fc7c2456b177e9f/press-kit-icon.svg"
+            },
+            {
+                "name": "Apache",
+                "img": "https://avatars.githubusercontent.com/u/47359"
+            },
+            {
+                "name": "Nginx",
+                "img": "https://avatars.githubusercontent.com/u/1412239"
+            },
+            {
+                "name": "Linux",
+                "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png"
+            }
+        ]
+    }
+}

@@ -1,0 +1,393 @@
+{
+    "master_data": {
+        "category": [
+            "Web",
+            "Android",
+            "Service",
+            "Certificate",
+            "Other"
+        ]
+    },
+    "data": [
+        {
+            "unique_id": "ibwrsdweufknsa",
+            "show": true,
+            "thumbnail": "/assets/images/portofolio/k-player/k-player-1.png",
+            "images": [
+                "/assets/images/portofolio/k-player/k-player-1.png",
+                "/assets/images/portofolio/k-player/k-player-2.png"
+            ],
+            "title": "K-Player",
+            "date": "Nov 2025 - Present",
+            "description": {
+                "id": "K-Player adalah aplikasi berbasis web untuk menampilkan video promosi pada TV cluster di perusahaan Anda. Sistem ini mempermudah Anda untuk menampilkan video promosi pada banyak TV.",
+                "en": "K-Player is a web-based application designed to display promotional videos on cluster TVs in your company. This system makes it easier for you to showcase promotional videos across multiple TVs."
+            },
+            "category": "Web Android",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "Javascript",
+                "jQuery",
+                "PHP",
+                "Codeigniter 4",
+                "MySQLi",
+                "Kotlin"
+            ],
+            "link": {
+                "Demo": "https://k-player.kiki.my.id/q/4"
+            }
+        },
+        {
+            "unique_id": "ibwrufknsa",
+            "show": true,
+            "thumbnail": "/assets/images/portofolio/mrhp/report-master-mrhp.png",
+            "images": [
+                "/assets/images/portofolio/mrhp/report-master-mrhp.png"
+            ],
+            "title": "Report Master",
+            "date": "Apr 2024 - Des 2024",
+            "description": {
+                "id": "Dibuat dengan Laravel untuk membantu Back-Office Mandaya Royal Hospital Puri. Fiturnya seperti mengenerate laporan pasien, mengirim hasil lab langsung ke pasien, integrasi dengan Debtor Allianz, serta mengirimkan slip gaji dokter. Semuanya dapat dilakukan hanya dengan beberapa klik.",
+                "en": "Created with Laravel to help Mandaya Royal Hospital Puri's back office. The features are generating patient reports, sending laboratory results directly to patients, integrating with Allianz Debtor, and sending doctor's salary slips. It can be done with just a few clicks."
+            },
+            "category": "Web",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Javascript",
+                "ExpressJS",
+                "PHP",
+                "Laravel",
+                "MS SQL Server",
+                "Bootstrap"
+            ],
+            "link": {}
+        },
+        {
+            "unique_id": "dsaefwghetf",
+            "show": true,
+            "thumbnail": "/assets/images/portofolio/ssayomart/ssayomart-web.png",
+            "images": [
+                "/assets/images/portofolio/ssayomart/ssayomart-web.png"
+            ],
+            "title": "Ssayomart E-commerce",
+            "date": "Jul 2023 - Jan 2024",
+            "description": {
+                "id": "Ssayomart E-commerce adalah sebuah aplikasi e-commerce berbasis web yang memungkinkan pengguna membeli bahan makanan, snack, minuman, dan saus Korea secara langsung tanpa perantara. Aplikasi e-commerce berbasis web ini dibuat menggunakan framework Codeigniter 4 dan bahasa pemrograman PHP. Lalu versi androidnya dibuat dengan Kotlin.",
+                "en": "Ssayomart E-commerce is a web-based e-commerce application that allows users to purchase foodstuffs, snacks, drinks, and Korean sauces directly without a third party as a seller. This web-based e-commerce application was created using the Codeigniter 4 framework and the PHP programming language. The android version was made with Kotlin."
+            },
+            "category": "Web Android",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Javascript",
+                "Kotlin",
+                "PHP",
+                "Codeigniter",
+                "MySQL",
+                "Bootstrap"
+            ],
+            "link": {
+                "Site": "https://ssayomart.com/"
+            }
+        },
+        {
+            "unique_id": "fodafafnoi",
+            "show": true,
+            "thumbnail": "/assets/images/portofolio/bcsk/bc-street-kit-1.png",
+            "images": [
+                "/assets/images/portofolio/bcsk/bc-street-kit-1.png",
+                "/assets/images/portofolio/bcsk/bc-street-kit-2.png"
+            ],
+            "title": "BC Street Kit",
+            "date": "Nov 2022",
+            "description": {
+                "id": "BC Street Kit adalah starter kit minimalis yang dirancang untuk memulai proyek berbasis Express.js. Kit ini menyediakan struktur dasar untuk membangun aplikasi.",
+                "en": "BC Street Kit is a minimalist starter kit designed to kickstart projects based on Express.js. This kit provides a basic structure for building applications."
+            },
+            "category": "Service",
+            "tech": [
+                "Javascript",
+                "ExpressJS",
+                "Vercel",
+                "NodeJS"
+            ],
+            "link": {
+                "Repository": "https://github.com/kikukeii/bc-street-kit",
+                "Site": "https://bcstreetkit.kronjo.com/"
+            }
+        },
+        {
+            "unique_id": "fewrwefnoi",
+            "show": true,
+            "thumbnail": "/assets/images/portofolio/mind-reader/mind-reader-1.png",
+            "images": [
+                "/assets/images/portofolio/mind-reader/mind-reader-1.png",
+                "/assets/images/portofolio/mind-reader/mind-reader-2.png"
+            ],
+            "title": "Mind Reader",
+            "date": "Sep 2023",
+            "description": {
+                "id": "Pembaca Pikiran: Hiburan cerdas yang menebak angka yang Anda pikirkan dengan teknologi kecerdasan buatan. Antarmuka ramah pengguna, pelatihan personalisasi, dan mode hiburan membuatnya unik. Lindungi privasi dengan keamanan tinggi. Rasakan sensasi prediksi angka yang semakin canggih. Magis, sederhana, dan seru! Bercanda Tehe~",
+                "en": "Mind Reader: A clever entertainment that predicts the numbers you think of using artificial intelligence technology. User-friendly interface, personalized training, and entertainment mode make it unique. Protect your privacy with high security. Experience the thrill of predicting numbers that gets better and better. Magical, simple, and fun! Just kidding Tehe~"
+            },
+            "category": "Other",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "Javascript",
+                "jQuery",
+                "Github Pages"
+            ],
+            "link": {
+                "Repository": "https://github.com/kikukeii/pembaca-pikiran/",
+                "Site": "https://kikukeii.github.io/pembaca-pikiran/"
+            }
+        },
+        {
+            "unique_id": "fodiyoofnoi",
+            "show": true,
+            "thumbnail": "/assets/images/portofolio/i-love-you/i-love-you.png",
+            "images": [
+                "/assets/images/portofolio/i-love-you/i-love-you.png"
+            ],
+            "title": "ILoveYou",
+            "date": "Sep 2023",
+            "description": {
+                "id": "ILoveYou adalah proyek static web yang diciptakan dengan penuh cinta untuk menyampaikan pesan kasih sayang kepada calon pasangan anda. Proyek ini menyediakan tampilan yang indah dan menyentuh hati dengan pesan-pesan cinta yang akan membuat hari Anda lebih cerah.",
+                "en": "ILoveYou is a static web project created with full of love to deliver love messages to your partner. This project provides a beautiful and heart-touching display with love messages that will make your day brighter."
+            },
+            "category": "Other",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "Javascript",
+                "jQuery",
+                "Github Pages"
+            ],
+            "link": {
+                "Repository": "https://github.com/kikukeii/iloveyou",
+                "Site": "https://kikukeii.github.io/iloveyou/"
+            }
+        },
+        {
+            "unique_id": "fobfvytsdfnoi",
+            "show": false,
+            "thumbnail": "/assets/images/portofolio/kamar-sehat/kamar-sehat-0.png",
+            "images": [
+                "/assets/images/portofolio/kamar-sehat/kamar-sehat-0.png",
+                "/assets/images/portofolio/kamar-sehat/kamar-sehat-1.png",
+                "/assets/images/portofolio/kamar-sehat/kamar-sehat-2.png",
+                "/assets/images/portofolio/kamar-sehat/kamar-sehat-3.png",
+                "/assets/images/portofolio/kamar-sehat/kamar-sehat-4.png"
+            ],
+            "title": "Kamar Sehat",
+            "date": "Mar 2023 - Mar 2023",
+            "description": {
+                "id": "Website melihat ketersediaan kamar pada rumah sakit seluruh indonesia. Aplikasi ini di-deploy di Vercel.com dan dibagun dengan Next.js, Bootstrap 5 dan Cinta. Repository dari proyek ini dapat dilihat pada kikukeii/kamar-sehat-app. Sumber data(Rest API) Satya Wikananda.",
+                "en": "Website for checking room availability in hospitals throughout Indonesia. This application is deployed on Vercel.com and built with Next.js, Bootstrap 5, and Cinta. The project's repository can be found at kikukeii/kamar-sehat-app. Data source (Rest API) Satya Wikananda."
+            },
+            "category": "Web",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Javascript"
+            ],
+            "link": {
+                "Repository": "https://github.com/kikukeii/kamar-sehat",
+                "Site": "https://kamar-sehat.vercel.app"
+            }
+        },
+        {
+            "unique_id": "fobfvytsrgfdfnoi",
+            "show": false,
+            "thumbnail": "/assets/images/portofolio/nijisanji/niji.png",
+            "images": [
+                "/assets/images/portofolio/nijisanji/niji1.png",
+                "/assets/images/portofolio/nijisanji/niji2.jpg",
+                "/assets/images/portofolio/nijisanji/niji3.jpg",
+                "/assets/images/portofolio/nijisanji/niji4.jpg",
+                "/assets/images/portofolio/nijisanji/niji.png"
+            ],
+            "title": "Nijisanji Vtuber Sticker For WhatsApp",
+            "date": "Oct 2020",
+            "description": {
+                "id": "kumpulan stiker WhatsApp yang menggambarkan berbagai karakter virtual YouTuber (Vtuber) dari kelompok Nijisanji. Stiker WhatsApp ini dirancang dengan penuh kasih sayang untuk para penggemar Vtuber dan digunakan untuk menambahkan sentuhan yang menyenangkan dalam percakapan sehari-hari di WhatsApp.",
+                "en": "A collection of WhatsApp stickers featuring various virtual YouTuber (Vtuber) characters from the Nijisanji group. These stickers are designed with love for Vtuber fans and can be used to add a touch of fun to your daily WhatsApp conversations."
+            },
+            "category": "Android",
+            "tech": [
+                "Json",
+                "Java",
+                "Android Studio"
+            ],
+            "link": {
+                "Repository": "https://github.com/kikukeii/niji",
+                "Site": "https://kikukeii.github.io/niji"
+            }
+        },
+        {
+            "unique_id": "afkhgbkdafqwddf",
+            "show": true,
+            "thumbnail": "https://udemy-certificate.s3.amazonaws.com/image/UC-e503f63b-bfdc-4070-8b1f-99997c07e9de.jpg",
+            "images": [
+                "https://udemy-certificate.s3.amazonaws.com/image/UC-e503f63b-bfdc-4070-8b1f-99997c07e9de.jpg"
+            ],
+            "title": "NGINX MasterClass: NGINX Server & Custom Load Balancer",
+            "date": "Des 2024",
+            "description": {
+                "id": "NGINX MasterClass: NGINX Server & Custom Load Balancer",
+                "en": "NGINX MasterClass: NGINX Server & Custom Load Balancer"
+            },
+            "category": "Certificate",
+            "tech": [
+                "Nginx",
+                "Load Balancer",
+                "Server"
+            ],
+            "link": {
+                "Certificate": "https://ude.my/UC-e503f63b-bfdc-4070-8b1f-99997c07e9de"
+            }
+        },
+        {
+            "unique_id": "afkhgbkjsaddf",
+            "show": true,
+            "thumbnail": "https://udemy-certificate.s3.amazonaws.com/image/UC-83a3cd70-8892-4bc2-89d6-8e61ad462c2f.jpg",
+            "images": [
+                "https://udemy-certificate.s3.amazonaws.com/image/UC-83a3cd70-8892-4bc2-89d6-8e61ad462c2f.jpg"
+            ],
+            "title": "Mastering SQL Query With SQL Server",
+            "date": "Oct 2024",
+            "description": {
+                "id": "Mastering SQL Query With SQL Server",
+                "en": "Mastering SQL Query With SQL Server"
+            },
+            "category": "Certificate",
+            "tech": [
+                "Microsoft SQL Server",
+                "SQL"
+            ],
+            "link": {
+                "Certificate": "https://ude.my/UC-83a3cd70-8892-4bc2-89d6-8e61ad462c2f"
+            }
+        },
+        {
+            "unique_id": "asdsdgdhr",
+            "show": true,
+            "thumbnail": "https://udemy-certificate.s3.amazonaws.com/image/UC-33a4b83a-6099-4f2e-b21b-82777c579f4c.jpg",
+            "images": [
+                "https://udemy-certificate.s3.amazonaws.com/image/UC-33a4b83a-6099-4f2e-b21b-82777c579f4c.jpg"
+            ],
+            "title": "JavaScript OOP: Mastering Modern Object-Oriented Programming",
+            "date": "Sep 2024",
+            "description": {
+                "id": "JavaScript OOP: Mastering Modern Object-Oriented Programming",
+                "en": "JavaScript OOP: Mastering Modern Object-Oriented Programming"
+            },
+            "category": "Certificate",
+            "tech": [
+                "Javascript",
+                "Object-Oriented Programming"
+            ],
+            "link": {
+                "Certificate": "https://ude.my/UC-33a4b83a-6099-4f2e-b21b-82777c579f4c"
+            }
+        },
+        {
+            "unique_id": "asdsdgsoodjdhr",
+            "show": true,
+            "thumbnail": "https://udemy-certificate.s3.amazonaws.com/image/UC-7fc7ae7b-0ed4-46ea-a403-9e994ff32ea5.jpg",
+            "images": [
+                "https://udemy-certificate.s3.amazonaws.com/image/UC-7fc7ae7b-0ed4-46ea-a403-9e994ff32ea5.jpg"
+            ],
+            "title": "Git, GitHub & Markdown Crash Course: Learn Git, GitHub & MD",
+            "date": "Agu 2024",
+            "description": {
+                "id": "Git, GitHub & Markdown Crash Course: Learn Git, GitHub & MD",
+                "en": "Git, GitHub & Markdown Crash Course: Learn Git, GitHub & MD"
+            },
+            "category": "Certificate",
+            "tech": [
+                "Git",
+                "Github",
+                "Markdown"
+            ],
+            "link": {
+                "Certificate": "https://ude.my/UC-7fc7ae7b-0ed4-46ea-a403-9e994ff32ea5"
+            }
+        },
+        {
+            "unique_id": "asdsdasf346jdhr",
+            "show": true,
+            "thumbnail": "https://udemy-certificate.s3.amazonaws.com/image/UC-eae1afb9-f0ce-43ea-b39b-a94e89af2758.jpg",
+            "images": [
+                "https://udemy-certificate.s3.amazonaws.com/image/UC-eae1afb9-f0ce-43ea-b39b-a94e89af2758.jpg"
+            ],
+            "title": "SQL: From Zero to Hero - Unleash the Data Superpowers Within",
+            "date": "Agu 2024",
+            "description": {
+                "id": "SQL: From Zero to Hero - Unleash the Data Superpowers Within",
+                "en": "SQL: From Zero to Hero - Unleash the Data Superpowers Within"
+            },
+            "category": "Certificate",
+            "tech": [
+                "PostgreSQL"
+            ],
+            "link": {
+                "Certificate": "https://ude.my/UC-eae1afb9-f0ce-43ea-b39b-a94e89af2758"
+            }
+        },
+        {
+            "unique_id": "aesdser2dasf346jdhr",
+            "show": true,
+            "thumbnail": "https://udemy-certificate.s3.amazonaws.com/image/UC-687b7fe3-4241-4055-acce-e2c06c355fe4.jpg",
+            "images": [
+                "https://udemy-certificate.s3.amazonaws.com/image/UC-687b7fe3-4241-4055-acce-e2c06c355fe4.jpg"
+            ],
+            "title": "PostgreSQL Bootcamp : Complete Beginner to Advanced Course",
+            "date": "Agu 2024",
+            "description": {
+                "id": "PostgreSQL Bootcamp : Complete Beginner to Advanced Course",
+                "en": "PostgreSQL Bootcamp : Complete Beginner to Advanced Course"
+            },
+            "category": "Certificate",
+            "tech": [
+                "PostgreSQL"
+            ],
+            "link": {
+                "Certificate": "https://ude.my/UC-687b7fe3-4241-4055-acce-e2c06c355fe4"
+            }
+        },
+        {
+            "unique_id": "aeswer4346ewrjdhr",
+            "show": true,
+            "thumbnail": "/assets/images/portofolio/S_digitelent_JWD_Page_1.jpg",
+            "images": [
+                "assets/images/portofolio/S_digitelent_JWD_Page_1.jpg",
+                "assets/images/portofolio/S_digitelent_JWD_Page_2.jpg"
+            ],
+            "title": "Junior Web Developer",
+            "date": "Jul 2022",
+            "description": {
+                "id": "Junior Web Developer",
+                "en": "Junior Web Developer"
+            },
+            "category": "Certificate",
+            "tech": [
+                "PHP",
+                "Codeigniter",
+                "HTML",
+                "CSS",
+                "Javascript",
+                "Object-Oriented Programming"
+            ],
+            "link": {
+                "Certificate": "https://digitalent.kominfo.go.id/cek-sertifikat?registrasi=150210757100-36"
+            }
+        }
+    ]
+}

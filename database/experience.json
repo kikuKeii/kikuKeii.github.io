@@ -1,0 +1,134 @@
+{
+    "data": [
+        {
+            "img": null,
+            "position": "IT Programmer",
+            "company": "Mandaya Royal Hospital Group",
+            "city": "Tangerang",
+            "start": "Mar 2025",
+            "end": "Present",
+            "description": [
+                "Developed and maintained internal web applications to support hospital operations across medical and non-medical departments.",
+                "Designed and implemented interactive dashboards, reporting systems, and data visualization tools to support data-driven decision-making.",
+                "Built and maintained integrations between hospital information systems (his), electronic medical records (EMR), insurance platforms, and internal business applications.",
+                "Created applications integrated with his databases, insurance systems, doctor fee management systems, and third-party apis using Laravel, Node.js (Express.js), JavaScript, and Microsoft SQL server.",
+                "Designed, optimized, and maintained complex SQL queries, stored procedures, and database structures for reporting and operational requirements.",
+                "Supported his and EMR systems, including application development, troubleshooting, database administration, and performance optimization.",
+                "Implemented and maintained WhatsApp gateway solutions for internal notifications and automated business processes using Express.js and baileys.",
+                "Managed application deployment, configuration, and maintenance on windows server environments utilizing NGINX, xampp, laragon, and iis.",
+                "Built and maintained CI/CD pipelines to automate application integration, testing, deployment, and release processes.",
+                "Performed application upgrades, bug fixing, troubleshooting, and production support to ensure system reliability and availability.",
+                "Collaborated with stakeholders, department heads, and end users to gather requirements and deliver business-focused technology solutions.",
+                "Assisted in infrastructure and system administration tasks, including server configuration, domain integration, SSL implementation, and SQL server connectivity management."
+            ],
+            "technologies": [
+                "PHP",
+                "Laravel",
+                "JavaScript",
+                "Node.js",
+                "Express.js",
+                "Microsoft SQL Server",
+                "MySQL",
+                "REST API",
+                "WhatsApp Gateway",
+                "Baileys",
+                "Nginx",
+                "IIS",
+                "XAMPP",
+                "Laragon",
+                "Windows Server",
+                "Git",
+                "GitHub",
+                "GitHub Actions",
+                "CI/CD",
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "jQuery"
+            ]
+        },
+        {
+            "img": null,
+            "position": "Full Stack Developer",
+            "company": "PT. Aneka Daisuib Jaya",
+            "city": "Tangerang",
+            "start": "Jul 2023",
+            "end": "Feb 2024",
+            "description": [
+                "Designed E-Commerce system and database architecture.",
+                "Created features such as wishlist, cart, checkout, product variants, product purchasing, and admin dashboard, along with REST APIs for front-end use.",
+                "Integrated Payment Gateway (Midtrans Snap UI & Core UI) and GoSend API for transaction processing, including UAT with GoSend.",
+                "Developed dynamic Web View application using Kotlin.",
+                "Updated dependencies and resolved update conflicts.",
+                "Reviewed team's pull requests for code quality and consistency."
+            ],
+            "technologies": [
+                "Kotlin",
+                "jQuery",
+                "Data Analysis",
+                "REST APIs",
+                "CodeIgniter 4"
+            ]
+        },
+        {
+            "img": null,
+            "position": "IT Programmer",
+            "company": "PT. Skyblue Network Technology",
+            "city": "Tangerang",
+            "start": "Jul 2022",
+            "end": "Jul 2023",
+            "description": [
+                "Provided consultation on application flow and design.",
+                "Designed system flow and database architecture.",
+                "Developed applications according to specifications.",
+                "Trained clients on application usage.",
+                "Reviewed and implemented client-requested changes following best practices.",
+                "Deployed applications to production environment.",
+                "Resolved issues with optimal solutions."
+            ],
+            "technologies": [
+                "Kotlin",
+                "jQuery",
+                "Data Analysis",
+                "REST APIs",
+                "CodeIgniter 4"
+            ]
+        },
+        {
+            "img": null,
+            "position": "IT Internship",
+            "company": "Klink Rumah Sehat Bunda",
+            "city": "Bogor",
+            "start": "Apr 2022",
+            "end": "Jul 2022",
+            "description": [
+                "Designed an inventory application using Express.js and React.js.",
+                "Integrated oAuth 2.0 authentication system into the application.",
+                "Developed custom input forms as per user requirements."
+            ],
+            "technologies": [
+                "REST APIs",
+                "Node.js",
+                "Express.js",
+                "React.js"
+            ]
+        },
+        {
+            "img": null,
+            "position": "IT Internship",
+            "company": "PT. Firman Indonesia",
+            "city": "Kab. Tangerang",
+            "start": "Agu 2016",
+            "end": "Sep 2016",
+            "description": [
+                "Entered and updated product specifications data in e-commerce web design using SQLite.",
+                "Edited product image assets using Photoshop to match web design."
+            ],
+            "technologies": [
+                "Data-flow Diagrams",
+                "MySQL",
+                "PHP"
+            ]
+        }
+    ]
+}
