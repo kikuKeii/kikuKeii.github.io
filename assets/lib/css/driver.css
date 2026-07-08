@@ -16,7 +16,9 @@
 .driver-popover.driverjs-theme .driver-popover-progress-text {
   color: #fff;
 }
-
+.driver-overlay {
+  background-color: #ffffff27;
+}
 .driver-popover.driverjs-theme button {
   flex: 1;
   text-align: center;
