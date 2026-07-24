@@ -72,3 +72,7 @@
   .driver-popover-arrow-side-bottom.driver-popover-arrow {
   border-bottom-color: #5049d1cb;
 }
+
+body.tour-active [data-aos] {
+  transition: none !important;
+}

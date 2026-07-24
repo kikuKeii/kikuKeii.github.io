@@ -1,10 +1,14 @@
 $("#start-tour").on("click", function () {
+  $("body").addClass("tour-active");
   const driver = window.driver.js.driver;
-
   const driverObj = driver({
     popoverClass: "driverjs-theme",
     showProgress: true,
     showButtons: ["next", "previous"],
+    onDestroyed: () => {
+      $("body").removeClass("tour-active");
+      AOS.refreshHard();
+    },
     steps: [
       {
         popover: {
