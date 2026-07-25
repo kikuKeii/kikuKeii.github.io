@@ -1,7 +1,7 @@
 AOS.init({
   duration: 800, // Durasi animasi (ms)
   easing: "ease-in-out", // Efek transisi
-  once: false, // Animasi hanya sekali
+  once: true, // Animasi hanya sekali
   offset: 100, // Mulai animasi sebelum elemen masuk viewport
   delay: 50, // Delay kecil
   mirror: false, // Tidak mengulang saat scroll ke atas
