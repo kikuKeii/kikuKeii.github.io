@@ -10,6 +10,91 @@
     },
     "data": [
         {
+            "unique_id": "dfreyehicew",
+            "show": true,
+            "thumbnail": "/assets/images/portofolio/icdx/2-uiux.png",
+            "images": [
+                "/assets/images/portofolio/icdx/2-uiux.png",
+                "/assets/images/portofolio/icdx/1-data.png",
+                "/assets/images/portofolio/icdx/3-services.png"
+            ],
+            "title": "ICD 10 Diagnosis",
+            "date": "Agu 2026 - Agu 2026",
+            "description": {
+                "id": "Temukan kode diagnosis berdasarkan nama penyakit atau kode langsung. Cukup ketik hasil muncul seketika.",
+                "en": "Find diagnosis codes by disease name or by entering the code directly. Simply type, and the results appear instantly."
+            },
+            "category": "Web Service",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "Javascript",
+                "jQuery",
+                "ExpressJS"
+            ],
+            "link": {
+                "Repository": "https://github.com/kikuKeii/pwa-invoice-generator",
+                "Web Apps": "https://kikukeii.github.io/pwa-invoice-generator/"
+            }
+        },
+        {
+            "unique_id": "ohwigs",
+            "show": true,
+            "thumbnail": "https://raw.githubusercontent.com/kikuKeii/pwa-invoice-generator/refs/heads/master/img/6.png",
+            "images": [
+                "https://raw.githubusercontent.com/kikuKeii/pwa-invoice-generator/refs/heads/master/img/6.png",
+                "https://raw.githubusercontent.com/kikuKeii/pwa-invoice-generator/refs/heads/master/img/1.png",
+                "https://raw.githubusercontent.com/kikuKeii/pwa-invoice-generator/refs/heads/master/img/2.png",
+                "https://raw.githubusercontent.com/kikuKeii/pwa-invoice-generator/refs/heads/master/img/3.png",
+                "https://raw.githubusercontent.com/kikuKeii/pwa-invoice-generator/refs/heads/master/img/4.2.png"
+            ],
+            "title": "PWA - Invoice Generator",
+            "date": "Agu 2026 - Agu 2026",
+            "description": {
+                "id": "Generator faktur berbasis Progressive Web App (PWA) yang berjalan offline penuh. Semua data disimpan secara lokal di browser tanpa server.",
+                "en": "A Progressive Web App (PWA)-based invoice generator that runs fully offline. All data is stored locally in the browser, without a server."
+            },
+            "category": "Web",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "Javascript",
+                "jQuery"
+            ],
+            "link": {
+                "Repository": "https://github.com/kikuKeii/pwa-invoice-generator",
+                "Web Apps": "https://kikukeii.github.io/pwa-invoice-generator/"
+            }
+        },
+        {
+            "unique_id": "gosndsknseddas",
+            "show": true,
+            "thumbnail": "https://raw.githubusercontent.com/kikuKeii/native-ls/master/native-ls/images/4.png",
+            "images": [
+                "https://raw.githubusercontent.com/kikuKeii/native-ls/master/native-ls/images/4.png",
+                "https://raw.githubusercontent.com/kikuKeii/native-ls/master/native-ls/images/4.png"
+            ],
+            "title": "Native-ls: Local Dashboard Project",
+            "date": "Agu 2026 - Agu 2026",
+            "description": {
+                "id": "Dasbor Proyek yang indah dan ringan untuk server pengembangan lokal Anda. Cukup tempatkan di direktori root `www` Anda untuk mendapatkan gambaran instan mengenai semua proyek lokal Anda — tanpa database, tanpa dependensi, murni hanya PHP.",
+                "en": "A beautiful, lightweight Projects Dashboard for your local development server. Drop it into your www/ root and get an instant overview of all your local projects — no database, no dependencies, just plain PHP."
+            },
+            "category": "Web Service",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Bootstrap",
+                "Javascript",
+                "jQuery"
+            ],
+            "link": {
+                "Repository": "https://github.com/kikuKeii/native-ls"
+            }
+        },
+        {
             "unique_id": "ibwrsdweufknsa",
             "show": true,
             "thumbnail": "/assets/images/portofolio/k-player/k-player-1.png",
@@ -41,7 +126,7 @@
         },
         {
             "unique_id": "ibwrufknsa",
-            "show": true,
+            "show": false,
             "thumbnail": "/assets/images/portofolio/mrhp/report-master-mrhp.png",
             "images": [
                 "/assets/images/portofolio/mrhp/report-master-mrhp.png"
@@ -121,7 +206,7 @@
         },
         {
             "unique_id": "fewrwefnoi",
-            "show": true,
+            "show": false,
             "thumbnail": "/assets/images/portofolio/mind-reader/mind-reader-1.png",
             "images": [
                 "/assets/images/portofolio/mind-reader/mind-reader-1.png",
@@ -149,7 +234,7 @@
         },
         {
             "unique_id": "fodiyoofnoi",
-            "show": true,
+            "show": false,
             "thumbnail": "/assets/images/portofolio/i-love-you/i-love-you.png",
             "images": [
                 "/assets/images/portofolio/i-love-you/i-love-you.png"
@@ -176,7 +261,7 @@
         },
         {
             "unique_id": "fobfvytsdfnoi",
-            "show": false,
+            "show": true,
             "thumbnail": "/assets/images/portofolio/kamar-sehat/kamar-sehat-0.png",
             "images": [
                 "/assets/images/portofolio/kamar-sehat/kamar-sehat-0.png",
@@ -204,7 +289,7 @@
         },
         {
             "unique_id": "fobfvytsrgfdfnoi",
-            "show": false,
+            "show": true,
             "thumbnail": "/assets/images/portofolio/nijisanji/niji.png",
             "images": [
                 "/assets/images/portofolio/nijisanji/niji1.png",

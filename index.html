@@ -97,8 +97,9 @@
                             </li>
                             <li><a class="dropdown-item" href="#contact">Contact</a></li>
                             <li>
-                                <hr class="dropdown-divider d-none" />
+                                <hr class="dropdown-divider" />
                             </li>
+                            <li><a class="dropdown-item" target="_blank" href="https://blog.kiki.my.id">Blogs</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -255,11 +256,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="alert alert-info" role="alert">
-                    <i class="bi bi-info-circle"></i> Data is hidden, Under
-                    construction.
-                </div>
-                <div class="row g-3 mt-3 mt-md-0 d-none" id="project-item">
+                <div class="row g-3 mt-3 mt-md-0" id="project-item">
                     <div class="col-md-4">
                         <div class="card border-0 shadow-sm">
                             <img src="#" class="card-img-top" alt="..." />
@@ -533,6 +530,42 @@
                             <div class="mb-3 border-bottom"></div>
                             <div class="fw-semibold">Technologies</div>
                             <div class="" id="modalExpDetailTech"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalProject" tabindex="-1" aria-labelledby="modalProjectLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-grid">
+                        <h2 class="modal-title fs-5 fw-semibold" id="modalProjectLabel">
+                            :title
+                        </h2>
+                        <small id="modalProjectCategory">:Category</small>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="alert alert-info" role="alert">
+                                <i class="bi bi-info-circle"></i> Data is hidden, Under
+                                construction.
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="fw-semibold">Description</div>
+                            <span id="modalProjectDescription"></span>
+                            <div class="fw-semibold mt-3">Period</div>
+                            <div class="fw-semibold" id="modalProjectWhen">
+                                :modalProjectWhen
+                            </div>
+                            <div class="mb-3 border-bottom"></div>
+                            <div class="fw-semibold">Technologies</div>
+                            <div class="" id="modalProjectTech"></div>
                         </div>
                     </div>
                 </div>
