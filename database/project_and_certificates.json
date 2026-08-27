@@ -94,6 +94,34 @@
                 "Repository": "https://github.com/kikuKeii/native-ls"
             }
         },
+         {
+            "unique_id": "trjtujdhbrvdshbthesga",
+            "show": true,
+            "thumbnail": "https://kikukeii.github.io/BakungKron-extension/images/0.1-home-light.png",
+            "images": [
+                "https://kikukeii.github.io/BakungKron-extension/images/0.1-home-light.png",
+                "https://kikukeii.github.io/BakungKron-extension/images/0.2-home-dark.png",
+                "https://kikukeii.github.io/BakungKron-extension/images/5-change-bg-image-dark.png",
+                "https://kikukeii.github.io/BakungKron-extension/images/5-change-bg-image-light.png"
+            ],
+            "title": "BakungKron - Beautiful New Tab for Browser",
+            "date": "Jul 2026",
+            "description": {
+                "id": "Halaman tab baru yang indah dan modern untuk Chrome. Pencarian, bookmark, pintasan, dan banyak lagi - semuanya dalam satu dasbor bergaya *glassmorphism* yang elegan.",
+                "en": "Beautiful modern new tab page for Chrome. Search, bookmarks, shortcuts, and more - all in one elegant glassmorphism dashboard."
+            },
+            "category": "Web Other",
+            "tech": [
+                "HTML",
+                "CSS",
+                "Javascript",
+                "Node JS"
+            ],
+            "link": {
+                "Repository": "https://github.com/kikuKeii/BakungKron-extension",
+                "Site": "https://kikukeii.github.io/BakungKron-extension/"
+            }
+        },
         {
             "unique_id": "ibwrsdweufknsa",
             "show": true,
