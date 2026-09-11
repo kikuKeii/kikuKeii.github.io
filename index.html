@@ -599,9 +599,17 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-9">
-                            <div class="alert alert-info" role="alert">
-                                <i class="bi bi-info-circle"></i> Data is hidden, Under
-                                construction.
+                            <div id="modalProjectCarousel" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-indicators" id="modalProjectCarouselIndicators"></div>
+                                <div class="carousel-inner rounded" id="modalProjectCarouselInner"></div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#modalProjectCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#modalProjectCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
                         <div class="col-md-3">
@@ -614,6 +622,9 @@
                             <div class="mb-3 border-bottom"></div>
                             <div class="fw-semibold">Technologies</div>
                             <div class="" id="modalProjectTech"></div>
+                            <div class="mb-3 border-bottom"></div>
+                            <div class="fw-semibold">Links</div>
+                            <div class="d-flex flex-column gap-1" id="modalProjectLinks"></div>
                         </div>
                     </div>
                 </div>

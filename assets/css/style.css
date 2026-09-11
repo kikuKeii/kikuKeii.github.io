@@ -434,3 +434,21 @@ footer .nav-link:hover {
   object-position: center;
   display: block;
 }
+
+/* Project modal link buttons */
+.btn-project-link {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-light) !important;
+  font-weight: 600 !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  transition: var(--transition);
+}
+
+.btn-project-link:hover {
+  border-color: var(--glass-border-hover) !important;
+  color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+  transform: translateY(-1px);
+}
