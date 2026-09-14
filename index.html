@@ -329,6 +329,13 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="csubject" name="csubject"
+                                            placeholder="Subject" />
+                                        <label for="csubject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
                                     <div class="form-floating">
                                         <textarea class="form-control" placeholder="Leave a messages here"
                                             id="cmessages" name="cmessages" style="height: 100px"></textarea>
@@ -336,18 +343,16 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12 my-3 d-flex justify-content-center">
-                                    <button type="button" onclick="
-                        alertShow(
-                           'info',
-                           'This function is unavailable right now, please email kiki@devkikinian.click',
-                           'info',
-                           'Okay',
-                        )
-                      " class="btn btn-warning shadow text-c-primary mx-1">
+                                    <button type="button" class="btn btn-warning shadow text-c-primary mx-1"
+                                        onclick="sendEmail()" id="btnSendEmail">
+                                        <span class="spinner-border spinner-border-sm me-1 d-none"
+                                            id="spinnerEmail" aria-hidden="true"></span>
                                         <i class="bi bi-send"></i> Email
                                     </button>
                                     <button type="button" class="btn btn-success shadow text-c-primary mx-1"
-                                        onclick="sendWhatsapp()">
+                                        onclick="sendWhatsapp()" id="btnSendWhatsapp">
+                                        <span class="spinner-border spinner-border-sm me-1 d-none"
+                                            id="spinnerWhatsapp" aria-hidden="true"></span>
                                         <i class="bi bi-whatsapp"></i> Whatsapp
                                     </button>
                                 </div>

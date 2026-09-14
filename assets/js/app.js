@@ -16,6 +16,52 @@ function alertShow(title, text, icon, confirmButtonText) {
     confirmButtonText: confirmButtonText,
   });
 }
+function sendEmail() {
+  let name = $("#cfname").val().trim();
+  let email = $("#cemail").val().trim();
+  let org = $("#ccompany").val().trim();
+  let subject = $("#csubject").val().trim();
+  let message = $("#cmessages").val().trim();
+  if (!name || !email || !message) {
+    return alertShow(
+      "Warning",
+      "Please fill all the fields Name, Email and Message.",
+      "warning",
+      "Okay",
+    );
+  }
+
+  showSpinner("#spinnerEmail", "#btnSendEmail", true);
+  let payload = {
+    name: name,
+    org: org,
+    email: email,
+    subject: subject,
+    message: message,
+    keyAuth: "akuganteng1010",
+  };
+
+  $.ajax({
+    url: "https://zeta.kiki.my.id/api/email",
+    method: "POST",
+    contentType: "application/json",
+    data: JSON.stringify(payload),
+    success: function (res) {
+      showSpinner("#spinnerEmail", "#btnSendEmail", false);
+      const ok = res?.response === "email";
+      alertShow(ok ? "Success" : "Error", res?.message, ok ? "success" : "error", "Okay");
+      if (ok) {
+        $("#cfname, #cemail, #ccompany, #cmessages").val("");
+      }
+    },
+    error: function (xhr, status, error) {
+      showSpinner("#spinnerEmail", "#btnSendEmail", false);
+      console.error("Failed send email:", error);
+      alertShow("Error", "Failed to send email. Please try again.", "error", "Okay");
+    },
+  });
+}
+
 function sendWhatsapp() {
   let name = $("#cfname").val();
   let email = $("#cemail").val();
@@ -29,6 +75,7 @@ function sendWhatsapp() {
       "Okay",
     );
   }
+  showSpinner("#spinnerWhatsapp", "#btnSendWhatsapp", true);
   // %20 space
   // %0A new line
   let url = `https://api.whatsapp.com/send?phone=6283807303926&text=Name%20${name}%20from%20${company}%0AEmail%20${email}%0A%0A${message}`;
@@ -43,6 +90,12 @@ Baru saja *${name}* mencoba mengirim pesan melalui WhatsApp.\n
   sendAlert(payload);
 
   window.open(url, "_blank");
+  setTimeout(() => showSpinner("#spinnerWhatsapp", "#btnSendWhatsapp", false), 1000);
+}
+
+function showSpinner(spinnerId, btnId, show) {
+  $(spinnerId).toggleClass("d-none", !show);
+  $(btnId).prop("disabled", show);
 }
 
 $(document).ready(function () {
