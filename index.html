@@ -355,95 +355,87 @@
 
     <div class="row mx-auto mt-5">
         <div class="col-12" data-aos="fade-up">
-            <footer class=" py-3">
-                <div class="row">
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Position</h5>
-                        <ul class="nav flex-column" id="footer-job-position"></ul>
-                    </div>
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Social Media</h5>
-                        <ul class="nav flex-column" id="footer-social-media">
-                            <!-- Example : 
-                        <li class="nav-item mb-2">
-                            <a href="#" class="nav-link p-0 text-body-secondary">Link</a>
-                        </li> -->
-                        </ul>
-                    </div>
-                    <div class="col-6 col-md-2 mb-3">
-                        <h5>Website</h5>
-                        <ul class="nav flex-column" id="footer-website"></ul>
-                    </div>
-                    <div class="col-md-5 offset-md-1 mb-3">
-                        <div class="fw-semibold">About this page</div>
-                        <small> Clean & Easy to read. </small><br />
-                        <small>
-                            Awalnya page ini dibuat dengan static page, lalu di refactor ke
-                            Codeigniter 4 -> Laravel -> Express JS -> AstroJS -> Terkahir di
-                            kembalikan ke Static Page saja karena terkendalah maintance dan
-                            biaya.
-                            <span class="text-body-tertiary">Udah ganti design dari yang biasa sampe yang banyak fitur.
-                                Ujungnya malah dibalikin ke yang simple dan clean.</span>
-                            <br />(*/ω＼*). </small><br />
-                        <small>Sekarang hanya menggunakan git action untuk build dan free host
-                            dari Cloudflare</small>
-                    </div>
-                </div>
-                <div class="d-flex flex-column flex-sm-row justify-content-between border-top">
-                    <p>
-                        <span class="company"></span> ©
-                        <span class="year"></span> kiki.my.id
-                    </p>
-                    <ul class="list-unstyled d-flex">
-                        <li class="ms-3"></li>
-                        <li class="ms-3"></li>
-                    </ul>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 d-flex justify-content-center align-items-end">
-                        <div class="d-grid">
-                            <div class="d-frid d-md-flex gap-2">
-                                <p class="text-center fw-bold">Powered by:</p>
-                                <ul class="nav justify-content-center pb-3 mb-3 fw-bold" id="powerby">
-                                    <li class="nav-item">
-                                        <a href="https://github.com/kikukeii"
-                                            class="text-secondary text-decoration-none px-2" target="_blank">Github</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://expressjs.com" class="text-secondary text-decoration-none px-2"
-                                            target="_blank">Express</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://vercel.com" class="text-secondary text-decoration-none px-2"
-                                            target="_blank">Vercel</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://cloudflare.com"
-                                            class="text-secondary text-decoration-none px-2"
-                                            target="_blank">Cloudflare</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://getbootstrap.com"
-                                            class="text-secondary text-decoration-none px-2"
-                                            target="_blank">Bootstrap</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://leafletjs.com" class="text-secondary text-decoration-none px-2"
-                                            target="_blank">Leaflet</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://driverjs.com" class="text-secondary text-decoration-none px-2"
-                                            target="_blank">Driver js</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="https://www.freepik.com"
-                                            class="text-secondary text-decoration-none px-2" target="_blank">Freepik</a>
-                                    </li>
-                                </ul>
+            <footer class="py-4">
+                <div class="footer-top-bar"></div>
+
+                <div class="row g-4">
+                    <div class="col-12 col-lg-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <img src="./assets/images/hero2.jpg" class="rounded-circle" width="38" height="38"
+                                alt="Miftakhuddin Falaki" loading="lazy" />
+                            <div class="d-grid">
+                                <span class="fw-bold">Miftakhuddin Falaki</span>
+                                <small class="text-body-tertiary">IT Programmer · Full Stack Developer</small>
                             </div>
                         </div>
+                        <p class="small mb-2 mt-2">
+                            Static page: CodeIgniter 4 → Laravel → Express JS → AstroJS →
+                            <span class="text-body-tertiary">akhirnya kembali ke static page karena maintenance &
+                                biaya.</span>
+                        </p>
+                        <p class="small text-body-tertiary mb-0">
+                            Sekarang dibangun dengan GitHub Actions & di-hosting gratis di Cloudflare. ( /ω＼)
+                        </p>
                     </div>
-                    <div class="col-md-4" id="visit-count-section">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <h5>Position</h5>
+                        <ul class="nav flex-column gap-1" id="footer-job-position"></ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <h5>Website</h5>
+                        <ul class="nav flex-column gap-1" id="footer-website"></ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <h5>Social Media</h5>
+                        <ul class="nav flex-column gap-1" id="footer-social-media"></ul>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <h5>Explore</h5>
+                        <ul class="nav flex-column gap-1">
+                            <li class="nav-item"><a class="nav-link p-0" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" href="#project">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" href="#skills-row">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link p-0" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div
+                    class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 pt-3 mt-3 border-top">
+                    <p class="mb-0 small">
+                        © <span class="year"></span>
+                        <span class="company"></span> · kiki.my.id
+                    </p>
+                    <div class="d-flex align-items-center gap-2">
+                        <small class="text-body-tertiary">Clean & Easy to read.</small>
+                        <button type="button" class="btn btn-theme btn-sm" id="btn-back-to-top"
+                            aria-label="Back to top">
+                            <i class="bi bi-arrow-up"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="row pt-3 mt-3 border-top align-items-center">
+                    <div class="col-md-8">
+                        <p class="fw-semibold small mb-2">Powered by</p>
+                        <ul class="nav flex-wrap gap-2" id="powerby">
+                            <li class="nav-item"><a class="powered-chip text-decoration-none"
+                                    href="https://github.com/kikukeii" target="_blank">Github</a></li>
+                            <li class="nav-item"><a class="powered-chip text-decoration-none"
+                                    href="https://expressjs.com" target="_blank">Express</a></li>
+                            <li class="nav-item"><a class="powered-chip text-decoration-none" href="https://vercel.com"
+                                    target="_blank">Vercel</a></li>
+                            <li class="nav-item"><a class="powered-chip text-decoration-none"
+                                    href="https://cloudflare.com" target="_blank">Cloudflare</a></li>
+                            <li class="nav-item"><a class="powered-chip text-decoration-none"
+                                    href="https://getbootstrap.com" target="_blank">Bootstrap</a></li>
+                            <li class="nav-item"><a class="powered-chip text-decoration-none"
+                                    href="https://leafletjs.com" target="_blank">Leaflet</a></li>
+                            <li class="nav-item"><a class="powered-chip text-decoration-none"
+                                    href="https://driverjs.com" target="_blank">Driver js</a></li>
+                            <li class="nav-item"><a class="powered-chip text-decoration-none"
+                                    href="https://www.freepik.com" target="_blank">Freepik</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mt-3 mt-md-0" id="visit-count-section">
                         <div class="fw-bold mb-3 d-flex align-items-center gap-2 text-light">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                 class="bi bi-bar-chart-fill text-info" viewBox="0 0 16 16">
