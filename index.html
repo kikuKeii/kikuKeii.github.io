@@ -65,11 +65,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.css" />
     <link rel="stylesheet" href="./assets/lib/css/driver.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/setup-theme.js"></script>
 </head>
 
 <body>
     <nav data-aos="fade-down" class="sticky-top navbar navbar-expand-lg border-bottom border-dark"
-        style="background-color: #0b1259d3">
+        style="background-color: var(--navbar-bg)">
         <div class="container-fluid">
             <a class="navbar-brand link-light" href="#">Miftakhuddn Falaki</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -87,6 +88,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link-light" href="#project">Project</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <button type="button" id="btn-open-theme" class="btn nav-link link-light btn-sm"
+                            data-bs-toggle="modal" data-bs-target="#modalTheme">
+                            <i class="bi bi-palette me-1"></i><span>Theme</span>
+                        </button>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle link-light" href="#" role="button" data-bs-toggle="dropdown"
@@ -184,36 +191,8 @@
             <div class="col-md-12">
                 <div class="d-md-flex d-grid gap-md-2 align-items-center mt-4 mt-md-0">
                     <h2>Skills</h2>
-                    <small class="text-body-tertiary pointer" data-bs-toggle="modal"
+                    <small class="text-body-tertiary pointer detail-link" data-bs-toggle="modal"
                         data-bs-target="#modalSkillsDetail">(click here for detail)</small>
-                </div>
-                <div class="modal fade" id="modalSkillsDetail" tabindex="-1" aria-labelledby="modalSkillsDetailLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <h6 class="border-bottom pb-2 mb-0">Skills</h6>
-
-                                <div id="skills-detail-mdl">
-                                    <div class="d-flex text-body-secondary pt-3">
-                                        <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
-                                            width="32" height="32" alt="" />
-                                        <div class="pb-3 ps-4 mb-0 small lh-sm border-bottom w-100">
-                                            <div class="d-flex justify-content-between">
-                                                <strong class="text-gray-dark"> Name </strong>
-                                            </div>
-                                            <span class="d-block">LVL</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-end mt-3">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                        Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -345,14 +324,14 @@
                                 <div class="col-md-12 my-3 d-flex justify-content-center">
                                     <button type="button" class="btn btn-warning shadow text-c-primary mx-1"
                                         onclick="sendEmail()" id="btnSendEmail">
-                                        <span class="spinner-border spinner-border-sm me-1 d-none"
-                                            id="spinnerEmail" aria-hidden="true"></span>
+                                        <span class="spinner-border spinner-border-sm me-1 d-none" id="spinnerEmail"
+                                            aria-hidden="true"></span>
                                         <i class="bi bi-send"></i> Email
                                     </button>
                                     <button type="button" class="btn btn-success shadow text-c-primary mx-1"
                                         onclick="sendWhatsapp()" id="btnSendWhatsapp">
-                                        <span class="spinner-border spinner-border-sm me-1 d-none"
-                                            id="spinnerWhatsapp" aria-hidden="true"></span>
+                                        <span class="spinner-border spinner-border-sm me-1 d-none" id="spinnerWhatsapp"
+                                            aria-hidden="true"></span>
                                         <i class="bi bi-whatsapp"></i> Whatsapp
                                     </button>
                                 </div>
@@ -558,6 +537,18 @@
     </div>
 
     <!-- Modal -->
+    <div class="modal fade" id="modalSkillsDetail" tabindex="-1" aria-labelledby="modalSkillsDetailLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h6 class="border-bottom pb-2 mb-0">Skills</h6>
+
+                    <div id="skills-detail-mdl"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal fade" id="modalExpDetail" tabindex="-1" aria-labelledby="modalExpDetailLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-fullscreen-md-down">
             <div class="modal-content">
@@ -607,11 +598,13 @@
                             <div id="modalProjectCarousel" class="carousel slide" data-bs-ride="false">
                                 <div class="carousel-indicators" id="modalProjectCarouselIndicators"></div>
                                 <div class="carousel-inner rounded" id="modalProjectCarouselInner"></div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#modalProjectCarousel" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#modalProjectCarousel" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#modalProjectCarousel" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#modalProjectCarousel" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
@@ -627,11 +620,30 @@
                             <div class="mb-3 border-bottom"></div>
                             <div class="fw-semibold">Technologies</div>
                             <div class="" id="modalProjectTech"></div>
-                            <div class="mb-3 border-bottom"></div>
+                            <div class="mb-1 border-bottom mt-3"></div>
                             <div class="fw-semibold">Links</div>
                             <div class="d-flex flex-column gap-1" id="modalProjectLinks"></div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalTheme" tabindex="-1" aria-labelledby="modalThemeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-grid">
+                        <h2 class="modal-title fs-5 fw-semibold" id="modalThemeLabel">
+                            Choose Theme
+                        </h2>
+                        <small class="text-body-tertiary">Theme rotates automatically every day. Click to pick
+                            one.</small>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-grid gap-2" id="theme-list"></div>
                 </div>
             </div>
         </div>

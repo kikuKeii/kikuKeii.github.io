@@ -53,7 +53,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(5, 6, 15, 0.3);
+  background: var(--glass-bg);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -83,7 +83,7 @@ h6 {
 
 h2 {
   font-size: 1.8rem;
-  background: linear-gradient(135deg, #ffffff 0%, var(--text-muted) 100%);
+  background: linear-gradient(135deg, var(--text-light) 0%, var(--text-muted) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
@@ -135,7 +135,7 @@ a:hover {
 
 /* Navbar glassmorphism color override */
 .navbar {
-  background: rgba(6, 7, 19, 0.85) !important;
+  background: var(--navbar-bg, rgba(6, 7, 19, 0.85)) !important;
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   border-bottom: 1px solid var(--glass-border) !important;
@@ -156,7 +156,11 @@ a:hover {
 
 .navbar .nav-link:hover {
   color: var(--text-light) !important;
-  text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+  text-shadow: var(--glow-cyan);
+}
+
+.navbar-toggler-icon {
+  filter: var(--navbar-toggler-filter, none);
 }
 
 /* Card glassmorphism overrides (keeps Bootstrap grid intact) */
@@ -173,7 +177,7 @@ a:hover {
 .card:hover {
   transform: translateY(-3px);
   border-color: var(--glass-border-hover) !important;
-  box-shadow: 0 10px 25px rgba(0, 242, 254, 0.08) !important;
+  box-shadow: var(--glow-cyan) !important;
 }
 
 .card-body {
@@ -203,7 +207,26 @@ a:hover {
 #certificates a:hover {
   color: var(--accent-cyan) !important;
   transform: translateY(-2px);
-  text-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+  text-shadow: var(--glow-cyan);
+}
+
+/* Project filter tabs (theme aware) */
+#filter-project .nav-link {
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+#filter-project .nav-link:hover {
+  color: var(--text-light);
+  border-color: var(--text-muted-dark);
+}
+
+#filter-project .nav-link.active {
+  color: var(--accent-cyan);
+  background-color: transparent;
+  border-color: var(--accent-cyan) var(--accent-cyan) transparent;
+  text-shadow: var(--glow-cyan);
+  font-weight: 700;
 }
 
 /* Skills wrapper & marquee styling */
@@ -211,7 +234,7 @@ a:hover {
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
-  background: rgba(5, 6, 16, 0.5);
+  background: var(--glass-bg);
   border-top: 1px solid var(--glass-border);
   border-bottom: 1px solid var(--glass-border);
   padding: 1.25rem 0;
@@ -242,6 +265,20 @@ a:hover {
   box-shadow: var(--glow-cyan);
 }
 
+.skills-track .category-chip {
+  background: color-mix(in srgb, var(--accent-cyan) 12%, transparent);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skills-category .badge {
+  align-self: center;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -264,9 +301,9 @@ a:hover {
 
 .form-control:focus,
 .form-floating textarea:focus {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background-color: var(--glass-bg) !important;
   border-color: var(--accent-cyan) !important;
-  box-shadow: 0 0 12px rgba(0, 242, 254, 0.15) !important;
+  box-shadow: var(--glow-cyan) !important;
 }
 
 .form-floating label {
@@ -287,7 +324,7 @@ a:hover {
 
 .btn-danger:hover {
   transform: translateY(-1px);
-  box-shadow: 0 5px 15px rgba(0, 242, 254, 0.35);
+  box-shadow: var(--glow-cyan);
 }
 
 .btn-success {
@@ -323,12 +360,33 @@ a:hover {
   height: 50vh;
   border: 1px solid var(--glass-border);
   border-radius: 12px;
-  filter: invert(0.9) hue-rotate(180deg) brightness(0.95) contrast(1.1);
+  filter: var(--map-filter, invert(0.9) hue-rotate(180deg) brightness(0.95) contrast(1.1));
   transition: var(--transition);
 }
 
 #map:hover {
   border-color: var(--glass-border-hover);
+}
+
+.leaflet-control-attribution {
+  background: var(--map-attribution-bg) !important;
+  color: var(--map-attribution-text) !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--map-attribution-text) !important;
+}
+
+.toast {
+  background-color: var(--bg-dark-1) !important;
+  color: var(--text-light) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.toast-header {
+  background-color: transparent !important;
+  color: var(--text-light) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
 }
 
 @media (min-width: 992px) {
@@ -340,6 +398,15 @@ a:hover {
 /* Bootstrap colors override */
 .text-body-tertiary {
   color: var(--text-muted) !important;
+}
+
+.detail-link {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+
+.detail-link:hover {
+  color: var(--accent-cyan) !important;
 }
 
 .text-body-secondary {
@@ -358,9 +425,9 @@ a:hover {
 }
 
 .bg-secondary {
-  background: rgba(138, 43, 226, 0.15) !important;
+  background: color-mix(in srgb, var(--accent-purple) 15%, transparent) !important;
   color: var(--accent-cyan) !important;
-  border: 1px solid rgba(138, 43, 226, 0.25) !important;
+  border: 1px solid color-mix(in srgb, var(--accent-purple) 25%, transparent) !important;
 }
 
 /* Modal and Dropdown Overrides */
@@ -386,7 +453,7 @@ a:hover {
 }
 
 .btn-close {
-  filter: invert(1) !important;
+  filter: var(--btn-close-filter, invert(1)) !important;
 }
 
 .dropdown-menu {
@@ -401,7 +468,7 @@ a:hover {
 }
 
 .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background-color: var(--glass-bg) !important;
   color: var(--text-light) !important;
 }
 
@@ -451,4 +518,51 @@ footer .nav-link:hover {
   color: var(--accent-cyan) !important;
   box-shadow: var(--glow-cyan) !important;
   transform: translateY(-1px);
+}
+
+/* Theme picker */
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--glass-bg);
+  transition: var(--transition);
+}
+
+.theme-option:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-1px);
+}
+
+.theme-option.active {
+  border-color: var(--accent-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+.theme-swatch {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--glass-border);
+}
+
+.theme-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.theme-check {
+  color: var(--accent-cyan);
+  font-size: 1.25rem;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.theme-option.active .theme-check {
+  opacity: 1;
 }

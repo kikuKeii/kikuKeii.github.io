@@ -93,99 +93,117 @@
         "skills": [
             {
                 "name": "HTML",
+                "category": "Frontend",
                 "level": "Advance",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"
             },
             {
                 "name": "CSS",
+                "category": "Frontend",
                 "level": "Advance",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png"
             },
             {
                 "name": "JavaScript",
+                "category": "Frontend",
                 "level": "Advance",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
             },
             {
                 "name": "PHP",
+                "category": "Backend",
                 "level": "Advance",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/ccc16358ac4530c6a69b1b80c7223cd2744dea83/topics/php/php.png"
             },
             {
                 "name": "Kotlin",
+                "category": "Mobile",
                 "level": "Basic",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/4479d2a2c854198cb00160f8593519c14dc3b905/topics/kotlin/kotlin.png"
             },
             {
                 "name": "Bootstrap",
+                "category": "Frontend",
                 "level": "Advance",
                 "description": null,
                 "img": "https://avatars.githubusercontent.com/u/2918581"
             },
             {
                 "name": "Laravel",
+                "category": "Backend",
                 "level": "Advance",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/56a826d05cf762b2b50ecbe7d492a839b04f3fbf/topics/laravel/laravel.png"
             },
             {
                 "name": "CodeIgniter 4",
+                "category": "Backend",
                 "level": "Advance",
                 "description": null,
                 "img": "https://avatars.githubusercontent.com/u/44521256"
             },
             {
                 "name": "ExpressJS",
+                "category": "Backend",
                 "level": "Advance",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png"
             },
             {
                 "name": "MySQL",
+                "category": "Database",
                 "level": "Advance",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png"
             },
             {
                 "name": "PostgreSQL",
+                "category": "Database",
                 "level": "Advance",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png"
             },
             {
                 "name": "MS SQL Server",
+                "category": "Database",
                 "level": "Advance",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sql/sql.png"
             },
             {
                 "name": "Git",
+                "category": "Tools",
                 "description": null,
                 "img": "https://raw.githubusercontent.com/github/explore/9d47da057258d668c7dba9e9bb9cfcd45e2226e9/topics/git/git.png"
             },
             {
                 "name": "GitHub",
+                "category": "Tools",
                 "img": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
             },
             {
                 "name": "GitLab",
+                "category": "Tools",
                 "img": "https://images.ctfassets.net/xz1dnu24egyd/3FbNmZRES38q2Sk2EcoT7a/a290dc207a67cf779fc7c2456b177e9f/press-kit-icon.svg"
             },
             {
                 "name": "Apache",
+                "category": "DevOps",
                 "img": "https://avatars.githubusercontent.com/u/47359"
             },
             {
                 "name": "Nginx",
+                "category": "DevOps",
                 "img": "https://avatars.githubusercontent.com/u/1412239"
             },
             {
                 "name": "Linux",
+                "category": "DevOps",
                 "img": "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/linux/linux.png"
             }
         ]
