@@ -327,6 +327,21 @@ a:hover {
   box-shadow: var(--glow-cyan);
 }
 
+.btn-theme {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)) !important;
+  border: none !important;
+  color: #05060f !important;
+  font-weight: 700 !important;
+  box-shadow: var(--glow-cyan);
+  transition: var(--transition);
+}
+
+.btn-theme:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--glow-cyan);
+  color: #05060f !important;
+}
+
 .btn-success {
   background: linear-gradient(135deg, #11998e, #38ef7d) !important;
   border: none !important;
