@@ -11,6 +11,56 @@ AOS.init({
 /* Path aset dari halaman utama (root). */
 var ASSET_PATH = "./assets/";
 
+/* Preloader: hilang saat gambar hero siap, atau paksa hilang setelah 3 detik. */
+var PRELOADER_TIMEOUT = 3000;
+
+function hidePreloader() {
+  var el = document.getElementById("preloader");
+  if (!el || el.dataset.done === "1") return;
+  el.dataset.done = "1";
+  el.classList.add("is-done");
+  setTimeout(function () {
+    el.remove();
+  }, 300);
+}
+
+(function initPreloader() {
+  var timeout = setTimeout(hidePreloader, PRELOADER_TIMEOUT);
+  var hero = document.getElementById("hero-main-image");
+
+  if (!hero) {
+    clearTimeout(timeout);
+    hidePreloader();
+    return;
+  }
+
+  /* Gambar sudah ada di cache / selesai sebelum script ini jalan. */
+  if (hero.complete && hero.naturalWidth > 0) {
+    clearTimeout(timeout);
+    hidePreloader();
+    return;
+  }
+
+  /* Event load tetap dipasang walau complete, agar tidak missed. */
+  hero.addEventListener(
+    "load",
+    function () {
+      clearTimeout(timeout);
+      hidePreloader();
+    },
+    { once: true }
+  );
+
+  hero.addEventListener(
+    "error",
+    function () {
+      clearTimeout(timeout);
+      hidePreloader();
+    },
+    { once: true }
+  );
+})();
+
 function alertShow(title, text, icon, confirmButtonText) {
   Swal.fire({
     title: title,
@@ -45,7 +95,7 @@ function sendEmail() {
   };
 
   $.ajax({
-    url: "https://zeta.kiki.my.id/api/email",
+    url: apiUrl("email"),
     method: "POST",
     contentType: "application/json",
     data: JSON.stringify(payload),
@@ -128,85 +178,114 @@ $(document).keydown(function (e) {
   }
 });
 
+/* Escape teks sebelum masuk innerHTML (value dari localStorage ikut aman). */
+function escapeHtml(str) {
+  return String(str).replace(
+    /[&<>"']/g,
+    (ch) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      })[ch]
+  );
+}
+
+/* Sisa waktu dalam detik, dibulatkan ke atas agar tidak tampil "0s" lebih dulu. */
+function remainingLabel(ms) {
+  if (ms <= 0) return "now";
+  const sec = Math.ceil(ms / 1000);
+  if (sec < 60) return `${sec}s`;
+  const min = Math.floor(sec / 60);
+  const rest = sec % 60;
+  return rest ? `${min}m ${rest}s` : `${min}m`;
+}
+
+let toastSeq = 0;
+
+/*
+ * showToast(title, message, delayBeforeShow, visibleFor)
+ * - delayBeforeShow : jeda sebelum toast muncul (ms)
+ * - visibleFor      : lama toast tampil sebelum auto-hide (ms)
+ *
+ * Countdown dihitung dari satu deadline absolut, bukan akumulasi per tick,
+ * supaya tidak melenceng walaupun interval terlambat.
+ * Elemen dibersihkan lewat event hidden.bs.toast (ikut hormati hover),
+ * dengan timer cadangan bila event tidak pernah datang.
+ */
+function showToast(title, message, delayBeforeShow, visibleFor) {
+  const wait = Number(delayBeforeShow) || 0;
+  const life = Number(visibleFor) || 15000;
+
+  const mount = () => {
+    const $container = $(".toast-container");
+    if (!$container.length) return;
+
+    const id = `tst-${++toastSeq}`;
+    const $toast = $(`
+      <div id="${id}" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+        data-bs-delay="${life}" data-bs-autohide="true">
+        <div class="toast-header">
+          <img src="${ASSET_PATH}images/hero2.jpg" class="me-2" alt="Avatar" width="25" height="25" />
+          <strong class="me-auto">${escapeHtml(title)}</strong>
+          <small class="toast-countdown"></small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">${escapeHtml(message)}</div>
+      </div>
+    `);
+
+    $container.append($toast);
+
+    const deadline = Date.now() + life;
+    const $count = $toast.find(".toast-countdown");
+    let ticker = null;
+
+    const stop = () => {
+      if (ticker !== null) {
+        clearInterval(ticker);
+        ticker = null;
+      }
+    };
+
+    const tick = () => {
+      const left = deadline - Date.now();
+      $count.text(remainingLabel(left));
+      if (left <= 0) stop();
+    };
+
+    tick();
+    ticker = setInterval(tick, 250);
+
+    $toast.on("hide.bs.toast", stop);
+
+    $toast.on("hidden.bs.toast", function () {
+      stop();
+      $toast.remove();
+    });
+
+    // Cadangan:Bootstrap autohide bisa tertahan hover, node tetap dibersihkan.
+    setTimeout(function () {
+      stop();
+      $toast.remove();
+    }, life + 1000);
+
+    $toast.toast("show");
+  };
+
+  if (wait > 0) {
+    setTimeout(mount, wait);
+  } else {
+    mount();
+  }
+}
+
 addEventListener("DOMContentLoaded", () => {
   showToast("Miftakhuddin Falaki", "Welcome to kiki.my.id", 0, 15000);
+  showToast("Miftakhuddin Falaki", "Actually, you can directly print my resume by pressing ctrl + p", 30000, 15000);
 });
-
-addEventListener("DOMContentLoaded", () => {
-  showToast("Actually, you can directly print my resume by pressing ctrl + p", 30000, 15000);
-});
-function showToast(title, message, interval, delay) {
-  let t_interval = setInterval(() => {
-    var randomString = Math.random().toString(36).substring(2, 15);
-    var data = {
-      title,
-      message,
-      delay,
-      randomString,
-    };
-    $(".toast-container").append(`
-    <div id="toast-${data.randomString}" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay=${data.delay}>
-        <div class="toast-header">
-        <img src="${ASSET_PATH}images/hero2.jpg" class="me-2" alt="Avatar" width="25" height="25"  />
-        <strong class="me-auto">${data.title}</strong>
-        <small id="toast-time-${data.randomString}">now</small>
-        <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="toast"
-            aria-label="Close"></button>
-        </div>
-        <div class="toast-body">${data.message}</div>
-    </div>`);
-    $(`#toast-${data.randomString}`).toast("show");
-    countTime(`#toast-time-${data.randomString}`, data.delay);
-
-    setTimeout(() => {
-      $(`#toast-${data.randomString}`).remove();
-    }, data.delay);
-
-    clearInterval(t_interval);
-  }, interval);
-}
-
-function countTime(e, time) {
-  let startTime = new Date().getTime();
-  let endTime = startTime - time;
-
-  $(e).html(timeToString(startTime - endTime));
-
-  var f_interval = setInterval(() => {
-    let currentTime = new Date().getTime();
-    let elapsedTime = currentTime - startTime;
-
-    $(e).html(timeToString(elapsedTime));
-
-    if (elapsedTime >= time) {
-      clearInterval(f_interval);
-    }
-  }, 1000);
-}
-
-function timeToString(elapsedTime) {
-  var seconds = Math.floor(elapsedTime / 1000) % 60;
-  var minutes = Math.floor(elapsedTime / (1000 * 60)) % 60;
-  var hours = Math.floor(elapsedTime / (1000 * 60 * 60)) % 24;
-  var days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
-
-  if (days > 0) {
-    return `${days} days ago`;
-  }
-  if (hours > 0) {
-    return `${hours} hours ago`;
-  }
-  if (minutes > 0) {
-    return `${minutes} minutes ago`;
-  }
-  if (seconds > 20) {
-    return `${seconds} seconds ago`;
-  }
-  return "just now";
-}
 
 function setLocalStorage(key, value, expireDay = 30) {
   var now = new Date();
@@ -236,3 +315,11 @@ addEventListener("load", function () {
     showToast("Miftakhuddin Falaki", `Welcome back ${name}`, 7000, 15000);
   }
 });
+
+
+let fetching_dots = 0;
+
+setInterval(() => {
+  $(".fetching-data").text(`Fetching${".".repeat(fetching_dots)}`);
+  fetching_dots = (fetching_dots + 1) % 4;
+}, 300);

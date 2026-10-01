@@ -455,6 +455,20 @@ code {
   min-width: 0;
 }
 
+/* Pada baris ber-mark (Work Exp / Certificate), teks mengisi sisa ruang
+   supaya meta terdorong ke kanan dan bisa turun baris bila tidak muat.
+   Basis harus 0 (bukan auto): .cert-url memakai white-space:nowrap sehingga
+   basis max-content sangat lebar dan akan mendorong mark ke baris sendiri. */
+.exp-item .row-line-main,
+.cert .row-line-main {
+  flex: 1 1 0;
+}
+
+.exp-item .row-line-meta,
+.cert .row-line-meta {
+  flex: 0 0 auto;
+}
+
 .row-line-title {
   display: block;
   font-weight: 600;
@@ -480,17 +494,23 @@ code {
   cursor: pointer !important;
 }
 
-.exp-item .row-line::before {
-  content: "\25B8";
-  color: var(--accent);
-  flex: 0 0 auto;
-}
-
-.exp-item .row-line {
+/* Work Exp & Certificate memakai struktur baris yang sama:
+   [mark] [judul + sub] [meta]. Mark jadi elemen nyata, bukan ::before,
+   supaya tidak pernah berdiri sendiri di baris atas saat mobile.
+   --mark-w dipakai lagi untuk meratakan meta di bawah judul. */
+.exp-item .row-line,
+.cert {
+  --mark-w: 0.85rem;
+  --row-gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: flex-start;
+  gap: var(--row-gap);
 }
 
-.exp-item:hover .row-line {
+.exp-item .row-line:hover {
   background: var(--bg-3);
   border-color: var(--accent);
   box-shadow: var(--off) var(--off) 0 var(--shadow);
@@ -502,10 +522,6 @@ code {
 
 /* Sertifikat */
 .cert {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
   padding: 0.7rem 0.85rem;
   background: var(--bg-2);
   border: var(--bw) solid var(--line);
@@ -537,9 +553,12 @@ code {
   color: var(--accent);
 }
 
-.cert-mark {
+.cert-mark,
+.row-mark {
   color: var(--accent);
   flex: 0 0 auto;
+  width: var(--mark-w, auto);
+  text-align: left;
 }
 
 .cert-url {
@@ -630,6 +649,84 @@ code {
 .chip-link:hover {
   color: var(--accent);
   border-color: var(--accent);
+}
+
+/* Preloader, hilang saat gambar hero siap atau timeout 3 detik */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-0);
+  background-image: repeating-conic-gradient(
+    from 0deg at 0 0,
+    var(--bg-0) 0deg 90deg,
+    var(--bg-1) 90deg 180deg
+  );
+  background-size: var(--checker) var(--checker);
+  transition: opacity 0.25s steps(4, end);
+}
+
+#preloader.is-done {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preloader-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preloader-bar {
+  display: flex;
+  gap: 6px;
+}
+
+.preloader-bar span {
+  width: 14px;
+  height: 14px;
+  background: var(--accent);
+  border: var(--bw) solid var(--shadow);
+  animation: preloader-bounce 0.9s steps(1, end) infinite;
+}
+
+.preloader-bar span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.preloader-bar span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.preloader-bar span:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+.preloader-text {
+  font-family: var(--font-display);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ink-dim);
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  49% {
+    background: var(--accent);
+    transform: translateY(0);
+  }
+
+  50%,
+  100% {
+    background: var(--bg-3);
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes marquee {
@@ -1199,6 +1296,13 @@ textarea.form-control {
   color: var(--ink-dim);
 }
 
+/* Countdown: lebar digit tetap agar tidak bergeser tiap detik. */
+.toast-countdown {
+  font-variant-numeric: tabular-nums;
+  min-width: 3.5ch;
+  text-align: right;
+}
+
 .toast-body {
   font-size: 0.95rem;
   color: var(--ink-dim);
@@ -1368,6 +1472,7 @@ footer .nav-link:hover {
 .commit-row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.75rem;
   padding: 0.85rem 1rem;
   background: var(--bg-1);
@@ -1382,9 +1487,16 @@ footer .nav-link:hover {
   flex: 0 0 auto;
 }
 
+/* Blok identitas repo: mengisi sisa ruang, boleh menyusut supaya
+   tombol tetap muat. min-width:0 wajib agar teks panjang bisa wrap. */
+.commit-id {
+  flex: 1 1 10rem;
+  min-width: 0;
+}
+
 .commit-title {
   font-family: var(--font-display);
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   color: var(--ink);
   text-transform: uppercase;
 }
@@ -1392,6 +1504,13 @@ footer .nav-link:hover {
 .commit-sub {
   font-size: 0.8rem;
   color: var(--ink-dim);
+  overflow-wrap: anywhere;
+}
+
+/* TombolGitHub: terdorong ke kanan saat ruang cukup. */
+.commit-cta {
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .commit-card {
@@ -1569,7 +1688,52 @@ footer .nav-link:hover {
     padding-top: 0;
   }
 
+  /* Sama seperti Education: tanggal / OPEN turun ke baris sendiri di
+     bawah judul. IndentasiSejajar dengan teks judul (setelah mark). */
+  .exp-item .row-line-meta,
+  .cert .row-line-meta {
+    flex: 0 0 100%;
+    margin-left: 0;
+    padding-left: calc(var(--mark-w) + var(--row-gap));
+  }
+
   .stat-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  /* ============================ COMMIT CARD ============================ */
+  /* Di layar sempit tombol "View on GitHub" tidak muat sebaris dengan
+     avatar + nama repo, sehingga teks terdesak jadi kolom sangat sempit.
+     Turunkan tombol ke baris penuh supaya repo name tetap terbaca. */
+  .commit-row {
+    gap: 0.6rem 0.5rem;
+  }
+
+  .commit-id {
+    flex: 1 1 100%;
+  }
+
+  .commit-cta {
+    flex: 1 0 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .commit-msg {
+    margin-top: 0.6rem;
+  }
+
+  /* Baris meta jadi grid 2 kolom supaya "@user committed ..." dan
+     tanggal/sha tidak menyatu jadi satu paragraf panjang. */
+  .commit-meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    row-gap: 0.3rem;
+  }
+
+  /* Pemisah titik tidak relevan lagi di layout grid. */
+  .commit-meta .commit-dot {
+    display: none;
   }
 }

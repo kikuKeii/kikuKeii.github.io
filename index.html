@@ -69,6 +69,27 @@
 </head>
 
 <body>
+    <div id="preloader" role="status" aria-live="polite" aria-label="Loading">
+        <div class="preloader-box">
+            <div class="preloader-bar">
+                <span></span><span></span><span></span><span></span>
+            </div>
+            <p class="preloader-text">Loading...</p>
+        </div>
+    </div>
+    <script>
+        /* Jaring pengaman: Hilangkan preloader maksimal 3 detik,
+           walau app.js gagal dimuat atau CDN di bawah ini tidak terjangkau. */
+        window.setTimeout(function () {
+            var el = document.getElementById("preloader");
+            if (el && el.dataset.done !== "1") {
+                el.dataset.done = "1";
+                el.classList.add("is-done");
+                setTimeout(function () { el.remove(); }, 300);
+            }
+        }, 3000);
+    </script>
+
     <nav data-aos="fade-down" class="sticky-top navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#about">
@@ -92,8 +113,8 @@
                         <a class="nav-link" href="#project">Project</a>
                     </li>
                     <li class="nav-item d-flex align-items-center">
-                        <button type="button" id="btn-open-theme" class="btn btn-sm nav-link"
-                            data-bs-toggle="modal" data-bs-target="#modalTheme">
+                        <button type="button" id="btn-open-theme" class="btn btn-sm nav-link" data-bs-toggle="modal"
+                            data-bs-target="#modalTheme">
                             <i class="bi bi-palette me-1"></i><span>Theme</span>
                         </button>
                     </li>
@@ -191,12 +212,14 @@
                         <span class="panel-note">click item<br />for detail</span>
                     </div>
                     <div class="row" id="exp-item">
-                        <div class="col-md-12 exp-item pointer" data-bs-toggle="tooltip" data-bs-title="Click to view detail">
+                        <div class="col-md-12 exp-item pointer" data-bs-toggle="tooltip"
+                            data-bs-title="Click to view detail">
                             <div class="row-line">
-                                <div class="row-line-main">
+                                <span class="row-mark">&#9656;</span>
+                                <span class="row-line-main">
                                     <span class="row-line-title">:companyName</span>
                                     <span class="row-line-sub">:positonName</span>
-                                </div>
+                                </span>
                                 <span class="row-line-meta">:startDate - :endDate</span>
                             </div>
                         </div>
@@ -283,11 +306,15 @@
                         </div>
                         <div class="contact-line">
                             <i class="bi bi-dot"></i>
-                            <span data-profile="contact.email[1]">-</span>
+                            <span data-profile="contact.email[1]">
+                                <div class="fetching-data"></div>
+                            </span>
                         </div>
                         <div class="contact-line">
                             <i class="bi bi-dot"></i>
-                            <span data-profile="contact.email[2]">-</span>
+                            <span data-profile="contact.email[2]">
+                                <div class="fetching-data"></div>
+                            </span>
                         </div>
                     </div>
                     <div class="contact-block">
@@ -296,11 +323,15 @@
                         </div>
                         <div class="contact-line">
                             <i class="bi bi-dot"></i>
-                            <span data-profile="contact.phone[1]">-</span>
+                            <span data-profile="contact.phone[1]">
+                                <div class="fetching-data"></div>
+                            </span>
                         </div>
                         <div class="contact-line">
                             <i class="bi bi-dot"></i>
-                            <span data-profile="contact.phone[2]">-</span>
+                            <span data-profile="contact.phone[2]">
+                                <div class="fetching-data"></div>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -323,7 +354,8 @@
                         <div class="col-md-12">
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="cemail" name="cemail"
-                                    placeholder="name@example.com" oninput="setLocalStorage('cemail', this.value, 30)" />
+                                    placeholder="name@example.com"
+                                    oninput="setLocalStorage('cemail', this.value, 30)" />
                                 <label for="cemail">Email address</label>
                             </div>
                         </div>
@@ -347,8 +379,7 @@
                                     aria-hidden="true"></span>
                                 <i class="bi bi-send"></i> Email
                             </button>
-                            <button type="button" class="btn btn-success" onclick="sendWhatsapp()"
-                                id="btnSendWhatsapp">
+                            <button type="button" class="btn btn-success" onclick="sendWhatsapp()" id="btnSendWhatsapp">
                                 <span class="spinner-border spinner-border-sm me-1 d-none" id="spinnerWhatsapp"
                                     aria-hidden="true"></span>
                                 <i class="bi bi-whatsapp"></i> Whatsapp
@@ -378,8 +409,8 @@
                 <div class="row g-4">
                     <div class="col-12 col-lg-4">
                         <div class="d-flex align-items-center gap-2 mb-2">
-                            <img src="./assets/images/hero2.jpg" width="40" height="40"
-                                alt="Miftakhuddin Falaki" loading="lazy" />
+                            <img id="hero-main-image" src="./assets/images/hero2.jpg" width="40" height="40"
+                                alt="Miftakhuddin Falaki" />
                             <div class="d-grid">
                                 <span class="commit-title">Miftakhuddin Falaki</span>
                                 <small class="commit-sub">IT Programmer · Full Stack Developer</small>
@@ -423,22 +454,62 @@
                     <div class="col-md-7">
                         <p class="commit-title mb-2">Powered by</p>
                         <ul class="nav flex-wrap gap-2" id="powerby">
-                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://github.com/kikukeii"
-                                    target="_blank">Github</a></li>
-                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://expressjs.com"
-                                    target="_blank">Express</a></li>
-                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://vercel.com"
-                                    target="_blank">Vercel</a></li>
-                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://cloudflare.com"
-                                    target="_blank">Cloudflare</a></li>
-                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://getbootstrap.com"
-                                    target="_blank">Bootstrap</a></li>
-                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://leafletjs.com"
-                                    target="_blank">Leaflet</a></li>
-                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://driverjs.com"
-                                    target="_blank">Driver js</a></li>
-                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://www.freepik.com"
-                                    target="_blank">Freepik</a></li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://github.com/kikukeii" target="_blank"
+                                    rel="noopener noreferrer">GitHub</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://pages.github.com" target="_blank"
+                                    rel="noopener noreferrer">GitHub Pages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://expressjs.com" target="_blank"
+                                    rel="noopener noreferrer">Express</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://vercel.com" target="_blank"
+                                    rel="noopener noreferrer">Vercel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://cloudflare.com" target="_blank"
+                                    rel="noopener noreferrer">Cloudflare</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://getbootstrap.com" target="_blank"
+                                    rel="noopener noreferrer">Bootstrap</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://icons.getbootstrap.com" target="_blank"
+                                    rel="noopener noreferrer">Bootstrap Icons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://jquery.com" target="_blank"
+                                    rel="noopener noreferrer">jQuery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://sweetalert2.github.io" target="_blank"
+                                    rel="noopener noreferrer">SweetAlert2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://michalsnik.github.io/aos/"
+                                    target="_blank" rel="noopener noreferrer">AOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://leafletjs.com" target="_blank"
+                                    rel="noopener noreferrer">Leaflet</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://www.openstreetmap.org" target="_blank"
+                                    rel="noopener noreferrer">OpenStreetMap</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://driverjs.com" target="_blank"
+                                    rel="noopener noreferrer">Driver.js</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="chip chip-sm chip-link" href="https://github.com/MichaelXF/js-confuser"
+                                    target="_blank" rel="noopener noreferrer">js-confuser</a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-5" id="visit-count-section">
@@ -492,8 +563,7 @@
 
                 <hr class="divider-dash" />
 
-                <div
-                    class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
                     <p class="mb-0 footer-note">
                         &copy; <span class="year"></span>
                         <span class="company"></span> · kiki.my.id

@@ -346,20 +346,23 @@
       t["--accent-3"],
       t["--ink-dim"]
     ];
-    var s = "";
+    var layers = [];
     for (var i = 0; i < c.length; i++) {
-      var x = (i % 4) * 25;
-      var y = Math.floor(i / 4) * 25;
-      s +=
-        "linear-gradient(" +
-        c[i] +
-        " 0 0) " +
-        x +
-        "% " +
-        y +
-        "% / 25% 25%";
+      var col = i % 4;
+      var row = Math.floor(i / 4);
+      /* Penting: background-position dalam persen dihitung relatif terhadap
+         (ukuran container - ukuran layer), BUKAN container. Karena tile
+         berukuran 25% dari container, untuk menaruh tile di frac F dari
+         container diperlukan posisi F / 0.75. 0, 33.33%, 66.67%, 100%.
+         Kalau langsung pakai 0/25/50/75%, baris & kolom terakhir tidak
+         pernah sampai tepi danSwatch kelihatan bolong. */
+      var px = ((col / 3) * 100).toFixed(4).replace(/\.?0+$/, "");
+      var py = ((row / 3) * 100).toFixed(4).replace(/\.?0+$/, "");
+      layers.push(
+        "linear-gradient(" + c[i] + " 0 0) " + px + "% " + py + "% / 25% 25% no-repeat"
+      );
     }
-    return s;
+    return layers.join(",");
   }
 
   function themeCard(name) {
@@ -395,13 +398,19 @@
 
     var today = THEMES[dailyThemeName()];
 
+    /* Tiap color stop conic-gradient wajib punya posisi eksplisit. Kalau
+       ada stop terakhir yang posisinya mundur (mis. "0 25%" setelah stop
+       tanpa posisi), CSS meng-clamp semuanya jadi satu warna datar. */
+    var autoStops = ORDER.map(function (n, i) {
+      var at = ((i / ORDER.length) * 100).toFixed(4).replace(/\.?0+$/, "");
+      return THEMES[n]["--accent"] + " " + at + "%";
+    }).join(",");
+
     var autoCard =
       '<div class="theme-option" data-theme="auto" role="button" tabindex="0">' +
       '<div class="theme-swatch" style="background:repeating-conic-gradient(' +
-      ORDER.map(function (n) {
-        return THEMES[n]["--accent"];
-      }).join(",") +
-      ',var(--bg-1) 0 25%) 0 0 / 12px 12px"></div>' +
+      autoStops +
+      ') 0 0 / 12px 12px"></div>' +
       '<div class="theme-info">' +
       '<div class="d-flex justify-content-between align-items-center gap-2">' +
       '<span class="theme-name">Auto (Daily)</span>' +
