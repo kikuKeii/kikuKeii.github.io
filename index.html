@@ -128,6 +128,9 @@
                             <li>
                                 <a class="dropdown-item" href="#certificates-row">Certificates</a>
                             </li>
+                            <li>
+                                <a class="dropdown-item" href="#reference">References</a>
+                            </li>
                             <li><a class="dropdown-item" href="#contact">Contact</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
@@ -263,10 +266,39 @@
         </div>
     </div>
 
-    <div data-aos="fade-in" data-aos-delay="300" class="container" id="project" style="margin-top: 2rem;">
+    <div data-aos="fade-in" data-aos-delay="300" class="container" id="reference" style="margin-top: 2rem;">
         <div class="panel">
             <div class="panel-head">
                 <span class="panel-num">05</span>
+                <h2>References</h2>
+                <span class="panel-note">auto rotate 5s</span>
+            </div>
+            <div id="reference-list">
+                <div class="carousel slide reference-carousel" id="referenceCarousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="ref-card">
+                                <i class="bi bi-quote ref-quote" aria-hidden="true"></i>
+                                <p class="ref-text">Quote dari rekan kerja, atasan, atau client akan tampil di sini.</p>
+                                <div class="ref-author">
+                                    <span class="ref-avatar ref-avatar-text">R</span>
+                                    <span class="d-grid ref-id">
+                                        <span class="ref-name">Full Name</span>
+                                        <span class="ref-role">Position - Company</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-aos="fade-in" data-aos-delay="300" class="container" id="project" style="margin-top: 2rem;">
+        <div class="panel">
+            <div class="panel-head">
+                <span class="panel-num">06</span>
                 <h2>Project</h2>
             </div>
             <ul class="nav nav-tabs flex-wrap" id="filter-project">
@@ -295,7 +327,7 @@
     <div class="container" id="contact" style="margin-top: 2rem;">
         <div class="panel">
             <div class="panel-head">
-                <span class="panel-num">06</span>
+                <span class="panel-num">07</span>
                 <h2>Contact Me</h2>
             </div>
             <div class="row flex-lg-row-reverse g-4">
@@ -394,7 +426,7 @@
     <div class="container" id="findMe" style="margin-top: 2rem;">
         <div class="panel">
             <div class="panel-head">
-                <span class="panel-num">07</span>
+                <span class="panel-num">08</span>
                 <h2>Find Me</h2>
             </div>
             <div id="map"></div>
@@ -669,6 +701,35 @@
                             <div class="d-flex flex-wrap" id="modalProjectLinks"></div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalReference" tabindex="-1" aria-labelledby="modalReferenceLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <span id="modalReferenceAvatar" class="ref-avatar ref-avatar-text" aria-hidden="true"></span>
+                        <div class="d-grid">
+                            <h2 class="modal-title" id="modalReferenceLabel">:name</h2>
+                            <small id="modalReferenceRole">:role</small>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="modalReferenceStars"></div>
+                    <div class="modal-label">Message</div>
+                    <p class="ref-modal-text" id="modalReferenceText"></p>
+                </div>
+                <div class="modal-footer">
+                    <span id="modalReferenceDate" class="ref-date me-auto"></span>
+                    <a href="#" target="_blank" rel="noopener noreferrer" id="modalReferenceLink"
+                        class="chip chip-sm chip-link">
+                        <i class="bi bi-linkedin me-1"></i>LinkedIn
+                    </a>
                 </div>
             </div>
         </div>

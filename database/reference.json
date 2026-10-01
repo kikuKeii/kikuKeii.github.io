@@ -1,0 +1,89 @@
+{
+  "master_data": {
+    "lang": [
+      "en",
+      "id"
+    ],
+    "source": [
+      "Colleague",
+      "Team Lead",
+      "Client",
+      "Lecturer"
+    ],
+    "note": "DATA CONTOH - seluruh isi masih lorem ipsum, ganti dengan reference asli nanti. Field message wajib object {id, en}. Format: \\n\\n untuk paragraf, \\n untuk baris baru, atau markup limited (p, br, strong, b, em, i, u, ul, ol, li, blockquote, a). Tag lain otomatis dibuang. img boleh null, avatar lalu memakai inisial nama."
+  },
+  "data": [
+    {
+      "unique_id": "ref-001",
+      "show": true,
+      "name": "Lorem Ipsum",
+      "position": "Dolor Sit Amet",
+      "company": "Consectetur Adipiscing",
+      "city": "Elit",
+      "img": null,
+      "rating": 5,
+      "date": "2025",
+      "link": {
+        "profile": "https://www.linkedin.com/in/lorem-ipsum"
+      },
+      "message": {
+        "id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse. Excepteur sint occaecat cupidatat non proident, sunt in culpa. Qui officia deserunt mollit anim id est laborum.\n\nSed ut perspiciatis unde omnis iste natus error. Sint voluptatem accusantium doloremque laudantium. Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse. Excepteur sint occaecat cupidatat non proident, sunt in culpa. Qui officia deserunt mollit anim id est laborum.\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem. Accusantium doloremque laudantium totam rem aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi architecto."
+      }
+    },
+    {
+      "unique_id": "ref-002",
+      "show": true,
+      "name": "Dolor Sit",
+      "position": "Amet Consectetur",
+      "company": "Adipiscing Elit",
+      "city": "Sed",
+      "img": null,
+      "rating": 5,
+      "date": "2025",
+      "link": {
+        "profile": "https://www.linkedin.com/in/dolor-sit"
+      },
+      "message": {
+        "id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n\nSed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <ul><li>Ut enim ad minim veniam, quis nostrud exercitation.</li><li>Duis aute irure dolor in reprehenderit in voluptate.</li><li>Excepteur sint occaecat cupidatat non proident.</li></ul> Sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n\nSed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <ul><li>Ut enim ad minim veniam, quis nostrud exercitation.</li><li>Duis aute irure dolor in reprehenderit in voluptate.</li><li>Excepteur sint occaecat cupidatat non proident.</li></ul> Sunt in culpa qui officia deserunt mollit anim id est laborum."
+      }
+    },
+    {
+      "unique_id": "ref-003",
+      "show": true,
+      "name": "Amet Consectetur",
+      "position": "Adipiscing Elit",
+      "company": "Sed Do Eiusmod",
+      "city": "Tempor",
+      "img": null,
+      "rating": 4,
+      "date": "2024",
+      "link": {
+        "profile": ""
+      },
+      "message": {
+        "id": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p> <p>Ut enim ad minim veniam, quis nostrud <strong>exercitation ullamco</strong> laboris.</p> <blockquote>Duis aute irure dolor in reprehenderit in voluptate velit esse.</blockquote> <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>",
+        "en": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p> <p>Ut enim ad minim veniam, quis nostrud <strong>exercitation ullamco</strong> laboris.</p> <blockquote>Duis aute irure dolor in reprehenderit in voluptate velit esse.</blockquote> <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>"
+      }
+    },
+    {
+      "unique_id": "ref-004",
+      "show": true,
+      "name": "Elit Sed",
+      "position": "Tempor Incididunt",
+      "company": "Ut Labore",
+      "city": "Magna",
+      "img": null,
+      "rating": 5,
+      "date": "2024",
+      "link": {
+        "profile": ""
+      },
+      "message": {
+        "id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+      }
+    }
+  ]
+}
