@@ -8,6 +8,9 @@ AOS.init({
   anchorPlacement: "top-bottom",
 });
 
+/* Path aset dari halaman utama (root). */
+var ASSET_PATH = "./assets/";
+
 function alertShow(title, text, icon, confirmButtonText) {
   Swal.fire({
     title: title,
@@ -81,13 +84,15 @@ function sendWhatsapp() {
   let url = `https://api.whatsapp.com/send?phone=6283807303926&text=Name%20${name}%20from%20${company}%0AEmail%20${email}%0A%0A${message}`;
   let payload = {
     text: `*Kikimyid Alert*\n
-Baru saja *${name}* mencoba mengirim pesan melalui WhatsApp.\n
-*Company*: ${company}\n
-*Email*: ${email}\n
-*Message*:\n${message}`,
+    Baru saja *${name}* mencoba mengirim pesan melalui WhatsApp.\n
+    *Company*: ${company}\n
+    *Email*: ${email}\n
+    *Message*:\n${message}`,
     parse_mode: "Markdown",
   };
-  sendAlert(payload);
+  if (typeof sendAlert === "function") {
+    sendAlert(payload);
+  }
 
   window.open(url, "_blank");
   setTimeout(() => showSpinner("#spinnerWhatsapp", "#btnSendWhatsapp", false), 1000);
@@ -104,7 +109,7 @@ $(document).ready(function () {
   });
   $(".download-cv").each(function () {
     let el = $(this);
-    el.attr("href", "./assets/pdf/Miftakhuddin Falaki - IT Programmer.pdf");
+    el.attr("href", ASSET_PATH + "pdf/Miftakhuddin Falaki - IT Programmer.pdf");
     el.attr("download", "Miftakhuddin Falaki - IT Programmer.pdf");
   });
 });
@@ -113,7 +118,7 @@ $(document).keydown(function (e) {
   if (e.ctrlKey && e.which === 80) {
     e.preventDefault();
 
-    const route = "./assets/pdf/Miftakhuddin Falaki - IT Programmer.pdf";
+    const route = ASSET_PATH + "pdf/Miftakhuddin Falaki - IT Programmer.pdf";
 
     window.open(
       route,
@@ -126,6 +131,10 @@ $(document).keydown(function (e) {
 addEventListener("DOMContentLoaded", () => {
   showToast("Miftakhuddin Falaki", "Welcome to kiki.my.id", 0, 15000);
 });
+
+addEventListener("DOMContentLoaded", () => {
+  showToast("Actually, you can directly print my resume by pressing ctrl + p", 30000, 15000);
+});
 function showToast(title, message, interval, delay) {
   let t_interval = setInterval(() => {
     var randomString = Math.random().toString(36).substring(2, 15);
@@ -136,9 +145,9 @@ function showToast(title, message, interval, delay) {
       randomString,
     };
     $(".toast-container").append(`
-    <div id="toast-${data.randomString}" class="toast text-bg-light" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay=${data.delay}>
+    <div id="toast-${data.randomString}" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay=${data.delay}>
         <div class="toast-header">
-        <img src="./assets/images/hero2.jpg" class="rounded me-2" alt="Avatar" width="25"  />
+        <img src="${ASSET_PATH}images/hero2.jpg" class="me-2" alt="Avatar" width="25" height="25"  />
         <strong class="me-auto">${data.title}</strong>
         <small id="toast-time-${data.randomString}">now</small>
         <button

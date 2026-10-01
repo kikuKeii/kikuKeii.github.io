@@ -45,7 +45,7 @@
     <meta name="twitter:image" content="https://kiki.my.id/assets/images/hero2.jpg" />
 
     <!-- Theme -->
-    <meta name="theme-color" content="#0d6efd" />
+    <meta name="theme-color" content="#d3a24b" />
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/images/hero2.jpg" sizes="any" />
@@ -63,16 +63,18 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.js.iife.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.css" />
-    <link rel="stylesheet" href="./assets/lib/css/driver.css" />
+    <link rel="stylesheet" href="./assets/css/driver.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="./assets/js/setup-theme.js"></script>
 </head>
 
 <body>
-    <nav data-aos="fade-down" class="sticky-top navbar navbar-expand-lg border-bottom border-dark"
-        style="background-color: var(--navbar-bg)">
+    <nav data-aos="fade-down" class="sticky-top navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand link-light" href="#">Miftakhuddn Falaki</a>
+            <a class="navbar-brand" href="#about">
+                <span class="brand-mark" aria-hidden="true"></span>
+                Miftakhuddn Falaki
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -81,22 +83,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link link-light" href="#education-section">Education</a>
+                        <a class="nav-link" href="#education-section">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-light" href="#work-exp">Work Experience</a>
+                        <a class="nav-link" href="#work-exp">Work Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-light" href="#project">Project</a>
+                        <a class="nav-link" href="#project">Project</a>
                     </li>
                     <li class="nav-item d-flex align-items-center">
-                        <button type="button" id="btn-open-theme" class="btn nav-link link-light btn-sm"
+                        <button type="button" id="btn-open-theme" class="btn btn-sm nav-link"
                             data-bs-toggle="modal" data-bs-target="#modalTheme">
                             <i class="bi bi-palette me-1"></i><span>Theme</span>
                         </button>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle link-light" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             More
                         </a>
@@ -117,137 +119,85 @@
         </div>
     </nav>
 
-    <div class="container" id="about">
-        <div class="row flex-lg-row-reverse align-items-center justify-content-center py-5">
-            <div data-aos="fade-in" class="col-10 col-sm-8 col-lg-6 ">
-                <img id="avatar" src="#" class="d-block mx-lg-auto img-fluid rounded-circle shadow"
-                    alt="Miftakhuddin Falaki - IT Programmer & Full Stack Developer" width="350" height="350"
-                    loading="lazy" />
+    <main class="container" id="about">
+        <div class="row flex-lg-row-reverse align-items-center justify-content-center py-5 g-4">
+            <div data-aos="fade-in" class="col-10 col-sm-8 col-lg-5">
+                <div class="avatar-frame">
+                    <img id="avatar" src="#" alt="Miftakhuddin Falaki - IT Programmer & Full Stack Developer"
+                        width="350" height="350" loading="lazy" />
+                </div>
             </div>
-            <div data-aos="fade-up" class="col-lg-6 d-grid gap-2" id="about-me">
-                <h1 class="display-5 fw-bold lh-1 mb-3" id="my-name">
+            <div data-aos="fade-up" class="col-lg-7 d-grid gap-3" id="about-me">
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="hero-tag">Available</span>
+                    <span class="hero-tag alt" data-profile="location.city"></span>
+                    <span class="hero-tag third" data-profile="job_title[0]"></span>
+                </div>
+                <h1 class="lh-1 mb-0" id="my-name">
                     Miftakhuddin Falaki
                 </h1>
                 <p id="summary"></p>
+                <div class="meta-grid">
+                    <div class="meta-cell">
+                        <b>Role</b>
+                        <span data-profile="job_title[4]">-</span>
+                    </div>
+                    <div class="meta-cell">
+                        <b>Location</b>
+                        <span data-profile="location.city">-</span>
+                    </div>
+                    <div class="meta-cell">
+                        <b>Country</b>
+                        <span data-profile="location.country">-</span>
+                    </div>
+                </div>
             </div>
-            <div data-aos="fade-up" data-aos-delay="50" class="d-grid d-md-flex gap-2">
-                <button class="btn btn-danger btn-sm" id="start-tour">Start Tour</button>
-                <a href="./assets/pdf/Miftakhuddin Falaki - IT Programmer.pdf"
-                    class="btn btn-warning download-cv btn-sm" download="Miftakhuddin Falaki - IT Programmer.pdf"
-                    id="download-cv-btn-1">Download resume</a>
+            <div data-aos="fade-up" data-aos-delay="50" class="col-12 d-grid d-md-flex gap-2 justify-content-center">
+                <button class="btn btn-danger" id="start-tour">Start Tour</button>
+                <a href="./assets/pdf/Miftakhuddin Falaki - IT Programmer.pdf" class="btn btn-warning download-cv"
+                    data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-title="Download the PDF, or press Ctrl + P to print"
+                    download="Miftakhuddin Falaki - IT Programmer.pdf" id="download-cv-btn-1">Download resume</a>
             </div>
         </div>
-    </div>
+    </main>
 
-    <div class="conatiner">
-        <div class="row mx-auto mx-md-3 flex-lg-row-reverse">
+    <div class="container">
+        <div class="row g-4">
             <div class="col-md-6" id="education-section">
-                <div data-aos="fade-up" class="d-flex gap-2 align-items-center mt-0 mt-md-4">
-                    <h2>Education</h2>
-                </div>
-                <div data-aos="fade-up" class="row" id="education">
-                    <div class="col-md-12">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between">
-                                    <div class="d-grid">
-                                        <div class="fw-semibold">University Name</div>
-                                        <small class="text-body-tertiary">Major</small>
-                                    </div>
-                                    <div class="d-flex justify-content-end">
-                                        Graduation Year
-                                    </div>
+                <div data-aos="fade-up" class="panel h-100">
+                    <div class="panel-head">
+                        <span class="panel-num">01</span>
+                        <h2>Education</h2>
+                    </div>
+                    <div class="row" id="education">
+                        <div class="col-md-12">
+                            <div class="row-line">
+                                <div class="row-line-main">
+                                    <span class="row-line-title">University Name</span>
+                                    <span class="row-line-sub">Major</span>
                                 </div>
-                                <p>City</p>
+                                <span class="row-line-meta">Graduation Year</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6" id="work-exp">
-                <div data-aos="fade-up" class="d-md-flex d-grid gap-md-2 align-items-center mt-4 mt-md-0">
-                    <h2>Work Experience</h2>
-                    <small class="text-body-tertiary">(click item below for detail)</small>
-                </div>
-                <div data-aos="fade-up" class="row mt-3 mt-md-0" id="exp-item">
-                    <div class="col-md-12 pointer" data-bs-toggle="tooltip" data-bs-title="Click to view detail">
-                        <div class="d-flex justify-content-between">
-                            <div class="d-grid">
-                                <div class="fw-semibold">:companyName</div>
-                                <small class="text-body-tertiary">:positonName</small>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                :startDate - :endDate
-                            </div>
-                        </div>
+                <div data-aos="fade-up" class="panel h-100">
+                    <div class="panel-head">
+                        <span class="panel-num">02</span>
+                        <h2>Work Exp</h2>
+                        <span class="panel-note">click item<br />for detail</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div data-aos="fade-in" data-aos-delay="100" class="conatiner" id="skills-row">
-        <div class="row mx-auto mx-md-3">
-            <div class="col-md-12">
-                <div class="d-md-flex d-grid gap-md-2 align-items-center mt-4 mt-md-0">
-                    <h2>Skills</h2>
-                    <small class="text-body-tertiary pointer detail-link" data-bs-toggle="modal"
-                        data-bs-target="#modalSkillsDetail">(click here for detail)</small>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div data-aos="fade-up" data-aos-delay="50" class="skills-wrapper">
-        <div class="skills-track" id="skills"></div>
-    </div>
-    <div data-aos="fade-up" data-aos-delay="100" class="conatiner" id="certificates-row">
-        <div class="row mx-auto mx-md-3 mt-md-4">
-            <div class="col-md-12">
-                <div class="d-md-flex d-grid gap-md-2 align-items-center mt-4 mt-md-0">
-                    <h2>Certificates</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-8" id="certificates">
-                    <div class="d-flex justify-content-between mb-3">
-                        <div class="d-grid">
-                            <div class="fw-bold">Indonesia Cybersecurity Forum</div>
-                            <small class="text-body-tertiary">Undemy</small>
-                        </div>
-                        <div class="d-flex justify-content-end">2020 - 2021</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div data-aos="fade-in" data-aos-delay="300" class="conatiner">
-        <div class="row mx-auto mx-md-3 mt-md-4" id="project">
-            <div class="col-md-12">
-                <div class="d-md-flex d-grid gap-md-2 align-items-center mt-4 mt-md-0">
-                    <h2>Project</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 mb-3">
-                        <ul class="nav nav-tabs" id="filter-project">
-                            <li class="nav-item">
-                                <button class="nav-link nproject active fw-bold" data-item="All">
-                                    All
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row g-3 mt-3 mt-md-0" id="project-item">
-                    <div class="col-md-4">
-                        <div class="card border-0 shadow-sm">
-                            <img src="#" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">
-                                    Some quick example text to build on the card title and make
-                                    up the bulk of the card’s content.
-                                </p>
+                    <div class="row" id="exp-item">
+                        <div class="col-md-12 exp-item pointer" data-bs-toggle="tooltip" data-bs-title="Click to view detail">
+                            <div class="row-line">
+                                <div class="row-line-main">
+                                    <span class="row-line-title">:companyName</span>
+                                    <span class="row-line-sub">:positonName</span>
+                                </div>
+                                <span class="row-line-meta">:startDate - :endDate</span>
                             </div>
                         </div>
                     </div>
@@ -256,104 +206,171 @@
         </div>
     </div>
 
-    <div class="conatiner">
-        <div class="row mx-auto mx-md-3" id="contact">
-            <div class="col-md-12">
-                <div class="d-md-flex d-grid gap-md-2 align-items-center mt-4 mt-md-0">
-                    <h2>Contact Me</h2>
+    <div data-aos="fade-in" data-aos-delay="100" class="container" id="skills-row" style="margin-top: 2rem;">
+        <div data-aos="fade-up" class="panel">
+            <div class="panel-head">
+                <span class="panel-num">03</span>
+                <h2>Skills</h2>
+                <span class="panel-note detail-link" data-bs-toggle="modal"
+                    data-bs-target="#modalSkillsDetail">(detail)</span>
+            </div>
+            <div class="skills-wrapper">
+                <div class="skills-track" id="skills"></div>
+            </div>
+        </div>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="100" class="container" id="certificates-row">
+        <div data-aos="fade-up" class="panel">
+            <div class="panel-head">
+                <span class="panel-num">04</span>
+                <h2>Certificates</h2>
+            </div>
+            <div id="certificates">
+                <div class="col-md-8">
+                    <div class="cert">
+                        <span class="cert-mark">&#9632;</span>
+                        <span class="row-line-main">
+                            <span class="row-line-title">Indonesia Cybersecurity Forum</span>
+                            <span class="row-line-sub">Undemy</span>
+                        </span>
+                        <span class="row-line-meta">2020 - 2021</span>
+                    </div>
                 </div>
-                <div class="col-12">
-                    <div class="row flex-lg-row-reverse">
-                        <div data-aos="fade-up" data-aos-delay="300" class="col-md-6" id="list-contact">
-                            <div class="d-grid gap-2">
-                                <div class="fw-bold">Email</div>
-                                <div class="d-flex gap-2">
-                                    <i class="bi bi-envelope-at"></i>
-                                    <div data-profile="contact.email[1]"></div>
-                                </div>
-                                <div class="d-flex gap-2">
-                                    <i class="bi bi-envelope-at"></i>
-                                    <div data-profile="contact.email[2]"></div>
-                                </div>
-                                <div class="fw-bold">Phone</div>
-                                <div class="d-flex gap-2">
-                                    <i class="bi bi-phone-vibrate"></i>
-                                    <div data-profile="contact.phone[1]"></div>
-                                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-aos="fade-in" data-aos-delay="300" class="container" id="project" style="margin-top: 2rem;">
+        <div class="panel">
+            <div class="panel-head">
+                <span class="panel-num">05</span>
+                <h2>Project</h2>
+            </div>
+            <ul class="nav nav-tabs flex-wrap" id="filter-project">
+                <li class="nav-item">
+                    <button class="nav-link nproject active" data-item="All">All</button>
+                </li>
+            </ul>
+            <div class="row g-3 mt-1" id="project-item">
+                <div class="col-md-6 col-lg-4">
+                    <article class="card card-proj h-100">
+                        <div class="proj-img">
+                            <img src="#" class="project-thumbnail" alt="..." />
+                        </div>
+                        <div class="proj-body">
+                            <span class="proj-cat">Category</span>
+                            <h3 class="proj-title">Card title</h3>
+                            <p class="proj-desc">Some quick example text to build on the card title.</p>
+                            <span class="proj-cta">LIHAT DETAIL &gt;</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact" style="margin-top: 2rem;">
+        <div class="panel">
+            <div class="panel-head">
+                <span class="panel-num">06</span>
+                <h2>Contact Me</h2>
+            </div>
+            <div class="row flex-lg-row-reverse g-4">
+                <div data-aos="fade-up" data-aos-delay="300" class="col-md-6" id="list-contact">
+                    <div class="contact-block">
+                        <div class="contact-label">
+                            <i class="bi bi-envelope-at"></i>Email
+                        </div>
+                        <div class="contact-line">
+                            <i class="bi bi-dot"></i>
+                            <span data-profile="contact.email[1]">-</span>
+                        </div>
+                        <div class="contact-line">
+                            <i class="bi bi-dot"></i>
+                            <span data-profile="contact.email[2]">-</span>
+                        </div>
+                    </div>
+                    <div class="contact-block">
+                        <div class="contact-label">
+                            <i class="bi bi-phone-vibrate"></i>Phone
+                        </div>
+                        <div class="contact-line">
+                            <i class="bi bi-dot"></i>
+                            <span data-profile="contact.phone[1]">-</span>
+                        </div>
+                        <div class="contact-line">
+                            <i class="bi bi-dot"></i>
+                            <span data-profile="contact.phone[2]">-</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="col-md-6" id="form-input-contact-me">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="cfname" name="cfname" placeholder="Name"
+                                    oninput="setLocalStorage('cfname', this.value, 30)" />
+                                <label for="cfname">Name</label>
                             </div>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="300" class="col-md-6" id="form-input-contact-me">
-                            <div class="row mt-md-0 mt-4">
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="cfname" name="cfname"
-                                            placeholder="Name" oninput="setLocalStorage('cfname', this.value, 30)" />
-                                        <label for="cfname">Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="ccompany" name="ccompany"
-                                            placeholder="Last Name"
-                                            oninput="setLocalStorage('ccompany', this.value, 30)" />
-                                        <label for="ccompany">Org/Corps</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="cemail" name="cemail"
-                                            placeholder="name@example.com"
-                                            oninput="setLocalStorage('cemail', this.value, 30)" />
-                                        <label for="cemail">Email address</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="csubject" name="csubject"
-                                            placeholder="Subject" />
-                                        <label for="csubject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a messages here"
-                                            id="cmessages" name="cmessages" style="height: 100px"></textarea>
-                                        <label for="cmessages">Leave a messages here</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 my-3 d-flex justify-content-center">
-                                    <button type="button" class="btn btn-warning shadow text-c-primary mx-1"
-                                        onclick="sendEmail()" id="btnSendEmail">
-                                        <span class="spinner-border spinner-border-sm me-1 d-none" id="spinnerEmail"
-                                            aria-hidden="true"></span>
-                                        <i class="bi bi-send"></i> Email
-                                    </button>
-                                    <button type="button" class="btn btn-success shadow text-c-primary mx-1"
-                                        onclick="sendWhatsapp()" id="btnSendWhatsapp">
-                                        <span class="spinner-border spinner-border-sm me-1 d-none" id="spinnerWhatsapp"
-                                            aria-hidden="true"></span>
-                                        <i class="bi bi-whatsapp"></i> Whatsapp
-                                    </button>
-                                </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="ccompany" name="ccompany"
+                                    placeholder="Org/Corps" oninput="setLocalStorage('ccompany', this.value, 30)" />
+                                <label for="ccompany">Org/Corps</label>
                             </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="cemail" name="cemail"
+                                    placeholder="name@example.com" oninput="setLocalStorage('cemail', this.value, 30)" />
+                                <label for="cemail">Email address</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="csubject" name="csubject"
+                                    placeholder="Subject" />
+                                <label for="csubject">Subject</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a messages here" id="cmessages"
+                                    name="cmessages" style="height: 120px"></textarea>
+                                <label for="cmessages">Leave a messages here</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12 my-3 d-flex gap-2 flex-wrap">
+                            <button type="button" class="btn btn-warning" onclick="sendEmail()" id="btnSendEmail">
+                                <span class="spinner-border spinner-border-sm me-1 d-none" id="spinnerEmail"
+                                    aria-hidden="true"></span>
+                                <i class="bi bi-send"></i> Email
+                            </button>
+                            <button type="button" class="btn btn-success" onclick="sendWhatsapp()"
+                                id="btnSendWhatsapp">
+                                <span class="spinner-border spinner-border-sm me-1 d-none" id="spinnerWhatsapp"
+                                    aria-hidden="true"></span>
+                                <i class="bi bi-whatsapp"></i> Whatsapp
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row mx-auto mx-md-3" id="findMe">
-        <div class="col-md-12">
-            <div class="d-md-flex d-grid gap-md-2 align-items-center mt-4 mt-md-0">
+
+    <div class="container" id="findMe" style="margin-top: 2rem;">
+        <div class="panel">
+            <div class="panel-head">
+                <span class="panel-num">07</span>
                 <h2>Find Me</h2>
             </div>
-        </div>
-        <div class="col-md-12">
-            <div id="map" class="rounded"></div>
+            <div id="map"></div>
         </div>
     </div>
 
-    <div class="row mx-auto mt-5">
+    <div class="container" style="margin-top: 2rem;">
         <div class="col-12" data-aos="fade-up">
             <footer class="py-4">
                 <div class="footer-top-bar"></div>
@@ -361,19 +378,19 @@
                 <div class="row g-4">
                     <div class="col-12 col-lg-4">
                         <div class="d-flex align-items-center gap-2 mb-2">
-                            <img src="./assets/images/hero2.jpg" class="rounded-circle" width="38" height="38"
+                            <img src="./assets/images/hero2.jpg" width="40" height="40"
                                 alt="Miftakhuddin Falaki" loading="lazy" />
                             <div class="d-grid">
-                                <span class="fw-bold">Miftakhuddin Falaki</span>
-                                <small class="text-body-tertiary">IT Programmer · Full Stack Developer</small>
+                                <span class="commit-title">Miftakhuddin Falaki</span>
+                                <small class="commit-sub">IT Programmer · Full Stack Developer</small>
                             </div>
                         </div>
-                        <p class="small mb-2 mt-2">
+                        <p class="footer-note mb-2">
                             Static page: CodeIgniter 4 → Laravel → Express JS → AstroJS →
                             <span class="text-body-tertiary">akhirnya kembali ke static page karena maintenance &
                                 biaya.</span>
                         </p>
-                        <p class="small text-body-tertiary mb-0">
+                        <p class="footer-note mb-0">
                             Sekarang dibangun dengan GitHub Actions & di-hosting gratis di Cloudflare. ( /ω＼)
                         </p>
                     </div>
@@ -386,7 +403,7 @@
                         <ul class="nav flex-column gap-1" id="footer-website"></ul>
                     </div>
                     <div class="col-6 col-md-4 col-lg-2">
-                        <h5>Social Media</h5>
+                        <h5>Social</h5>
                         <ul class="nav flex-column gap-1" id="footer-social-media"></ul>
                     </div>
                     <div class="col-6 col-md-4 col-lg-2">
@@ -399,139 +416,111 @@
                         </ul>
                     </div>
                 </div>
+
+                <hr class="divider-dash" />
+
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-7">
+                        <p class="commit-title mb-2">Powered by</p>
+                        <ul class="nav flex-wrap gap-2" id="powerby">
+                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://github.com/kikukeii"
+                                    target="_blank">Github</a></li>
+                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://expressjs.com"
+                                    target="_blank">Express</a></li>
+                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://vercel.com"
+                                    target="_blank">Vercel</a></li>
+                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://cloudflare.com"
+                                    target="_blank">Cloudflare</a></li>
+                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://getbootstrap.com"
+                                    target="_blank">Bootstrap</a></li>
+                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://leafletjs.com"
+                                    target="_blank">Leaflet</a></li>
+                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://driverjs.com"
+                                    target="_blank">Driver js</a></li>
+                            <li class="nav-item"><a class="chip chip-sm chip-link" href="https://www.freepik.com"
+                                    target="_blank">Freepik</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5" id="visit-count-section">
+                        <p class="commit-title mb-2 d-flex align-items-center gap-2">
+                            <i class="bi bi-bar-chart-fill"></i>Visit Statistics
+                        </p>
+                        <div class="stat-grid">
+                            <div class="stat">
+                                <b>Today</b>
+                                <span class="vcount-today">
+                                    <div class="spinner-border spinner-border-sm" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="stat">
+                                <b>This Week</b>
+                                <span class="vcount-this-week">
+                                    <div class="spinner-border spinner-border-sm" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="stat">
+                                <b>This Month</b>
+                                <span class="vcount-this-month">
+                                    <div class="spinner-border spinner-border-sm" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="stat">
+                                <b>This Year</b>
+                                <span class="vcount-this-year">
+                                    <div class="spinner-border spinner-border-sm" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="stat stat-total">
+                                <b>Total Visits</b>
+                                <span class="vcount-all-time">
+                                    <div class="spinner-border spinner-border-sm" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider-dash" />
+
                 <div
-                    class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 pt-3 mt-3 border-top">
-                    <p class="mb-0 small">
-                        © <span class="year"></span>
+                    class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+                    <p class="mb-0 footer-note">
+                        &copy; <span class="year"></span>
                         <span class="company"></span> · kiki.my.id
                     </p>
                     <div class="d-flex align-items-center gap-2">
-                        <small class="text-body-tertiary">Clean & Easy to read.</small>
-                        <button type="button" class="btn btn-theme btn-sm" id="btn-back-to-top"
+                        <button type="button" class="btn btn-theme btn-sm btn-back-top" id="btn-back-to-top"
                             aria-label="Back to top">
                             <i class="bi bi-arrow-up"></i>
                         </button>
                     </div>
                 </div>
-                <div class="row pt-3 mt-3 border-top align-items-center">
-                    <div class="col-md-8">
-                        <p class="fw-semibold small mb-2">Powered by</p>
-                        <ul class="nav flex-wrap gap-2" id="powerby">
-                            <li class="nav-item"><a class="powered-chip text-decoration-none"
-                                    href="https://github.com/kikukeii" target="_blank">Github</a></li>
-                            <li class="nav-item"><a class="powered-chip text-decoration-none"
-                                    href="https://expressjs.com" target="_blank">Express</a></li>
-                            <li class="nav-item"><a class="powered-chip text-decoration-none" href="https://vercel.com"
-                                    target="_blank">Vercel</a></li>
-                            <li class="nav-item"><a class="powered-chip text-decoration-none"
-                                    href="https://cloudflare.com" target="_blank">Cloudflare</a></li>
-                            <li class="nav-item"><a class="powered-chip text-decoration-none"
-                                    href="https://getbootstrap.com" target="_blank">Bootstrap</a></li>
-                            <li class="nav-item"><a class="powered-chip text-decoration-none"
-                                    href="https://leafletjs.com" target="_blank">Leaflet</a></li>
-                            <li class="nav-item"><a class="powered-chip text-decoration-none"
-                                    href="https://driverjs.com" target="_blank">Driver js</a></li>
-                            <li class="nav-item"><a class="powered-chip text-decoration-none"
-                                    href="https://www.freepik.com" target="_blank">Freepik</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 mt-3 mt-md-0" id="visit-count-section">
-                        <div class="fw-bold mb-3 d-flex align-items-center gap-2 text-light">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
-                                class="bi bi-bar-chart-fill text-info" viewBox="0 0 16 16">
-                                <path
-                                    d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z" />
-                            </svg>
-                            <span>Visit Statistics</span>
-                        </div>
-
-                        <div class="row row-cols-2 g-2">
-                            <!-- Today -->
-                            <div class="col">
-                                <div
-                                    class="p-2 border border-secondary border-opacity-25 rounded bg-dark bg-opacity-50 text-center h-100">
-                                    <small class="text-secondary d-block lh-1 mb-1"
-                                        style="font-size: 0.75rem;">Today</small>
-                                    <span class="vcount-today fw-bold fs-6 text-info">
-                                        <div class="spinner-border spinner-border-sm text-info" role="status">
-                                            <span class="visually-hidden">Loading...</span>
-                                        </div>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <!-- This Week -->
-                            <div class="col">
-                                <div
-                                    class="p-2 border border-secondary border-opacity-25 rounded bg-dark bg-opacity-50 text-center h-100">
-                                    <small class="text-secondary d-block lh-1 mb-1" style="font-size: 0.75rem;">This
-                                        Week</small>
-                                    <span class="vcount-this-week fw-bold fs-6 text-light">
-                                        <div class="spinner-border spinner-border-sm text-secondary" role="status">
-                                            <span class="visually-hidden">Loading...</span>
-                                        </div>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <!-- This Month -->
-                            <div class="col">
-                                <div
-                                    class="p-2 border border-secondary border-opacity-25 rounded bg-dark bg-opacity-50 text-center h-100">
-                                    <small class="text-secondary d-block lh-1 mb-1" style="font-size: 0.75rem;">This
-                                        Month</small>
-                                    <span class="vcount-this-month fw-bold fs-6 text-light">
-                                        <div class="spinner-border spinner-border-sm text-secondary" role="status">
-                                            <span class="visually-hidden">Loading...</span>
-                                        </div>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <!-- This Year -->
-                            <div class="col">
-                                <div
-                                    class="p-2 border border-secondary border-opacity-25 rounded bg-dark bg-opacity-50 text-center h-100">
-                                    <small class="text-secondary d-block lh-1 mb-1" style="font-size: 0.75rem;">This
-                                        Year</small>
-                                    <span class="vcount-this-year fw-bold fs-6 text-light">
-                                        <div class="spinner-border spinner-border-sm text-secondary" role="status">
-                                            <span class="visually-hidden">Loading...</span>
-                                        </div>
-                                    </span>
-                                </div>
-                            </div>
-
-                            <!-- All Time (Full Width Highlight) -->
-                            <div class="col-12">
-                                <div
-                                    class="p-2 border border-info border-opacity-25 rounded bg-info bg-opacity-10 text-center d-flex justify-content-between align-items-center px-3">
-                                    <small class="fw-semibold text-info-emphasis">Total Visits</small>
-                                    <span class="vcount-all-time fw-bold fs-6 text-info">
-                                        <div class="spinner-border spinner-border-sm text-info" role="status">
-                                            <span class="visually-hidden">Loading...</span>
-                                        </div>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </footer>
         </div>
     </div>
 
-    <div class="row mx-auto mx-md-3 mt-4 mb-4" id="github-commit"></div>
+    <div class="container my-4" id="github-commit"></div>
 
     <!-- Modal -->
     <div class="modal fade" id="modalSkillsDetail" tabindex="-1" aria-labelledby="modalSkillsDetailLabel"
         aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-lg modal-fullscreen-md-down">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="modalSkillsDetailLabel">Skills</h6>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">
-                    <h6 class="border-bottom pb-2 mb-0">Skills</h6>
-
                     <div id="skills-detail-mdl"></div>
                 </div>
             </div>
@@ -542,7 +531,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="d-grid">
-                        <h2 class="modal-title fs-5 fw-semibold" id="modalExpDetailLabel">
+                        <h2 class="modal-title" id="modalExpDetailLabel">
                             :title
                         </h2>
                         <small id="modalExpDetailPosition">:postion</small>
@@ -550,18 +539,17 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="fw-semibold">Description</div>
+                    <div class="row g-4">
+                        <div class="col-md-8">
+                            <div class="modal-label">Description</div>
                             <ul class="list-group list-group-flush" id="modalExpDetailDescription"></ul>
                         </div>
-                        <div class="col-md-3">
-                            <div class="fw-semibold" id="modalExpDetailWhen">
-                                :modalExpDetailWhen
-                            </div>
-                            <div class="mb-3 border-bottom"></div>
-                            <div class="fw-semibold">Technologies</div>
-                            <div class="" id="modalExpDetailTech"></div>
+                        <div class="col-md-4">
+                            <div class="modal-label">Period</div>
+                            <div id="modalExpDetailWhen">:modalExpDetailWhen</div>
+                            <hr class="divider-dash" />
+                            <div class="modal-label">Technologies</div>
+                            <div class="d-flex flex-wrap gap-1" id="modalExpDetailTech"></div>
                         </div>
                     </div>
                 </div>
@@ -573,7 +561,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="d-grid">
-                        <h2 class="modal-title fs-5 fw-semibold" id="modalProjectLabel">
+                        <h2 class="modal-title" id="modalProjectLabel">
                             :title
                         </h2>
                         <small id="modalProjectCategory">:Category</small>
@@ -581,11 +569,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-9">
+                    <div class="row g-4">
+                        <div class="col-md-8">
                             <div id="modalProjectCarousel" class="carousel slide" data-bs-ride="false">
                                 <div class="carousel-indicators" id="modalProjectCarouselIndicators"></div>
-                                <div class="carousel-inner rounded" id="modalProjectCarouselInner"></div>
+                                <div class="carousel-inner" id="modalProjectCarouselInner"></div>
                                 <button class="carousel-control-prev" type="button"
                                     data-bs-target="#modalProjectCarousel" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -598,19 +586,17 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="fw-semibold">Description</div>
+                        <div class="col-md-4">
+                            <div class="modal-label">Description</div>
                             <span id="modalProjectDescription"></span>
-                            <div class="fw-semibold mt-3">Period</div>
-                            <div class="fw-semibold" id="modalProjectWhen">
-                                :modalProjectWhen
-                            </div>
-                            <div class="mb-3 border-bottom"></div>
-                            <div class="fw-semibold">Technologies</div>
-                            <div class="" id="modalProjectTech"></div>
-                            <div class="mb-1 border-bottom mt-3"></div>
-                            <div class="fw-semibold">Links</div>
-                            <div class="d-flex flex-column gap-1" id="modalProjectLinks"></div>
+                            <hr class="divider-dash" />
+                            <div class="modal-label">Period</div>
+                            <div id="modalProjectWhen">:modalProjectWhen</div>
+                            <div class="modal-label mt-3">Technologies</div>
+                            <div class="d-flex flex-wrap gap-1" id="modalProjectTech"></div>
+                            <hr class="divider-dash" />
+                            <div class="modal-label">Links</div>
+                            <div class="d-flex flex-wrap" id="modalProjectLinks"></div>
                         </div>
                     </div>
                 </div>
@@ -622,11 +608,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="d-grid">
-                        <h2 class="modal-title fs-5 fw-semibold" id="modalThemeLabel">
-                            Choose Theme
-                        </h2>
-                        <small class="text-body-tertiary">Theme rotates automatically every day. Click to pick
-                            one.</small>
+                        <h2 class="modal-title" id="modalThemeLabel">Choose Theme</h2>
+                        <small>Theme rotates automatically every day. Click to pick one.</small>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>

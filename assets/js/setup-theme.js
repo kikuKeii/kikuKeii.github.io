@@ -4,204 +4,212 @@
   var STORAGE_KEY = "kiki-theme";
   var AUTO_KEY = "kiki-theme-auto";
 
-  var DARK_BASE = {
-    "--text-light": "#f8fafc",
-    "--text-muted": "#94a3b8",
-    "--text-muted-dark": "#64748b",
-    "--glass-bg": "rgba(255, 255, 255, 0.03)",
-    "--glass-border": "rgba(255, 255, 255, 0.08)",
-    "--bs-light": "#f8fafc",
-    "--bs-light-rgb": "248, 250, 252",
-    "--bs-secondary": "#64748b",
-    "--bs-secondary-rgb": "100, 116, 139",
-    "--btn-close-filter": "invert(1)",
-    "--navbar-toggler-filter": "invert(1)",
-    "--map-attribution-bg": "#ffffff",
-    "--map-attribution-text": "#1f2937"
-  };
+  var MAP_FILTER_DARK = "invert(0.92) hue-rotate(180deg) brightness(0.92) contrast(1.05)";
 
-  var LIGHT_BASE = {
-    "--text-light": "#0f172a",
-    "--text-muted": "#475569",
-    "--text-muted-dark": "#94a3b8",
-    "--glass-bg": "rgba(15, 23, 42, 0.03)",
-    "--glass-border": "rgba(15, 23, 42, 0.1)",
-    "--bs-light": "#0f172a",
-    "--bs-light-rgb": "15, 23, 42",
-    "--bs-secondary": "#64748b",
-    "--bs-secondary-rgb": "100, 116, 139",
-    "--btn-close-filter": "invert(0)",
-    "--navbar-toggler-filter": "invert(0)",
-    "--map-attribution-bg": "rgba(255, 255, 255, 0.9)",
-    "--map-attribution-text": "#475569"
-  };
-
-  var MAP_FILTER_DARK =
-    "invert(0.9) hue-rotate(180deg) brightness(0.95) contrast(1.1)";
-
+  /* Palet retro: warna keruh, tidak neon, tidak gradient. */
   var THEMES = {
-    "dark-blue": Object.assign(
-      { name: "Dark Blue", color: "#0d6efd" },
-      DARK_BASE,
-      {
-        "--bg-dark-1": "#0a0b1e",
-        "--bg-dark-2": "#050610",
-        "--accent-cyan": "#00f2fe",
-        "--accent-blue": "#007cff",
-        "--accent-purple": "#8a2be2",
-        "--glass-border-hover": "rgba(0, 242, 254, 0.25)",
-        "--glow-cyan": "0 0 15px rgba(0, 242, 254, 0.2)",
-        "--glow-purple": "0 0 15px rgba(138, 43, 226, 0.2)",
-        "--navbar-bg": "rgba(11, 18, 89, 0.83)",
-        "--map-filter": MAP_FILTER_DARK,
-        "--bs-info": "#00f2fe",
-        "--bs-info-rgb": "0, 242, 254",
-        "--bs-info-text-emphasis": "#a5f3fc",
-        "--bs-dark": "#050610",
-        "--bs-dark-rgb": "5, 6, 16"
-      }
-    ),
-    "dark-green-leaf": Object.assign(
-      { name: "Dark Green Leaf", color: "#16a34a" },
-      DARK_BASE,
-      {
-        "--bg-dark-1": "#071a11",
-        "--bg-dark-2": "#020d08",
-        "--accent-cyan": "#4ade80",
-        "--accent-blue": "#16a34a",
-        "--accent-purple": "#2dd4bf",
-        "--glass-border-hover": "rgba(74, 222, 128, 0.3)",
-        "--glow-cyan": "0 0 15px rgba(74, 222, 128, 0.25)",
-        "--glow-purple": "0 0 15px rgba(45, 212, 191, 0.25)",
-        "--navbar-bg": "rgba(5, 22, 14, 0.83)",
-        "--map-filter": MAP_FILTER_DARK,
-        "--bs-info": "#4ade80",
-        "--bs-info-rgb": "74, 222, 128",
-        "--bs-info-text-emphasis": "#bbf7d0",
-        "--bs-dark": "#020d08",
-        "--bs-dark-rgb": "2, 13, 8"
-      }
-    ),
-    "dark-purple": Object.assign(
-      { name: "Dark Purple", color: "#a855f7" },
-      DARK_BASE,
-      {
-        "--bg-dark-1": "#150a22",
-        "--bg-dark-2": "#0b0512",
-        "--accent-cyan": "#c084fc",
-        "--accent-blue": "#8b5cf6",
-        "--accent-purple": "#e879f9",
-        "--glass-border-hover": "rgba(192, 132, 252, 0.3)",
-        "--glow-cyan": "0 0 15px rgba(192, 132, 252, 0.25)",
-        "--glow-purple": "0 0 15px rgba(232, 121, 249, 0.25)",
-        "--navbar-bg": "rgba(21, 10, 34, 0.83)",
-        "--map-filter": MAP_FILTER_DARK,
-        "--bs-info": "#c084fc",
-        "--bs-info-rgb": "192, 132, 252",
-        "--bs-info-text-emphasis": "#e9d5ff",
-        "--bs-dark": "#0b0512",
-        "--bs-dark-rgb": "11, 5, 18"
-      }
-    ),
-    "dark-amber": Object.assign(
-      { name: "Dark Amber", color: "#f59e0b" },
-      DARK_BASE,
-      {
-        "--bg-dark-1": "#1c1306",
-        "--bg-dark-2": "#0e0903",
-        "--accent-cyan": "#fbbf24",
-        "--accent-blue": "#f59e0b",
-        "--accent-purple": "#fb923c",
-        "--glass-border-hover": "rgba(251, 191, 36, 0.3)",
-        "--glow-cyan": "0 0 15px rgba(251, 191, 36, 0.25)",
-        "--glow-purple": "0 0 15px rgba(251, 146, 60, 0.25)",
-        "--navbar-bg": "rgba(28, 19, 6, 0.83)",
-        "--map-filter": MAP_FILTER_DARK,
-        "--bs-info": "#fbbf24",
-        "--bs-info-rgb": "251, 191, 36",
-        "--bs-info-text-emphasis": "#fde68a",
-        "--bs-dark": "#0e0903",
-        "--bs-dark-rgb": "14, 9, 3"
-      }
-    ),
-    "light-sky": Object.assign(
-      { name: "Light Sky", color: "#0284c7" },
-      LIGHT_BASE,
-      {
-        "--bg-dark-1": "#ecf4fb",
-        "--bg-dark-2": "#ffffff",
-        "--accent-cyan": "#0ea5e9",
-        "--accent-blue": "#0284c7",
-        "--accent-purple": "#6366f1",
-        "--glass-border-hover": "rgba(14, 165, 233, 0.35)",
-        "--glow-cyan": "0 0 15px rgba(14, 165, 233, 0.18)",
-        "--glow-purple": "0 0 15px rgba(99, 102, 241, 0.18)",
-        "--navbar-bg": "rgba(255, 255, 255, 0.85)",
-        "--map-filter": "none",
-        "--bs-info": "#0ea5e9",
-        "--bs-info-rgb": "14, 165, 233",
-        "--bs-info-text-emphasis": "#0369a1",
-        "--bs-dark": "#ffffff",
-        "--bs-dark-rgb": "255, 255, 255"
-      }
-    ),
-    "light-mint": Object.assign(
-      { name: "Light Mint", color: "#047857" },
-      LIGHT_BASE,
-      {
-        "--bg-dark-1": "#ecf7f1",
-        "--bg-dark-2": "#ffffff",
-        "--accent-cyan": "#16a34a",
-        "--accent-blue": "#15803d",
-        "--accent-purple": "#14b8a6",
-        "--glass-border-hover": "rgba(22, 163, 74, 0.35)",
-        "--glow-cyan": "0 0 15px rgba(22, 163, 74, 0.18)",
-        "--glow-purple": "0 0 15px rgba(20, 184, 166, 0.18)",
-        "--navbar-bg": "rgba(255, 255, 255, 0.85)",
-        "--map-filter": "none",
-        "--bs-info": "#22c55e",
-        "--bs-info-rgb": "34, 197, 94",
-        "--bs-info-text-emphasis": "#166534",
-        "--bs-dark": "#ffffff",
-        "--bs-dark-rgb": "255, 255, 255"
-      }
-    ),
-    "light-blossom": Object.assign(
-      { name: "Light Blossom", color: "#db2777" },
-      LIGHT_BASE,
-      {
-        "--bg-dark-1": "#fdf1f6",
-        "--bg-dark-2": "#ffffff",
-        "--accent-cyan": "#ec4899",
-        "--accent-blue": "#db2777",
-        "--accent-purple": "#a855f7",
-        "--glass-border-hover": "rgba(236, 72, 153, 0.35)",
-        "--glow-cyan": "0 0 15px rgba(236, 72, 153, 0.18)",
-        "--glow-purple": "0 0 15px rgba(168, 85, 247, 0.18)",
-        "--navbar-bg": "rgba(255, 255, 255, 0.85)",
-        "--map-filter": "none",
-        "--bs-info": "#ec4899",
-        "--bs-info-rgb": "236, 72, 153",
-        "--bs-info-text-emphasis": "#be185d",
-        "--bs-dark": "#ffffff",
-        "--bs-dark-rgb": "255, 255, 255"
-      }
-    )
+    "amber-crt": {
+      name: "Amber CRT",
+      color: "#d3a24b",
+      "--bg-0": "#16150f",
+      "--bg-1": "#1d1b14",
+      "--bg-2": "#25221a",
+      "--bg-3": "#2f2a20",
+      "--line": "#4a4433",
+      "--line-2": "#6d6550",
+      "--ink": "#e9e2cd",
+      "--ink-dim": "#a89f88",
+      "--accent": "#d3a24b",
+      "--accent-2": "#8fa25c",
+      "--accent-3": "#c2743c",
+      "--shadow": "#0b0a06",
+      "--scan": "0.5",
+      "--navbar-bg": "#1d1b14",
+      "--map-filter": MAP_FILTER_DARK + " sepia(0.18)",
+      "--map-attribution-bg": "#e4ddc8",
+      "--map-attribution-text": "#2a2519",
+      "--btn-close-filter": "invert(1)",
+      "--navbar-toggler-filter": "invert(1)"
+    },
+    "paper": {
+      name: "Paper",
+      color: "#8a7a4f",
+      "--bg-0": "#e6e0cd",
+      "--bg-1": "#f1ebda",
+      "--bg-2": "#e2dbc5",
+      "--bg-3": "#d5ccb1",
+      "--line": "#9a927a",
+      "--line-2": "#6f6854",
+      "--ink": "#23201a",
+      "--ink-dim": "#5d5747",
+      "--accent": "#8f6517",
+      "--accent-2": "#5c6f31",
+      "--accent-3": "#a04f27",
+      "--shadow": "#b3ab90",
+      "--scan": "0",
+      "--navbar-bg": "#f1ebda",
+      "--map-filter": "sepia(0.25) saturate(0.9) brightness(1.02)",
+      "--map-attribution-bg": "#ffffff",
+      "--map-attribution-text": "#23201a",
+      "--btn-close-filter": "none",
+      "--navbar-toggler-filter": "none"
+    },
+    "gameboy": {
+      name: "Gameboy",
+      color: "#8baf4e",
+      "--bg-0": "#1a2013",
+      "--bg-1": "#212917",
+      "--bg-2": "#29321b",
+      "--bg-3": "#333d22",
+      "--line": "#516638",
+      "--line-2": "#7a9850",
+      "--ink": "#dde7c2",
+      "--ink-dim": "#9cae78",
+      "--accent": "#9cb84f",
+      "--accent-2": "#c6d67c",
+      "--accent-3": "#a5764a",
+      "--shadow": "#0c1108",
+      "--scan": "0.45",
+      "--navbar-bg": "#212917",
+      "--map-filter": "grayscale(0.9) sepia(0.55) hue-rotate(45deg) brightness(0.92)",
+      "--map-attribution-bg": "#dde7c2",
+      "--map-attribution-text": "#21291a",
+      "--btn-close-filter": "invert(1)",
+      "--navbar-toggler-filter": "invert(1)"
+    },
+    "cobalt": {
+      name: "Cobalt Dust",
+      color: "#7fa5c0",
+      "--bg-0": "#14181e",
+      "--bg-1": "#1b2027",
+      "--bg-2": "#232931",
+      "--bg-3": "#2c333c",
+      "--line": "#434e58",
+      "--line-2": "#667682",
+      "--ink": "#dde4ea",
+      "--ink-dim": "#94a3ad",
+      "--accent": "#7fa5c0",
+      "--accent-2": "#c3a878",
+      "--accent-3": "#b06a5e",
+      "--shadow": "#090c0f",
+      "--scan": "0.45",
+      "--navbar-bg": "#1b2027",
+      "--map-filter": "invert(0.92) hue-rotate(190deg) brightness(0.92) contrast(1.05)",
+      "--map-attribution-bg": "#dde4ea",
+      "--map-attribution-text": "#1b2027",
+      "--btn-close-filter": "invert(1)",
+      "--navbar-toggler-filter": "invert(1)"
+    },
+    "rust": {
+      name: "Rust",
+      color: "#d08a4e",
+      "--bg-0": "#1a1512",
+      "--bg-1": "#221b16",
+      "--bg-2": "#2b221b",
+      "--bg-3": "#342a21",
+      "--line": "#584737",
+      "--line-2": "#82654f",
+      "--ink": "#ecdfd2",
+      "--ink-dim": "#ae9887",
+      "--accent": "#d08a4e",
+      "--accent-2": "#97a35e",
+      "--accent-3": "#c25a45",
+      "--shadow": "#0c0806",
+      "--scan": "0.5",
+      "--navbar-bg": "#221b16",
+      "--map-filter": "invert(0.9) hue-rotate(170deg) brightness(0.9) sepia(0.3) contrast(1.05)",
+      "--map-attribution-bg": "#ecdfd2",
+      "--map-attribution-text": "#221b16",
+      "--btn-close-filter": "invert(1)",
+      "--navbar-toggler-filter": "invert(1)"
+    },
+    "mono": {
+      name: "Monochrome",
+      color: "#c9c9c9",
+      "--bg-0": "#131313",
+      "--bg-1": "#1b1b1b",
+      "--bg-2": "#232323",
+      "--bg-3": "#2c2c2c",
+      "--line": "#494949",
+      "--line-2": "#6f6f6f",
+      "--ink": "#e8e8e8",
+      "--ink-dim": "#a0a0a0",
+      "--accent": "#c9c9c9",
+      "--accent-2": "#969696",
+      "--accent-3": "#b0b0b0",
+      "--shadow": "#070707",
+      "--scan": "0.5",
+      "--navbar-bg": "#1b1b1b",
+      "--map-filter": "grayscale(1) invert(0.88) contrast(1.05)",
+      "--map-attribution-bg": "#e8e8e8",
+      "--map-attribution-text": "#1b1b1b",
+      "--btn-close-filter": "invert(1)",
+      "--navbar-toggler-filter": "invert(1)"
+    }
   };
 
-  var ORDER = [
-    "dark-blue",
-    "light-sky",
-    "dark-green-leaf",
-    "light-mint",
-    "dark-purple",
-    "light-blossom",
-    "dark-amber"
-  ];
+  var ORDER = ["amber-crt", "paper", "gameboy", "cobalt", "rust", "mono"];
 
-  var DEFAULT_THEME = "dark-blue";
+  var DEFAULT_THEME = "amber-crt";
   var DAY_MS = 24 * 60 * 60 * 1000;
   var current = DEFAULT_THEME;
+
+  /* Alias supaya kelas utilitas Bootstrap tetap nyambung. */
+  function aliases(t) {
+    return {
+      "--text-light": t["--ink"],
+      "--text-muted": t["--ink-dim"],
+      "--text-muted-dark": t["--line-2"],
+      "--bg-dark-1": t["--bg-1"],
+      "--bg-dark-2": t["--bg-0"],
+      "--accent-cyan": t["--accent"],
+      "--accent-blue": t["--accent"],
+      "--accent-purple": t["--accent-2"],
+      "--glass-bg": t["--bg-2"],
+      "--glass-border": t["--line"],
+      "--glass-border-hover": t["--accent"],
+      "--glow-cyan": "none",
+      "--glow-purple": "none",
+
+      "--bs-body-bg": t["--bg-0"],
+      "--bs-body-color": t["--ink"],
+      "--bs-body-color-rgb": rgb(t["--ink"]),
+      "--bs-emphasis-color": t["--ink"],
+      "--bs-emphasis-color-rgb": rgb(t["--ink"]),
+      "--bs-secondary-color": t["--ink-dim"],
+      "--bs-secondary-color-rgb": rgb(t["--ink-dim"]),
+      "--bs-secondary-bg": t["--bg-2"],
+      "--bs-tertiary-color": t["--ink-dim"],
+      "--bs-tertiary-color-rgb": rgb(t["--ink-dim"]),
+      "--bs-tertiary-bg": t["--bg-3"],
+      "--bs-heading-color": t["--ink"],
+      "--bs-border-color": t["--line"],
+      "--bs-border-color-translucent": t["--line"],
+      "--bs-link-color": t["--accent"],
+      "--bs-link-hover-color": t["--accent-2"],
+      "--bs-link-color-rgb": rgb(t["--accent"]),
+      "--bs-link-hover-color-rgb": rgb(t["--accent-2"]),
+      "--bs-info": t["--accent"],
+      "--bs-info-rgb": rgb(t["--accent"]),
+      "--bs-info-text-emphasis": t["--accent-2"],
+      "--bs-light": t["--ink"],
+      "--bs-light-rgb": rgb(t["--ink"]),
+      "--bs-secondary": t["--ink-dim"],
+      "--bs-secondary-rgb": rgb(t["--ink-dim"]),
+      "--bs-dark": t["--bg-0"],
+      "--bs-dark-rgb": rgb(t["--bg-0"]),
+      "--bs-white-rgb": rgb(t["--ink"])
+    };
+  }
+
+  function rgb(hex) {
+    var h = String(hex).replace("#", "");
+    if (h.length === 3) {
+      h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
+    }
+    var n = parseInt(h, 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255].join(", ");
+  }
 
   function getStoredTheme() {
     if (typeof localStorage === "undefined") return null;
@@ -233,10 +241,15 @@
 
     current = name;
 
-    var root = document.documentElement;
+    var vars = aliases(theme);
     Object.keys(theme).forEach(function (prop) {
       if (prop === "name" || prop === "color") return;
-      root.style.setProperty(prop, theme[prop]);
+      vars[prop] = theme[prop];
+    });
+
+    var root = document.documentElement;
+    Object.keys(vars).forEach(function (prop) {
+      root.style.setProperty(prop, vars[prop]);
     });
 
     var meta = document.querySelector('meta[name="theme-color"]');
@@ -294,8 +307,12 @@
       }
       d = new Date(year, d.getMonth(), d.getDate() + 1);
     }
-    days.sort((a, b) => a - b);
-    return days.map((n) => WEEKDAYS[n]);
+    days.sort(function (a, b) {
+      return a - b;
+    });
+    return days.map(function (n) {
+      return WEEKDAYS[n];
+    });
   }
 
   function nextOccurrence(name) {
@@ -309,28 +326,62 @@
     return next;
   }
 
+  function swatch(t) {
+    /* Swatch 4x4 px, biar kelihatan kayak palet pixel. */
+    var c = [
+      t["--bg-0"],
+      t["--bg-1"],
+      t["--bg-2"],
+      t["--bg-3"],
+      t["--line"],
+      t["--line-2"],
+      t["--ink"],
+      t["--ink-dim"],
+      t["--accent"],
+      t["--accent"],
+      t["--accent-2"],
+      t["--accent-3"],
+      t["--accent"],
+      t["--accent-2"],
+      t["--accent-3"],
+      t["--ink-dim"]
+    ];
+    var s = "";
+    for (var i = 0; i < c.length; i++) {
+      var x = (i % 4) * 25;
+      var y = Math.floor(i / 4) * 25;
+      s +=
+        "linear-gradient(" +
+        c[i] +
+        " 0 0) " +
+        x +
+        "% " +
+        y +
+        "% / 25% 25%";
+    }
+    return s;
+  }
+
   function themeCard(name) {
     var t = THEMES[name];
-    var swatch =
-      "linear-gradient(135deg, " + t["--accent-cyan"] + ", " + t["--accent-purple"] + ")";
     return (
       '<div class="theme-option" data-theme="' +
       name +
       '" role="button" tabindex="0">' +
       '<div class="theme-swatch" style="background:' +
-      swatch +
+      swatch(t) +
       '"></div>' +
       '<div class="theme-info">' +
-      '<div class="d-flex justify-content-between align-items-center">' +
-      '<span class="fw-semibold">' +
+      '<div class="d-flex justify-content-between align-items-center gap-2">' +
+      '<span class="theme-name">' +
       t.name +
       "</span>" +
-      '<i class="bi bi-check2-circle theme-check"></i>' +
+      '<i class="bi bi-check2-square theme-check"></i>' +
       "</div>" +
-      '<small class="d-block text-body-tertiary">Day: ' +
+      '<small class="d-block theme-meta">Day: ' +
       themeDays(name).join(", ") +
       "</small>" +
-      '<small class="d-block text-body-tertiary">Next: ' +
+      '<small class="d-block theme-meta">Next: ' +
       nextOccurrence(name).toLocaleDateString("en-US", DATE_FMT) +
       "</small>" +
       "</div>" +
@@ -342,17 +393,23 @@
     var el = document.getElementById("theme-list");
     if (!el) return;
 
+    var today = THEMES[dailyThemeName()];
+
     var autoCard =
       '<div class="theme-option" data-theme="auto" role="button" tabindex="0">' +
-      '<div class="theme-swatch" style="background: conic-gradient(#00f2fe, #8a2be2, #fbbf24, #4ade80, #0ea5e9, #ec4899, #00f2fe)"></div>' +
+      '<div class="theme-swatch" style="background:repeating-conic-gradient(' +
+      ORDER.map(function (n) {
+        return THEMES[n]["--accent"];
+      }).join(",") +
+      ',var(--bg-1) 0 25%) 0 0 / 12px 12px"></div>' +
       '<div class="theme-info">' +
-      '<div class="d-flex justify-content-between align-items-center">' +
-      '<span class="fw-semibold">Auto (Daily)</span>' +
-      '<i class="bi bi-check2-circle theme-check"></i>' +
+      '<div class="d-flex justify-content-between align-items-center gap-2">' +
+      '<span class="theme-name">Auto (Daily)</span>' +
+      '<i class="bi bi-check2-square theme-check"></i>' +
       "</div>" +
-      '<small class="d-block text-body-tertiary">Rotates the theme automatically every day</small>' +
-      '<small class="d-block text-body-tertiary">Theme today: ' +
-      THEMES[dailyThemeName()].name +
+      '<small class="d-block theme-meta">Rotates the palette automatically every day</small>' +
+      '<small class="d-block theme-meta">Theme today: ' +
+      today.name +
       "</small>" +
       "</div>" +
       "</div>";
