@@ -1629,11 +1629,20 @@ footer .nav-link:hover {
   position: relative;
   display: flex;
   flex-direction: column;
+  /* Isi penuh tinggi slide supaya author tetap menempel di bawah dan tidak
+     ada ruang kosong di bawah card saat teksnya pendek. */
+  height: 100%;
   min-height: 230px;
   padding: 1.5rem 1.25rem 1.25rem;
   background: var(--bg-2);
   border: var(--bw) solid var(--line);
   box-shadow: var(--off) var(--off) 0 var(--shadow);
+}
+
+/* Slide harus setinggi carousel-inner (yang di-set min-height oleh JS),
+   supaya .ref-card bisa 100% walau slide-nya sendiri auto height. */
+.reference-carousel .carousel-item {
+  height: 100%;
 }
 
 /* Tanda kutip besar di sudut kanan atas card. */
