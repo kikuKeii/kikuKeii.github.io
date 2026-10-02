@@ -119,6 +119,12 @@
                             <i class="bi bi-palette me-1"></i><span>Theme</span>
                         </button>
                     </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <button type="button" id="btn-open-game" class="btn btn-sm nav-link" data-bs-toggle="modal"
+                            data-bs-target="#modalGame">
+                            <i class="bi bi-emoji-smile me-1"></i><span>Mini Game</span>
+                        </button>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -759,6 +765,83 @@
             </div>
         </div>
     </div>
+    <div class="modal fade game-modal" id="modalGame" tabindex="-1" aria-labelledby="modalGameLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="d-grid">
+                        <h2 class="modal-title" id="modalGameLabel">Batu Kertas Gunting</h2>
+                        <small>Lawan: Kiki. Peluang kamu menang cuma <b>3%</b>.</small>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="game-score" aria-live="polite">
+                        <div class="game-stat is-you">
+                            <b id="gameScoreYou">0</b>
+                            <span>Kamu</span>
+                        </div>
+                        <span class="game-vs">vs</span>
+                        <div class="game-stat is-cpu">
+                            <b id="gameScoreCpu">0</b>
+                            <span>Kiki</span>
+                        </div>
+                        <span class="game-vs">=</span>
+                        <div class="game-stat">
+                            <b id="gameScoreDraw">0</b>
+                            <span>Seri</span>
+                        </div>
+                    </div>
+
+                    <div class="game-arena">
+                        <div class="game-slot" id="gameSlotYou">
+                            <span class="game-slot-label">Kamu</span>
+                            <span class="game-face">?</span>
+                        </div>
+                        <span class="game-round" id="gameRoundLabel">ROUND 0</span>
+                        <div class="game-slot" id="gameSlotCpu">
+                            <span class="game-slot-label">Kiki</span>
+                            <span class="game-face">?</span>
+                        </div>
+                    </div>
+
+                    <p class="game-msg" id="gameMsg">Pilih satu kartu untuk mulai.</p>
+
+                    <div class="game-pick" id="gamePick" role="group" aria-label="Pilih kartu">
+                        <button type="button" class="game-card" data-move="rock">
+                            <span class="game-emoji" aria-hidden="true">&#9994;</span>
+                            <span class="game-name">Batu</span>
+                            <span class="game-hint">Kalah dari Kertas</span>
+                        </button>
+                        <button type="button" class="game-card" data-move="paper">
+                            <span class="game-emoji" aria-hidden="true">&#9995;</span>
+                            <span class="game-name">Kertas</span>
+                            <span class="game-hint">Kalah dari Gunting</span>
+                        </button>
+                        <button type="button" class="game-card" data-move="scissors">
+                            <span class="game-emoji" aria-hidden="true">&#9996;&#65039;</span>
+                            <span class="game-name">Gunting</span>
+                            <span class="game-hint">Kalah dari Batu</span>
+                        </button>
+                    </div>
+
+                    <div class="game-meter" id="gameMeter" title="Peluang menang kamu: 3%">
+                        <span></span>
+                    </div>
+
+                    <div class="game-foot">
+                        <small>
+                            Putaran <b id="gameRounds">0</b> · Win rate nyata <b id="gameRate">0.0%</b>
+                        </small>
+                        <button type="button" class="btn btn-theme btn-sm" id="gameReset">
+                            <i class="bi bi-arrow-counterclockwise me-1"></i>Main Lagi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 2000;">
     </div>
     <script type="application/ld+json">
@@ -797,6 +880,7 @@
         integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
     <script src="./assets/js/obfuscate/app.js"></script>
     <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/game.js"></script>
     <script src="./assets/lib/js/leaflet.js"></script>
     <script src="./assets/lib/js/driver.js"></script>
 </body>
