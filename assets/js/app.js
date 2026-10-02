@@ -148,6 +148,20 @@ function sendWhatsapp() {
   setTimeout(() => showSpinner("#spinnerWhatsapp", "#btnSendWhatsapp", false), 1000);
 }
 
+/*
+ * Dipanggil dari tombol "+" di card References. Navigasi ke form Contact
+ * sudah ditangani href="#contact" (smooth scroll), fungsi ini hanya mengisi
+ * subject default. Selalu ditimpa: Kalau pengunjung mengisi subject sendiri
+ * lalu klik tombol "+", mereka jelas memilih alur kirim reference, bukan
+ * membiarkan subject lama yang tidak sengaja ikut terkirim.
+ */
+function prefillReferenceSubject() {
+  $("#csubject").val("New Reference from kiki.my.id");
+  showToast("Miftakhuddin Falaki", "You can send your reference by filling out the contact form.", 0, 15000);
+  showToast("Miftakhuddin Falaki", "Please make sure to provide accurate information and use appropriate language.", 2000, 15000);
+
+}
+
 function showSpinner(spinnerId, btnId, show) {
   $(spinnerId).toggleClass("d-none", !show);
   $(btnId).prop("disabled", show);
