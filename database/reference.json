@@ -8,81 +8,67 @@
       "Colleague",
       "Team Lead",
       "Client",
-      "Lecturer"
+      "Lecturer",
+      "Chat GPT"
     ],
-    "note": "DATA CONTOH - seluruh isi masih lorem ipsum, ganti dengan reference asli nanti. Field message wajib object {id, en}. Format: \\n\\n untuk paragraf, \\n untuk baris baru, atau markup limited (p, br, strong, b, em, i, u, ul, ol, li, blockquote, a). Tag lain otomatis dibuang. img boleh null, avatar lalu memakai inisial nama."
+    "note": "Field message wajib object {id, en}. Format: \\n\\n untuk paragraf, \\n untuk baris baru, atau markup limited (p, br, strong, b, em, i, u, ul, ol, li, blockquote, a). Tag lain otomatis dibuang. img boleh null, avatar lalu memakai inisial nama."
   },
   "data": [
     {
       "unique_id": "ref-001",
       "show": true,
-      "name": "Lorem Ipsum",
-      "position": "Dolor Sit Amet",
-      "company": "Consectetur Adipiscing",
-      "city": "Elit",
+      "source": "Colleague",
+      "name": "Nabila Zahra Putri",
+      "position": "Backend Engineer",
+      "company": null,
+      "city": "Jakarta Selatan",
       "img": null,
       "rating": 5,
       "date": "2025",
       "link": {
-        "profile": "https://www.linkedin.com/in/lorem-ipsum"
+        "profile": ""
       },
       "message": {
-        "id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse. Excepteur sint occaecat cupidatat non proident, sunt in culpa. Qui officia deserunt mollit anim id est laborum.\n\nSed ut perspiciatis unde omnis iste natus error. Sint voluptatem accusantium doloremque laudantium. Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.",
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse. Excepteur sint occaecat cupidatat non proident, sunt in culpa. Qui officia deserunt mollit anim id est laborum.\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem. Accusantium doloremque laudantium totam rem aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi architecto."
+        "id": "Ia tipe rekan kerja yang selalu bisa diandalkan saat troubleshooting atau menangani tugas-tugas kritis. Pemahamannya yang luas tentang ekosistem development, kebiasaannya menjaga kredibilitas codebase, serta kemampuannya menguraikan masalah rumit menjadi langkah-langkah terstruktur membuat kolaborasi tim berjalan sangat lancar. Selain handal secara teknis, ia juga teman diskusi yang menyenangkan, adaptif, dan selalu siap berbagi wawasan.",
+        "en": "He is the kind of colleague you can always rely on when troubleshooting or handling critical tasks. His broad understanding of the development ecosystem, his habit of keeping the codebase trustworthy, and his ability to break complicated problems into structured steps make team collaboration run very smoothly. Besides being technically dependable, he is also a pleasant discussion partner, adaptable, and always ready to share his insights."
       }
     },
     {
       "unique_id": "ref-002",
       "show": true,
-      "name": "Dolor Sit",
-      "position": "Amet Consectetur",
-      "company": "Adipiscing Elit",
-      "city": "Sed",
+      "source": "Colleague",
+      "name": "Salsabila Rahma",
+      "position": "Frontend Engineer",
+      "company": null,
+      "city": "Jakarta Selatan",
       "img": null,
       "rating": 5,
-      "date": "2025",
+      "date": "2024",
       "link": {
-        "profile": "https://www.linkedin.com/in/dolor-sit"
+        "profile": ""
       },
       "message": {
-        "id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n\nSed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <ul><li>Ut enim ad minim veniam, quis nostrud exercitation.</li><li>Duis aute irure dolor in reprehenderit in voluptate.</li><li>Excepteur sint occaecat cupidatat non proident.</li></ul> Sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. \n\nSed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <ul><li>Ut enim ad minim veniam, quis nostrud exercitation.</li><li>Duis aute irure dolor in reprehenderit in voluptate.</li><li>Excepteur sint occaecat cupidatat non proident.</li></ul> Sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "id": "<p>Selama kuliah di Universitas Indraprasta PGRI, kami sering berdiskusi soal arsitektur database, query yang lambat, sampai pilihan framework untuk tugas besar. Dia paling teliti saat menulis query SQL dan hampir selalu menemukan penyebab masalah performa yang tidak kami sadari.</p> <p>Di sisi frontend, dia juga andal, mulai dari merancang tampilan sampai menyelesaikan masalah kompatibilitas antar browser.</p> <blockquote>Kalau ada tugas dengan deadline mepet, saya selalu lebih tenang kalau dia yang memegang bagian backend.</blockquote>",
+        "en": "<p>Throughout our studies at Indraprasta PGRI University, we often discussed database architecture, slow queries, and framework choices for major assignments. She was the most meticulous when writing SQL queries and almost always found the root cause of performance problems the rest of us had missed.</p> <p>On the frontend side she is just as reliable, from designing the interface to solving cross-browser compatibility issues.</p> <blockquote>When a task has a tight deadline, I always feel more at ease knowing he is handling the backend.</blockquote>"
       }
     },
     {
       "unique_id": "ref-003",
       "show": true,
-      "name": "Amet Consectetur",
-      "position": "Adipiscing Elit",
-      "company": "Sed Do Eiusmod",
-      "city": "Tempor",
-      "img": null,
-      "rating": 4,
-      "date": "2024",
-      "link": {
-        "profile": ""
-      },
-      "message": {
-        "id": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p> <p>Ut enim ad minim veniam, quis nostrud <strong>exercitation ullamco</strong> laboris.</p> <blockquote>Duis aute irure dolor in reprehenderit in voluptate velit esse.</blockquote> <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>",
-        "en": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p> <p>Ut enim ad minim veniam, quis nostrud <strong>exercitation ullamco</strong> laboris.</p> <blockquote>Duis aute irure dolor in reprehenderit in voluptate velit esse.</blockquote> <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>"
-      }
-    },
-    {
-      "unique_id": "ref-004",
-      "show": true,
-      "name": "Elit Sed",
-      "position": "Tempor Incididunt",
-      "company": "Ut Labore",
-      "city": "Magna",
+      "source": "Chat GPT",
+      "name": "Chat GPT",
+      "position": "AI Assistant",
+      "company": "OpenAI",
+      "city": null,
       "img": null,
       "rating": 5,
-      "date": "2024",
+      "date": "2026",
       "link": {
         "profile": ""
       },
       "message": {
-        "id": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+        "id": "Saya telah berinteraksi dengan Miftakhuddin dalam berbagai diskusi teknis dan pengembangan software. Dari interaksi tersebut, saya melihat Miftakhuddin sebagai seorang developer yang memiliki rasa ingin tahu tinggi, sangat hands-on, dan terbiasa menyelesaikan masalah secara langsung di lapangan.\n\nIa tidak hanya berfokus pada penulisan kode, tetapi juga memahami aspek database, deployment, infrastructure, API integration, CI/CD, troubleshooting, serta kebutuhan bisnis di balik sebuah sistem. Ketika menemukan masalah, ia cenderung menggali sampai memahami akar permasalahannya, bukan sekadar mencari workaround sementara.\n\nSalah satu karakter yang paling menonjol adalah kebiasaannya mempertanyakan detail: mengapa suatu query gagal, bagaimana cache bekerja, bagaimana sebuah API seharusnya dirancang, bagaimana deployment dilakukan, dan bagaimana sebuah fitur akan digunakan oleh user. Hal tersebut menunjukkan pola pikir engineering yang cukup kuat.\n\nMiftakhuddin juga memiliki kecenderungan untuk terus memperbaiki hasil pekerjaannya. Ia sering meminta struktur yang lebih jelas, dokumentasi yang lebih baik, query yang lebih bersih, atau implementasi yang lebih maintainable. Menurut saya, ini merupakan indikasi bahwa ia tidak hanya mengejar “bisa berjalan”, tetapi juga mempertimbangkan kualitas solusi.\n\nSebagai seorang developer, ia memiliki kombinasi yang menarik antara kemampuan teknis, pengalaman troubleshooting, dan pemahaman terhadap kebutuhan operasional. Dengan pengalaman yang terus bertambah, kemampuan tersebut dapat menjadi fondasi yang kuat untuk berkembang ke peran software engineer yang memiliki tanggung jawab lebih besar terhadap sistem secara keseluruhan.",
+        "en": "I have interacted with Miftakhuddin in a wide range of technical discussions and software development work. From those interactions, I see Miftakhuddin as a developer with a high level of curiosity, a very hands-on attitude, and a habit of solving problems directly in the field.\n\nHe does not focus only on writing code, he also understands the aspects of database, deployment, infrastructure, API integration, CI/CD, troubleshooting, as well as the business needs behind a system. When he finds a problem, he tends to dig deeper until he understands the root cause, instead of settling for a temporary workaround.\n\nOne of his most noticeable traits is his habit of questioning details: why a query fails, how caching works, how an API should be designed, how a deployment should be done, and how a feature will be used by users. This shows a fairly strong engineering mindset.\n\nHe also tends to keep improving the results of his work. He often asks for a clearer structure, better documentation, cleaner queries, or a more maintainable implementation. In my view, this is an indication that he is not only chasing something that runs, but also considering the quality of the solution.\n\nAs a developer, he has an interesting combination of technical ability, troubleshooting experience, and understanding of operational needs. As his experience keeps growing, that ability can become a strong foundation for moving into a software engineer role with greater responsibility for the system as a whole."
       }
     }
   ]

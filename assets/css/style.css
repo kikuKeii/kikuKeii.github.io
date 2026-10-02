@@ -1675,6 +1675,15 @@ footer .nav-link:hover {
   overflow: hidden;
 }
 
+/* Dipakai sesaat oleh JS untuk mengukur tinggi teks penuh: line-clamp
+   memotong scrollHeight sehingga tinggi terpotong tidak bisa dihitung. */
+.ref-text-clamp.ref-noclamp {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
+
 .ref-top {
   position: relative;
   z-index: 1;
@@ -1684,11 +1693,17 @@ footer .nav-link:hover {
   margin-bottom: 0.5rem;
 }
 
-/* Toggle ID/EN, satu per card (bukan global). */
+/* Toggle ID/EN, satu per card (dan satu lagi di header modal). */
 .ref-lang {
   display: inline-flex;
   border: var(--bw) solid var(--line);
   overflow: hidden;
+}
+
+/* .ref-lang di atas memakai display: inline-flex, jadi [hidden] dari UA
+   stylesheet kalah specificity dan tidak menyembunyikan toggle yang kosong. */
+.ref-lang[hidden] {
+  display: none;
 }
 
 .ref-lang-btn {
@@ -1721,6 +1736,12 @@ footer .nav-link:hover {
 .ref-lang-btn:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: -2px;
+}
+
+/* Di modal tombolnya dibesarkan sedikit supaya mudah ditekan di layar kecil. */
+#modalReferenceLang .ref-lang-btn {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.62rem;
 }
 
 .ref-more {
