@@ -24,6 +24,11 @@
     <!-- CDN Preconnects for speed/performance optimization -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://code.jquery.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet" />
 
     <!-- Canonical -->
     <link rel="canonical" href="https://kiki.my.id/" />
@@ -45,7 +50,7 @@
     <meta name="twitter:image" content="https://kiki.my.id/assets/images/hero2.jpg" />
 
     <!-- Theme -->
-    <meta name="theme-color" content="#d3a24b" />
+    <meta name="theme-color" content="#f5f2eb" />
 
     <!-- Favicon -->
     <link rel="icon" href="./assets/images/hero2.jpg" sizes="any" />
@@ -66,7 +71,6 @@
     <link rel="stylesheet" href="./assets/css/driver.css" />
     <link rel="stylesheet" href="./assets/lib/css/leaflet.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/setup-theme.js"></script>
 </head>
 
 <body>
@@ -91,11 +95,11 @@
         }, 3000);
     </script>
 
-    <nav data-aos="fade-down" class="sticky-top navbar navbar-expand-lg">
+    <nav class="sticky-top navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#about">
                 <span class="brand-mark" aria-hidden="true"></span>
-                Miftakhuddn Falaki
+                Miftakhuddin Falaki
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -112,12 +116,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#project">Project</a>
-                    </li>
-                    <li class="nav-item d-flex align-items-center">
-                        <button type="button" id="btn-open-theme" class="btn btn-sm nav-link" data-bs-toggle="modal"
-                            data-bs-target="#modalTheme">
-                            <i class="bi bi-palette me-1"></i><span>Theme</span>
-                        </button>
                     </li>
                     <li class="nav-item d-flex align-items-center">
                         <button type="button" id="btn-open-game" class="btn btn-sm nav-link" data-bs-toggle="modal"
@@ -718,8 +716,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modalReference" tabindex="-1" aria-labelledby="modalReferenceLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="modalReference" tabindex="-1" aria-labelledby="modalReferenceLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
             <div class="modal-content">
                 <div class="modal-header">
@@ -729,8 +726,8 @@
                             <h2 class="modal-title" id="modalReferenceLabel">:name</h2>
                             <small id="modalReferenceRole">:role</small>
                         </div>
-                        <div class="ref-lang ms-auto" id="modalReferenceLang" role="group"
-                            aria-label="Bahasa" hidden></div>
+                        <div class="ref-lang ms-auto" id="modalReferenceLang" role="group" aria-label="Bahasa" hidden>
+                        </div>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -749,24 +746,7 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="modalTheme" tabindex="-1" aria-labelledby="modalThemeLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-fullscreen-md-down">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="d-grid">
-                        <h2 class="modal-title" id="modalThemeLabel">Choose Theme</h2>
-                        <small>Theme rotates automatically every day. Click to pick one.</small>
-                    </div>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="d-grid gap-2" id="theme-list"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade game-modal" id="modalGame" tabindex="-1" aria-labelledby="modalGameLabel"
-        aria-hidden="true">
+    <div class="modal fade game-modal" id="modalGame" tabindex="-1" aria-labelledby="modalGameLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down">
             <div class="modal-content">
                 <div class="modal-header">
