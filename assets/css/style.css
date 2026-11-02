@@ -2049,11 +2049,17 @@ body.game-open > .modal-backdrop {
   .avatar-frame {
     width: min(76%, 340px);
     aspect-ratio: 1 / 1;
+    border-radius: 50%;
+  }
+
+  .avatar-frame::after {
+    display: none;
   }
 
   .avatar-frame img {
     height: 100%;
     aspect-ratio: 1 / 1;
+    border-radius: 50%;
   }
 
   .panel {
